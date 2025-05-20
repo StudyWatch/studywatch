@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* הוספות מותאמות אישית */
+body {
+  @apply bg-gray-100 text-gray-800 font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-gray-900 font-bold;
+}
+
+button {
+  @apply transition-colors duration-200;
+}
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+.animate-fadeInOut {
+  animation: fadeInOut 2s ease-in-out forwards;
+}
