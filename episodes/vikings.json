@@ -1,0 +1,473 @@
+{
+    "season-4": {
+     "episode-7": {
+    "easy": [
+      {
+        "word": "touch",
+        "translate": "לגעת",
+        "sentence": "I don't want to touch a raw nerve."
+      },
+      {
+        "word": "protect",
+        "translate": "להגן",
+        "sentence": "We protect our heads as we force our way through."
+      },
+      {
+        "word": "attack",
+        "translate": "לתקוף",
+        "sentence": "Then it is agreed we attack tomorrow."
+      },
+      {
+        "word": "lead",
+        "translate": "להוביל",
+        "sentence": "I'll lead that party by foot."
+      },
+      {
+        "word": "boat",
+        "translate": "סירה",
+        "sentence": "Let ours be the first boat through."
+      },
+      {
+        "word": "fight",
+        "translate": "להילחם",
+        "sentence": "Can we fight with you tomorrow?"
+      },
+      {
+        "word": "stay",
+        "translate": "להישאר",
+        "sentence": "I want you to stay here."
+      },
+      {
+        "word": "alive",
+        "translate": "חיים",
+        "sentence": "The space between life and death, that's where we are most alive."
+      },
+      {
+        "word": "run",
+        "translate": "לרוץ",
+        "sentence": "Boys, Ubbe! Run!"
+      },
+      {
+        "word": "starboard",
+        "translate": "ימין (ספינה)",
+        "sentence": "Go back! Turn starboard!"
+      },
+      {
+        "word": "celebrate",
+        "translate": "לחגוג",
+        "sentence": "We should celebrate a great victory."
+      },
+      {
+        "word": "victory",
+        "translate": "ניצחון",
+        "sentence": "Today, your forces won a great victory."
+      },
+      {
+        "word": "cure",
+        "translate": "לרפא",
+        "sentence": "These runes will cure you, my dear Helga."
+      },
+      {
+        "word": "crown",
+        "translate": "כתר",
+        "sentence": "This was once the ancestral crown of Mercia."
+      },
+      {
+        "word": "retreat",
+        "translate": "לסגת",
+        "sentence": "Tomorrow we retreat."
+      }
+    ],
+    "medium": [
+      {
+        "word": "betray",
+        "translate": "לבגוד",
+        "sentence": "I understand that your brother betrayed you."
+      },
+      {
+        "word": "suggest",
+        "translate": "להציע",
+        "sentence": "So what do you suggest we do?"
+      },
+      {
+        "word": "expect",
+        "translate": "לצפות",
+        "sentence": "Isn't that what your brother is going to expect us to do?"
+      },
+      {
+        "word": "unison",
+        "translate": "אחדות",
+        "sentence": "In unison with the boats, we'll send a party on foot to the nearest fort."
+      },
+      {
+        "word": "divert",
+        "translate": "להסיט",
+        "sentence": "They will engage the archers, diverting their attention away from the boats."
+      },
+      {
+        "word": "objections",
+        "translate": "התנגדויות",
+        "sentence": "Any objections?"
+      },
+      {
+        "word": "supplies",
+        "translate": "אספקה",
+        "sentence": "I want you to protect all the food and the supplies."
+      },
+      {
+        "word": "force",
+        "translate": "כוח",
+        "sentence": "Protect our heads as we force our way through."
+      },
+      {
+        "word": "attention",
+        "translate": "תשומת לב",
+        "sentence": "Diverting their attention away from the boats."
+      },
+      {
+        "word": "belong",
+        "translate": "שייך",
+        "sentence": "This belongs to you, yes?"
+      },
+      {
+        "word": "explain",
+        "translate": "להסביר",
+        "sentence": "Let me explain something to you."
+      },
+      {
+        "word": "faith",
+        "translate": "אמונה",
+        "sentence": "I lost my faith in God."
+      },
+      {
+        "word": "redeem",
+        "translate": "לפדות",
+        "sentence": "I only want a chance to redeem my sins."
+      },
+      {
+        "word": "descendants",
+        "translate": "צאצאים",
+        "sentence": "You shelter for your own purposes another of my mad descendants."
+      },
+      {
+        "word": "stabilizing",
+        "translate": "מייצב",
+        "sentence": "I thought she might be a stabilizing factor."
+      }
+    ],
+    "hard": [
+      {
+        "word": "prophecy",
+        "translate": "נבואה",
+        "sentence": "You're certainly doing everything in your power to prove the seer's prophecy right."
+      },
+      {
+        "word": "obstacles",
+        "translate": "מכשולים",
+        "sentence": "The boats have more chance without the archers' obstacles."
+      },
+      {
+        "word": "forgiveness",
+        "translate": "מחילה",
+        "sentence": "Forgive me for caring, but you shouldn't fight tomorrow."
+      },
+      {
+        "word": "distract",
+        "translate": "להסיח",
+        "sentence": "Our foot soldiers will distract the archers, giving the boats a chance."
+      },
+      {
+        "word": "penance",
+        "translate": "כפרה",
+        "sentence": "I seek only penance for my sins."
+      },
+      {
+        "word": "ambitious",
+        "translate": "שאפתני",
+        "sentence": "In you I see a leader strong and ambitious enough to take our countries forward."
+      },
+      {
+        "word": "decadent",
+        "translate": "מנוון",
+        "sentence": "The corrupt, decadent remains of an illustrious name."
+      },
+      {
+        "word": "conceive",
+        "translate": "לתפוס",
+        "sentence": "I could no longer conceive that our Lord could allow such deaths."
+      },
+      {
+        "word": "mausoleum",
+        "translate": "מאוזוליאום",
+        "sentence": "This is the mausoleum of the kings and queens of Mercia."
+      },
+      {
+        "word": "renounce",
+        "translate": "לוותר",
+        "sentence": "I shall formally renounce the kingdom in your name."
+      },
+      {
+        "word": "plague",
+        "translate": "מגפה",
+        "sentence": "I say a plague on their council and their arrogance."
+      },
+      {
+        "word": "corrupted",
+        "translate": "מושחת",
+        "sentence": "They corrupted me, but who could remain uncorrupted?"
+      },
+      {
+        "word": "lickspits",
+        "translate": "חנפנים",
+        "sentence": "We will overcome the council and their lickspits."
+      },
+      {
+        "word": "embark",
+        "translate": "לעלות לסיפון",
+        "sentence": "The warriors are ready to embark on their journey."
+      },
+      {
+        "word": "frenzied",
+        "translate": "קדחתני",
+        "sentence": "Many died in the frenzied bloodletting of our past."
+      }
+    ]},
+    "episode-8": {
+        "easy": [
+          {
+            "word": "king",
+            "translate": "מלך",
+            "sentence": "God bless the King!"
+          },
+          {
+            "word": "brother",
+            "translate": "אח",
+            "sentence": "It’s true he has contributed to the defeat of his brother."
+          },
+          {
+            "word": "boat",
+            "translate": "סירה",
+            "sentence": "Let’s empty the boats."
+          },
+          {
+            "word": "river",
+            "translate": "נהר",
+            "sentence": "We ought to be continuing downriver."
+          },
+          {
+            "word": "camp",
+            "translate": "מחנה",
+            "sentence": "We’re going to make camp here."
+          },
+          {
+            "word": "queen",
+            "translate": "מלכה",
+            "sentence": "Then I am Queen again!"
+          },
+          {
+            "word": "magic",
+            "translate": "קסם",
+            "sentence": "We bought into the magic of Ragnar Lothbrok."
+          },
+          {
+            "word": "trust",
+            "translate": "אמון",
+            "sentence": "I fear the trust you have placed in him is misplaced."
+          },
+          {
+            "word": "fight",
+            "translate": "להילחם",
+            "sentence": "I was busy fighting the Northmen."
+          },
+          {
+            "word": "daughter",
+            "translate": "בת",
+            "sentence": "But my daughter... will get over it."
+          },
+          {
+            "word": "honesty",
+            "translate": "יושר",
+            "sentence": "I am grateful for your honesty."
+          },
+          {
+            "word": "hero",
+            "translate": "גיבור",
+            "sentence": "You are a great hero."
+          },
+          {
+            "word": "soldier",
+            "translate": "חייל",
+            "sentence": "The tribute should go to your warriors and soldiers."
+          },
+          {
+            "word": "courage",
+            "translate": "אומץ",
+            "sentence": "Your soldiers have surpassed themselves in courage."
+          },
+          {
+            "word": "enemy",
+            "translate": "אויב",
+            "sentence": "No one could stand in his way; he had no equal as an enemy."
+          }
+        ],
+        "medium": [
+          {
+            "word": "raid",
+            "translate": "פשיטה",
+            "sentence": "We agreed to raid with the mighty Ragnar Lothbrok."
+          },
+          {
+            "word": "responsible",
+            "translate": "אחראי",
+            "sentence": "Someone is always responsible for failure."
+          },
+          {
+            "word": "quarrel",
+            "translate": "מריבה",
+            "sentence": "It was a quarrel between them."
+          },
+          {
+            "word": "valor",
+            "translate": "גבורה",
+            "sentence": "I thank you for your honesty and valor."
+          },
+          {
+            "word": "tribune",
+            "translate": "מחווה",
+            "sentence": "The tribute should not all go to me."
+          },
+          {
+            "word": "convert",
+            "translate": "להתנצר",
+            "sentence": "Rollo’s conversion to Christianity is a joke."
+          },
+          {
+            "word": "honor",
+            "translate": "כבוד",
+            "sentence": "They feel honored to do the impossible with him."
+          },
+          {
+            "word": "deception",
+            "translate": "הונאה",
+            "sentence": "He deceived me, even though I trusted him."
+          },
+          {
+            "word": "attachment",
+            "translate": "קשר",
+            "sentence": "After he rescued me, we formed a sincere attachment."
+          },
+          {
+            "word": "purpose",
+            "translate": "מטרה",
+            "sentence": "He has now served his purpose."
+          },
+          {
+            "word": "celebrate",
+            "translate": "לחגוג",
+            "sentence": "Before he can savor and celebrate his triumph."
+          },
+          {
+            "word": "instinct",
+            "translate": "אינסטינקט",
+            "sentence": "I fear he may revert to his instincts."
+          },
+          {
+            "word": "betray",
+            "translate": "לבגוד",
+            "sentence": "He has betrayed the King."
+          },
+          {
+            "word": "exile",
+            "translate": "גלות",
+            "sentence": "I cannot stay here; I must go into exile."
+          },
+          {
+            "word": "disloyalty",
+            "translate": "בגידה",
+            "sentence": "Count Odo was executed for disloyalty."
+          }
+        ],
+        "hard": [
+          {
+            "word": "abdication",
+            "translate": "התפטרות",
+            "sentence": "Lord Wigstan accepted both your abdication and my assumption of the throne."
+          },
+          {
+            "word": "monstrous",
+            "translate": "מפלצתי",
+            "sentence": "I never realized how truly monstrous you are!"
+          },
+          {
+            "word": "ceremony",
+            "translate": "טקס",
+            "sentence": "We must hold a special mass to pray for them."
+          },
+          {
+            "word": "prospect",
+            "translate": "אפשרות",
+            "sentence": "She is young and can entertain the prospect of a more civilized marriage."
+          },
+          {
+            "word": "conversion",
+            "translate": "המרה",
+            "sentence": "Rollo's conversion to Christianity is insincere."
+          },
+          {
+            "word": "exertion",
+            "translate": "מאמץ",
+            "sentence": "I trust you are well rested after such great exertions."
+          },
+          {
+            "word": "laity",
+            "translate": "להדיוטות",
+            "sentence": "In the presence of the laity and clergy of Mercia."
+          },
+          {
+            "word": "obliged",
+            "translate": "מחויב",
+            "sentence": "They were obliged to sign the documents."
+          },
+          {
+            "word": "indulgence",
+            "translate": "התמסרות",
+            "sentence": "Her indulgence in her emotions led her to act."
+          },
+          {
+            "word": "relinquish",
+            "translate": "לוותר",
+            "sentence": "She had to relinquish her title as Queen."
+          },
+          {
+            "word": "vindicate",
+            "translate": "להצדיק",
+            "sentence": "Her loyalty was meant to vindicate her decisions."
+          },
+          {
+            "word": "summon",
+            "translate": "לזמן",
+            "sentence": "She summoned her courage to confront him."
+          },
+          {
+            "word": "intrigue",
+            "translate": "תככים",
+            "sentence": "The court was filled with intrigue and betrayal."
+          },
+          {
+            "word": "empower",
+            "translate": "להעצים",
+            "sentence": "The King’s decree was meant to empower his rule."
+          },
+          {
+            "word": "consent",
+            "translate": "הסכמה",
+            "sentence": "They must have his consent before acting."
+          }
+        ]
+      
+    
+    }
+  
+  
+    }
+    }

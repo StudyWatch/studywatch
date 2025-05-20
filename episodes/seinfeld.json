@@ -1,0 +1,3969 @@
+{
+    "season-1": {
+      "episode-1": {
+        "easy": [
+          {
+            "word": "know",
+            "translate": "יודע",
+            "sentence": "Do you know why we're here?"
+          },
+          {
+            "word": "out",
+            "translate": "חוצה",
+            "sentence": "Let's go out."
+          },
+          {
+            "word": "life",
+            "translate": "חיים",
+            "sentence": "Out's one of the most enjoyable experiences of life."
+          },
+          {
+            "word": "ready",
+            "translate": "מוכן",
+            "sentence": "You get ready-- pick out clothes."
+          },
+          {
+            "word": "sleep",
+            "translate": "שינה",
+            "sentence": "Go to sleep, get up."
+          },
+          {
+            "word": "back",
+            "translate": "חזרה",
+            "sentence": "Got to be getting back."
+          },
+          {
+            "word": "home",
+            "translate": "בית",
+            "sentence": "No one is home."
+          },
+          {
+            "word": "find",
+            "translate": "למצוא",
+            "sentence": "There are people trying to find us."
+          },
+          {
+            "word": "clothes",
+            "translate": "בגדים",
+            "sentence": "Pick out clothes, take the shower, get all ready."
+          },
+          {
+            "word": "car",
+            "translate": "מכונית",
+            "sentence": "Get the cash, the car, the spot, the reservation."
+          },
+          {
+            "word": "spot",
+            "translate": "מקום",
+            "sentence": "Get the cash, the car, the spot, the reservation."
+          },
+          {
+            "word": "home",
+            "translate": "בית",
+            "sentence": "Not one person here's home."
+          },
+          {
+            "word": "people",
+            "translate": "אנשים",
+            "sentence": "When people say, let's go out."
+          },
+          {
+            "word": "whole",
+            "translate": "כולו",
+            "sentence": "This whole thing-- we're all out."
+          },
+          {
+            "word": "enjoyable",
+            "translate": "מהנה",
+            "sentence": "Out's one of the most enjoyable experiences of life."
+          }
+        ],
+        "medium": [
+          {
+            "word": "reservation",
+            "translate": "הזמנה",
+            "sentence": "Get the cash, the car, the spot, the reservation."
+          },
+          {
+            "word": "inconvenient",
+            "translate": "לא נוח",
+            "sentence": "Would it be terribly inconvenient if she stayed here?"
+          },
+          {
+            "word": "political",
+            "translate": "פוליטי",
+            "sentence": "She teaches political science."
+          },
+          {
+            "word": "seminar",
+            "translate": "סמינר",
+            "sentence": "After my seminar, I'm wide open."
+          },
+          {
+            "word": "engaged",
+            "translate": "מאורס",
+            "sentence": "Never get engaged."
+          },
+          {
+            "word": "conversation",
+            "translate": "שיחה",
+            "sentence": "The conversation, it was..."
+          },
+          {
+            "word": "cash",
+            "translate": "מזומן",
+            "sentence": "Get the cash, the car, the spot, the reservation."
+          },
+          {
+            "word": "borrow",
+            "translate": "להשאיל",
+            "sentence": "May I borrow your phone?"
+          },
+          {
+            "word": "meeting",
+            "translate": "פגישה",
+            "sentence": "We have a meeting tomorrow."
+          },
+          {
+            "word": "plan",
+            "translate": "תכנית",
+            "sentence": "She doesn't make a plan for tomorrow."
+          },
+          {
+            "word": "signals",
+            "translate": "אותות",
+            "sentence": "Cause it's signals, Jerry."
+          },
+          {
+            "word": "second",
+            "translate": "שני",
+            "sentence": "Wait a second."
+          },
+          {
+            "word": "polite",
+            "translate": "מנומס",
+            "sentence": "Maybe she wanted to be polite."
+          },
+          {
+            "word": "hypothetical",
+            "translate": "היפותטי",
+            "sentence": "I'd like to ask you to analyze a hypothetical phone call."
+          },
+          {
+            "word": "honestly",
+            "translate": "בכנות",
+            "sentence": "He answered honestly."
+          }
+        ],
+        "hard": [
+          {
+            "word": "presumptuous",
+            "translate": "יומרני",
+            "sentence": "It's a very awkward situation. I don't want to be presumptuous."
+          },
+          {
+            "word": "harpoon",
+            "translate": "צִלְצָל",
+            "sentence": "Maybe you should get the harpoon out of your chest first."
+          },
+          {
+            "word": "contingency",
+            "translate": "תוכנית חירום",
+            "sentence": "You're a backup, a second line, a just-in-case, a 'B' plan, a contingency."
+          },
+          {
+            "word": "perception",
+            "translate": "תפיסה",
+            "sentence": "Perception is key in these matters."
+          },
+          {
+            "word": "obviously",
+            "translate": "כמובן",
+            "sentence": "Talking with her was like talking with you, but, you know, obviously much better."
+          },
+          {
+            "word": "hypothetical",
+            "translate": "היפותטי",
+            "sentence": "I'd like to ask you to analyze a hypothetical phone call."
+          },
+          {
+            "word": "hypothesis",
+            "translate": "היפותזה",
+            "sentence": "That's just a hypothesis."
+          },
+          {
+            "word": "analysis",
+            "translate": "ניתוח",
+            "sentence": "He gave a detailed analysis."
+          },
+          {
+            "word": "reservation",
+            "translate": "הזמנה",
+            "sentence": "Make a reservation for dinner."
+          },
+          {
+            "word": "philosophy",
+            "translate": "פילוסופיה",
+            "sentence": "She teaches philosophy."
+          },
+          {
+            "word": "interpretation",
+            "translate": "פירוש",
+            "sentence": "It's open to interpretation."
+          },
+          {
+            "word": "circumstance",
+            "translate": "נסיבות",
+            "sentence": "Given the circumstance, I agree."
+          },
+          {
+            "word": "demonstration",
+            "translate": "הפגנה",
+            "sentence": "A demonstration was held."
+          },
+          {
+            "word": "engagement",
+            "translate": "אירוסין",
+            "sentence": "Their engagement was announced."
+          },
+          {
+            "word": "psychology",
+            "translate": "פסיכולוגיה",
+            "sentence": "He studies psychology."
+          }
+        ]
+      },
+      "episode-2": {
+        "easy": [
+          {
+            "word": "total",
+            "translate": "סך הכל",
+            "sentence": "One of them, her total was $8."
+          },
+          {
+            "word": "women",
+            "translate": "נשים",
+            "sentence": "Two women in front of me."
+          },
+          {
+            "word": "check",
+            "translate": "צ'ק",
+            "sentence": "They both, of course, choose to pay by the use of the check."
+          },
+          {
+            "word": "waiting",
+            "translate": "מחכה",
+            "sentence": "You'll not be waiting long."
+          },
+          {
+            "word": "write",
+            "translate": "לכתוב",
+            "sentence": "They write out so many checks."
+          },
+          {
+            "word": "keys",
+            "translate": "מפתחות",
+            "sentence": "The keys, they can never find."
+          },
+          {
+            "word": "find",
+            "translate": "למצוא",
+            "sentence": "They can never find the keys."
+          },
+          {
+            "word": "holster",
+            "translate": "נרתיק",
+            "sentence": "The checkbook comes out of a holster."
+          },
+          {
+            "word": "money",
+            "translate": "כסף",
+            "sentence": "I don't have any money, but I have these."
+          },
+          {
+            "word": "note",
+            "translate": "פתק",
+            "sentence": "A check is like a note from your mother."
+          },
+          {
+            "word": "contact",
+            "translate": "ליצור קשר",
+            "sentence": "If you'll contact these people..."
+          },
+          {
+            "word": "value",
+            "translate": "ערך",
+            "sentence": "Is this of any value at all?"
+          },
+          {
+            "word": "parents",
+            "translate": "הורים",
+            "sentence": "What do you think their parents think?"
+          },
+          {
+            "word": "birthday",
+            "translate": "יום הולדת",
+            "sentence": "This would be a really funny gift for Pamela's birthday."
+          },
+          {
+            "word": "blond",
+            "translate": "בלונדינית",
+            "sentence": "Blond hair, remember?"
+          }
+        ],
+        "medium": [
+          {
+            "word": "supermarket",
+            "translate": "סופרמרקט",
+            "sentence": "So I'm on line at the supermarket."
+          },
+          {
+            "word": "masculine",
+            "translate": "גברי",
+            "sentence": "A check is not masculine."
+          },
+          {
+            "word": "fumble",
+            "translate": "לגמגם",
+            "sentence": "They never fumble for the checkbook."
+          },
+          {
+            "word": "craving",
+            "translate": "חשק",
+            "sentence": "Maureen Stapleton gets a craving..."
+          },
+          {
+            "word": "fornicator",
+            "translate": "נואף",
+            "sentence": "He's a public fornicator."
+          },
+          {
+            "word": "blocked",
+            "translate": "חסום",
+            "sentence": "Have you totally blocked out the entire time we were a couple?"
+          },
+          {
+            "word": "couple",
+            "translate": "זוג",
+            "sentence": "Have you totally blocked out the entire time we were a couple?"
+          },
+          {
+            "word": "conversation",
+            "translate": "שיחה",
+            "sentence": "I didn't appreciate these little courtesy responses like I'm selling you aluminium siding."
+          },
+          {
+            "word": "siding",
+            "translate": "חיפוי",
+            "sentence": "I didn't appreciate these little courtesy responses like I'm selling you aluminium siding."
+          },
+          {
+            "word": "appreciate",
+            "translate": "להעריך",
+            "sentence": "I just don't appreciate these little courtesy responses."
+          },
+          {
+            "word": "convenient",
+            "translate": "נוח",
+            "sentence": "It would be convenient to stay here."
+          },
+          {
+            "word": "chemistry",
+            "translate": "כימיה",
+            "sentence": "There was a little problem with the physical chemistry."
+          },
+          {
+            "word": "weave",
+            "translate": "אריגה",
+            "sentence": "Did your father ever get that hair weave?"
+          },
+          {
+            "word": "attractive",
+            "translate": "מושך",
+            "sentence": "She's a very attractive girl."
+          },
+          {
+            "word": "lobby",
+            "translate": "לובי",
+            "sentence": "You stand in the lobby and wait for her to come down for lunch."
+          }
+        ],
+        "hard": [
+          {
+            "word": "masculine",
+            "translate": "גברי",
+            "sentence": "There's something about a check that, to a man, is not masculine."
+          },
+          {
+            "word": "materialized",
+            "translate": "התממש",
+            "sentence": "How come nothing materialized there?"
+          },
+          {
+            "word": "particular",
+            "translate": "מסוים",
+            "sentence": "You can't be so particular."
+          },
+          {
+            "word": "presumptuous",
+            "translate": "יומרני",
+            "sentence": "I don't want to be presumptuous."
+          },
+          {
+            "word": "congregation",
+            "translate": "קהילה",
+            "sentence": "What congregation do you belong to?"
+          },
+          {
+            "word": "chemistry",
+            "translate": "כימיה",
+            "sentence": "There was a little problem with the physical chemistry."
+          },
+          {
+            "word": "patience",
+            "translate": "סבלנות",
+            "sentence": "I have no patience for this."
+          },
+          {
+            "word": "engineering",
+            "translate": "הנדסה",
+            "sentence": "I thought engineers do that."
+          },
+          {
+            "word": "courtesy",
+            "translate": "נימוס",
+            "sentence": "I just don't appreciate these little courtesy responses."
+          },
+          {
+            "word": "considerate",
+            "translate": "מתחשב",
+            "sentence": "That was very considerate of you."
+          },
+          {
+            "word": "reservation",
+            "translate": "הזמנה",
+            "sentence": "Did you make a reservation?"
+          },
+          {
+            "word": "stakeout",
+            "translate": "מעקב",
+            "sentence": "I staked out his health club."
+          },
+          {
+            "word": "preposterous",
+            "translate": "אבסורדי",
+            "sentence": "That's preposterous!"
+          },
+          {
+            "word": "exclusively",
+            "translate": "בלעדי",
+            "sentence": "Almost exclusively."
+          },
+          {
+            "word": "speculation",
+            "translate": "השערה",
+            "sentence": "That's mere speculation."
+          }
+        ]
+      },
+      "episode-3": {
+        "easy": [
+          {
+            "word": "finger",
+            "translate": "אצבע",
+            "sentence": "Someone shows me one of their fingers, and I'm supposed to feel bad."
+          },
+          {
+            "word": "toe",
+            "translate": "בוהן",
+            "sentence": "You could give someone the toe, couldn't you?"
+          },
+          {
+            "word": "plane",
+            "translate": "מטוס",
+            "sentence": "Something boring to read on the plane."
+          },
+          {
+            "word": "read",
+            "translate": "לקרוא",
+            "sentence": "Something boring to read on the plane."
+          },
+          {
+            "word": "jacket",
+            "translate": "ז'קט",
+            "sentence": "One leather jacket, VCR, and computer."
+          },
+          {
+            "word": "key",
+            "translate": "מפתח",
+            "sentence": "Just give me your keys."
+          },
+          {
+            "word": "shower",
+            "translate": "מקלחת",
+            "sentence": "The best thing to do is to turn it on, do all your shopping, come back, and take a shower."
+          },
+          {
+            "word": "cheese",
+            "translate": "גבינה",
+            "sentence": "No soft cheeses of any kind."
+          },
+          {
+            "word": "sock",
+            "translate": "גרב",
+            "sentence": "You got to get the shoe and sock off and drive, get it up in the--"
+          },
+          {
+            "word": "waitress",
+            "translate": "מלצרית",
+            "sentence": "I need a break from my roommate, the waitress/actress."
+          },
+          {
+            "word": "chorus",
+            "translate": "מקהלה",
+            "sentence": "She just got some part in some dinner theater production of A Chorus Line."
+          },
+          {
+            "word": "lease",
+            "translate": "חוזה שכירות",
+            "sentence": "She's on the lease."
+          },
+          {
+            "word": "minneapolis",
+            "translate": "מיניאפוליס",
+            "sentence": "I can't think about it. I'm going to Minneapolis."
+          },
+          {
+            "word": "door",
+            "translate": "דלת",
+            "sentence": "You left the door open?"
+          },
+          {
+            "word": "steal",
+            "translate": "לגנוב",
+            "sentence": "They were stolen."
+          }
+        ],
+        "medium": [
+          {
+            "word": "arbitrary",
+            "translate": "שרירותי",
+            "sentence": "It seems like such an arbitrary, ridiculous thing to just pick a finger, and you show it to the person."
+          },
+          {
+            "word": "umbrella",
+            "translate": "מטריה",
+            "sentence": "I've got the Q-Tips, the mini-umbrella, something boring to read on the plane."
+          },
+          {
+            "word": "platoon",
+            "translate": "מחלקה",
+            "sentence": "You've got to know the strengths and weaknesses of every soldier in that platoon."
+          },
+          {
+            "word": "expiration",
+            "translate": "תפוגה",
+            "sentence": "Deduct a minimum of two days off all expiration dates."
+          },
+          {
+            "word": "prohibit",
+            "translate": "לאסור",
+            "sentence": "Regarding sexual activity—strictly prohibited, but if you absolutely must, do us all a favor, do it in the tub."
+          },
+          {
+            "word": "wait",
+            "translate": "לחכות",
+            "sentence": "The hot water takes a while to come on. The best thing to do is to turn it on, do all your shopping, come back, and take a shower."
+          },
+          {
+            "word": "apartment",
+            "translate": "דירה",
+            "sentence": "This is quite a place."
+          },
+          {
+            "word": "deposit",
+            "translate": "פיקדון",
+            "sentence": "I can't believe I lost the deposit on that U-Haul."
+          },
+          {
+            "word": "ridiculous",
+            "translate": "מגוחך",
+            "sentence": "I admit it was a fairly ridiculous thing to do, but I mean, obviously we have a little problem here."
+          },
+          {
+            "word": "soap opera",
+            "translate": "טלנובלה",
+            "sentence": "Well, I got caught up watching a soap opera."
+          },
+          {
+            "word": "impenetrable",
+            "translate": "בלתי חדיר",
+            "sentence": "It's the most impenetrable lock on the market today."
+          },
+          {
+            "word": "interference",
+            "translate": "התערבות",
+            "sentence": "It hit the table. So what? Interference. You can't count that."
+          },
+          {
+            "word": "structure",
+            "translate": "מבנה",
+            "sentence": "They're restructuring the organization in Atlanta."
+          },
+          {
+            "word": "lease",
+            "translate": "חוזה שכירות",
+            "sentence": "She's on the lease."
+          },
+          {
+            "word": "expensive",
+            "translate": "יקר",
+            "sentence": "The rent is unbelievable."
+          }
+        ],
+        "hard": [
+          {
+            "word": "congratulations",
+            "translate": "מזל טוב",
+            "sentence": "Congratulations."
+          },
+          {
+            "word": "platoon",
+            "translate": "מחלקה",
+            "sentence": "You've got to know the strengths and weaknesses of every soldier in that platoon."
+          },
+          {
+            "word": "prohibited",
+            "translate": "אסור",
+            "sentence": "Regarding sexual activity—strictly prohibited, but if you absolutely must, do us all a favor, do it in the tub."
+          },
+          {
+            "word": "dispute",
+            "translate": "מחלוקת",
+            "sentence": "No disputes. That's it."
+          },
+          {
+            "word": "restructure",
+            "translate": "לארגן מחדש",
+            "sentence": "They're restructuring the organization in Atlanta."
+          },
+          {
+            "word": "courtesy",
+            "translate": "נימוס",
+            "sentence": "I just don't appreciate these little courtesy responses."
+          },
+          {
+            "word": "peninsula",
+            "translate": "חצי אי",
+            "sentence": "It's time you got out of here anyway. For me, it's a step up, like moving from Iceland to Finland."
+          },
+          {
+            "word": "precaution",
+            "translate": "אמצעי זהירות",
+            "sentence": "Deduct a minimum of two days off all expiration dates as a precaution."
+          },
+          {
+            "word": "dilemma",
+            "translate": "דילמה",
+            "sentence": "If we're friends, you'd ask her for the number. It's a dilemma."
+          },
+          {
+            "word": "resolution",
+            "translate": "החלטה",
+            "sentence": "It's great to talk about other people. A resolution to our problems."
+          },
+          {
+            "word": "commitment",
+            "translate": "התחייבות",
+            "sentence": "Jerry, if you're feeling uncomfortable about this at all, don't feel like you have to take it. A commitment is important."
+          },
+          {
+            "word": "transparent",
+            "translate": "שקוף",
+            "sentence": "The glass is practically transparent."
+          },
+          {
+            "word": "condolence",
+            "translate": "תנחומים",
+            "sentence": "The condolence note was heartfelt."
+          },
+          {
+            "word": "implement",
+            "translate": "ליישם",
+            "sentence": "He needs to implement the new strategy."
+          },
+          {
+            "word": "comprehend",
+            "translate": "להבין",
+            "sentence": "How can you comprehend such behavior?"
+          }
+        ]
+      },
+      "episode-4": {
+        "easy": [
+          {
+            "word": "working",
+            "translate": "עובד",
+            "sentence": "Most men like working on things."
+          },
+          {
+            "word": "tools",
+            "translate": "כלים",
+            "sentence": "Notice when a guy's out in his driveway, working with tools."
+          },
+          {
+            "word": "neighborhood",
+            "translate": "שכונה",
+            "sentence": "All men in the neighborhood are magnetically drawn to this activity."
+          },
+          {
+            "word": "watch",
+            "translate": "צופה",
+            "sentence": "We want to watch the guy."
+          },
+          {
+            "word": "questions",
+            "translate": "שאלות",
+            "sentence": "We want to talk to him, ask him dumb questions."
+          },
+          {
+            "word": "help",
+            "translate": "לעזור",
+            "sentence": "They don't actually help the guy."
+          },
+          {
+            "word": "fences",
+            "translate": "גדרות",
+            "sentence": "At construction sites, they need those fences around it."
+          },
+          {
+            "word": "holes",
+            "translate": "חורים",
+            "sentence": "They cut holes for us so we can see what's going on."
+          },
+          {
+            "word": "steel",
+            "translate": "פלדה",
+            "sentence": "What are you using, the steel girders down here?"
+          },
+          {
+            "word": "office",
+            "translate": "משרד",
+            "sentence": "She calls me at the office, she says, 'We have to talk.'"
+          },
+          {
+            "word": "friends",
+            "translate": "חברים",
+            "sentence": "We were friends."
+          },
+          {
+            "word": "tickets",
+            "translate": "כרטיסים",
+            "sentence": "We had tickets to the Knick game Wednesday."
+          },
+          {
+            "word": "cancer",
+            "translate": "סרטן",
+            "sentence": "They got a cure for cancer."
+          },
+          {
+            "word": "money",
+            "translate": "כסף",
+            "sentence": "Look, it's my money."
+          },
+          {
+            "word": "game",
+            "translate": "משחק",
+            "sentence": "I'm telling you, this pizza idea is really going to happen."
+          }
+        ],
+        "medium": [
+          {
+            "word": "activity",
+            "translate": "פעילות",
+            "sentence": "All men in the neighborhood are magnetically drawn to this activity."
+          },
+          {
+            "word": "construction",
+            "translate": "בנייה",
+            "sentence": "That's why, at construction sites, they need those fences around it."
+          },
+          {
+            "word": "magnetically",
+            "translate": "מגנטית",
+            "sentence": "All men in the neighborhood are magnetically drawn to this activity."
+          },
+          {
+            "word": "attention",
+            "translate": "תשומת לב",
+            "sentence": "He’s got the attention span of a 5-year-old."
+          },
+          {
+            "word": "relationship",
+            "translate": "מערכת יחסים",
+            "sentence": "The relationship’s over but egg salad’s coming."
+          },
+          {
+            "word": "imagine",
+            "translate": "לדמיין",
+            "sentence": "You’re imagining this. Really."
+          },
+          {
+            "word": "episode",
+            "translate": "פרק",
+            "sentence": "That episode where Jerry makes up excuses is hilarious."
+          },
+          {
+            "word": "cure",
+            "translate": "תרופה",
+            "sentence": "They got a cure for cancer."
+          },
+          {
+            "word": "compulsion",
+            "translate": "כפייה",
+            "sentence": "I have this compulsion to tell women how I feel."
+          },
+          {
+            "word": "decision",
+            "translate": "החלטה",
+            "sentence": "So I have a decision—do I walk or eat?"
+          },
+          {
+            "word": "excuses",
+            "translate": "תירוצים",
+            "sentence": "I’m really running out of excuses with this guy."
+          },
+          {
+            "word": "adventure",
+            "translate": "הרפתקה",
+            "sentence": "Let's go do something. Want to get some food?"
+          },
+          {
+            "word": "priority",
+            "translate": "עדיפות",
+            "sentence": "Why put me on the phone with him? He wanted to talk to you."
+          },
+          {
+            "word": "process",
+            "translate": "תהליך",
+            "sentence": "You don’t want to talk? Fine, then we’ll just sit there."
+          },
+          {
+            "word": "difference",
+            "translate": "הבדל",
+            "sentence": "Can you conduct your business... elsewhere?"
+          }
+        ],
+        "hard": [
+          {
+            "word": "simultaneously",
+            "translate": "בו זמנית",
+            "sentence": "I can’t simultaneously handle all of this."
+          },
+          {
+            "word": "philosophical",
+            "translate": "פילוסופי",
+            "sentence": "He’s got a philosophical outlook on life."
+          },
+          {
+            "word": "perception",
+            "translate": "תפיסה",
+            "sentence": "Our perception of reality is often skewed."
+          },
+          {
+            "word": "metaphor",
+            "translate": "מטאפורה",
+            "sentence": "That’s just a metaphor for something deeper."
+          },
+          {
+            "word": "hypothetical",
+            "translate": "היפותטי",
+            "sentence": "Imagine a hypothetical scenario."
+          },
+          {
+            "word": "intrinsic",
+            "translate": "מהותי",
+            "sentence": "There’s an intrinsic value to this."
+          },
+          {
+            "word": "subjective",
+            "translate": "סובייקטיבי",
+            "sentence": "Our experiences are subjective."
+          },
+          {
+            "word": "paradox",
+            "translate": "פרדוקס",
+            "sentence": "It’s a paradox that we can’t resolve."
+          },
+          {
+            "word": "nuance",
+            "translate": "ניואנס",
+            "sentence": "You have to understand the nuance of the situation."
+          },
+          {
+            "word": "epiphany",
+            "translate": "הארה",
+            "sentence": "He had an epiphany about his life."
+          },
+          {
+            "word": "dichotomy",
+            "translate": "דיכוטומיה",
+            "sentence": "There’s a dichotomy between good and evil."
+          },
+          {
+            "word": "idiosyncrasy",
+            "translate": "מאפיין ייחודי",
+            "sentence": "Everyone has their own idiosyncrasy."
+          },
+          {
+            "word": "juxtaposition",
+            "translate": "הצבה זה לצד זה",
+            "sentence": "The juxtaposition of these ideas is fascinating."
+          },
+          {
+            "word": "ephemeral",
+            "translate": "חולף",
+            "sentence": "Life is ephemeral and constantly changing."
+          },
+          {
+            "word": "serendipity",
+            "translate": "מזל טוב",
+            "sentence": "Serendipity often leads to great discoveries."
+          }
+        ]
+      },
+      "episode-5": {
+        "easy": [
+          {
+            "word": "meal",
+            "translate": "ארוחה",
+            "sentence": "It will be the greatest meal of our lives."
+          },
+          {
+            "word": "money",
+            "translate": "כסף",
+            "sentence": "Money's different before and after you eat."
+          },
+          {
+            "word": "hungry",
+            "translate": "רעב",
+            "sentence": "You don't care about money when you're hungry."
+          },
+          {
+            "word": "napkins",
+            "translate": "מפיות",
+            "sentence": "You got the napkins destroyed."
+          },
+          {
+            "word": "check",
+            "translate": "חשבון",
+            "sentence": "Then the check comes at that moment."
+          },
+          {
+            "word": "funny",
+            "translate": "מצחיק",
+            "sentence": "I never heard him say anything funny."
+          },
+          {
+            "word": "allergy",
+            "translate": "אלרגיה",
+            "sentence": "I'm just getting over an allergy attack."
+          },
+          {
+            "word": "cats",
+            "translate": "חתולים",
+            "sentence": "He has two cats, and I'm allergic to them."
+          },
+          {
+            "word": "normal",
+            "translate": "נורמלי",
+            "sentence": "You know, I finally meet a normal man."
+          },
+          {
+            "word": "weekend",
+            "translate": "סוף שבוע",
+            "sentence": "He won't even leave his cats for the weekend."
+          },
+          {
+            "word": "vermont",
+            "translate": "ורמונט",
+            "sentence": "Why don't you take her to that place in Vermont?"
+          },
+          {
+            "word": "relationship",
+            "translate": "מערכת יחסים",
+            "sentence": "It's like putting the relationship in a time compressor."
+          },
+          {
+            "word": "separate",
+            "translate": "נפרד",
+            "sentence": "With separate faucets for the hot and cold."
+          },
+          {
+            "word": "fishing",
+            "translate": "דיג",
+            "sentence": "Can we go fishing up there?"
+          },
+          {
+            "word": "stock",
+            "translate": "מניה",
+            "sentence": "The stock's the same as when you checked earlier."
+          }
+        ],
+        "medium": [
+          {
+            "word": "empire",
+            "translate": "אימפריה",
+            "sentence": "You're like the ruler of an empire."
+          },
+          {
+            "word": "appetizers",
+            "translate": "מנות פתיחה",
+            "sentence": "Appetizers! Quickly, quickly."
+          },
+          {
+            "word": "destroyed",
+            "translate": "הרוס",
+            "sentence": "You got the napkins destroyed."
+          },
+          {
+            "word": "cigarette",
+            "translate": "סיגריה",
+            "sentence": "Cigarette butt in the mashed potatoes."
+          },
+          {
+            "word": "mystified",
+            "translate": "נבוך",
+            "sentence": "People are always upset, you know, they're mystified by the check."
+          },
+          {
+            "word": "sense",
+            "translate": "חוש",
+            "sentence": "I think Superman probably has a very good sense of humor."
+          },
+          {
+            "word": "humor",
+            "translate": "הומור",
+            "sentence": "I'm sure he's got super humor."
+          },
+          {
+            "word": "couch",
+            "translate": "ספה",
+            "sentence": "I've got friends visiting this weekend."
+          },
+          {
+            "word": "anarchists",
+            "translate": "אנרכיסטים",
+            "sentence": "You know, they're anarchists."
+          },
+          {
+            "word": "merger",
+            "translate": "מיזוג",
+            "sentence": "He's got some new thing - a big merger."
+          },
+          {
+            "word": "intimacy",
+            "translate": "אינטימיות",
+            "sentence": "It speeds up the intimacy level."
+          },
+          {
+            "word": "compressor",
+            "translate": "מדחס",
+            "sentence": "It's like putting the relationship in a time compressor."
+          },
+          {
+            "word": "extension",
+            "translate": "הארכה",
+            "sentence": "Maybe I can get an extension cord and hang myself."
+          },
+          {
+            "word": "charming",
+            "translate": "מקסים",
+            "sentence": "It's really charming with separate faucets for the hot and cold."
+          },
+          {
+            "word": "whisper",
+            "translate": "ללחוש",
+            "sentence": "Psst. Wilkinson's got a bite on a new one."
+          }
+        ],
+        "hard": [
+          {
+            "word": "manipulated",
+            "translate": "מנוהל",
+            "sentence": "It's all manipulated with junk bonds."
+          },
+          {
+            "word": "mystified",
+            "translate": "נבוך",
+            "sentence": "People are always upset, you know, they're mystified by the check."
+          },
+          {
+            "word": "hygiene",
+            "translate": "היגיינה",
+            "sentence": "Don't give me hygiene."
+          },
+          {
+            "word": "ultimatum",
+            "translate": "אולטימטום",
+            "sentence": "I gave him an ultimatum."
+          },
+          {
+            "word": "unselfish",
+            "translate": "לא אנוכי",
+            "sentence": "Incorporate one unselfish act in your daily routine."
+          },
+          {
+            "word": "fluctuates",
+            "translate": "מתנודד",
+            "sentence": "The market fluctuates. Remember?"
+          },
+          {
+            "word": "compressor",
+            "translate": "מדחס",
+            "sentence": "It's like putting the relationship in a time compressor."
+          },
+          {
+            "word": "anarchists",
+            "translate": "אנרכיסטים",
+            "sentence": "You know, they're anarchists."
+          },
+          {
+            "word": "decathlon",
+            "translate": "קרב עשר",
+            "sentence": "That's a dating decathlon."
+          },
+          {
+            "word": "relationship",
+            "translate": "מערכת יחסים",
+            "sentence": "It's like putting the relationship in a time compressor."
+          },
+          {
+            "word": "investing",
+            "translate": "השקעה",
+            "sentence": "I'm not cut out for investing."
+          },
+          {
+            "word": "shrink",
+            "translate": "לכווץ",
+            "sentence": "It's completely shrunk."
+          },
+          {
+            "word": "hand puppet",
+            "translate": "בובת יד",
+            "sentence": "It's a hand puppet."
+          },
+          {
+            "word": "televised",
+            "translate": "מצולם לטלוויזיה",
+            "sentence": "They got some new technique for televising opera."
+          },
+          {
+            "word": "admission",
+            "translate": "הודאה",
+            "sentence": "I want an admission of guilt."
+          }
+        ]
+      }
+  
+    },
+    "season-2": {
+      "episode-1": {
+        "easy": [
+          {
+            "word": "traffic",
+            "translate": "תנועה",
+            "sentence": "I'm always in traffic with the lane expert."
+          },
+          {
+            "word": "lane",
+            "translate": "נתיב",
+            "sentence": "Do you know this type of person? Constantly re-evaluating their lane choice."
+          },
+          {
+            "word": "person",
+            "translate": "אדם",
+            "sentence": "Do you know this type of person?"
+          },
+          {
+            "word": "life",
+            "translate": "חיים",
+            "sentence": "Is this the best lane for me, for my life?"
+          },
+          {
+            "word": "ahead",
+            "translate": "קדימה",
+            "sentence": "They're always a little bit ahead."
+          },
+          {
+            "word": "choice",
+            "translate": "בחירה",
+            "sentence": "...their lane choice. Never quite sure..."
+          },
+          {
+            "word": "choice",
+            "translate": "בחירה",
+            "sentence": "Never quite sure: 'Is this the best lane for me, for my life?'"
+          },
+          {
+            "word": "ahead",
+            "translate": "קדימה",
+            "sentence": "Can I get ahead of you?"
+          },
+          {
+            "word": "secret",
+            "translate": "סוד",
+            "sentence": "This is the secret lane, nobody knows about it."
+          },
+          {
+            "word": "ultimate",
+            "translate": "סופי",
+            "sentence": "I think the ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "window",
+            "translate": "חלון",
+            "sentence": "You look out the window, you see gum clearly."
+          },
+          {
+            "word": "future",
+            "translate": "עתיד",
+            "sentence": "But we know that in the future, traffic will get even worse than that."
+          },
+          {
+            "word": "backwards",
+            "translate": "אחורה",
+            "sentence": "Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "test",
+            "translate": "מבחן",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "stop",
+            "translate": "עצירה",
+            "sentence": "Not even rolling and you look out the window, you see gum clearly."
+          }
+        ],
+        "medium": [
+          {
+            "word": "expert",
+            "translate": "מומחה",
+            "sentence": "I'm always in traffic with the lane expert."
+          },
+          {
+            "word": "re-evaluating",
+            "translate": "מחדש הערכה",
+            "sentence": "Do you know this type of person? Constantly re-evaluating their lane choice."
+          },
+          {
+            "word": "ultimate",
+            "translate": "סופי",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "psychological",
+            "translate": "פסיכולוגי",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "rolling",
+            "translate": "מתגלגל",
+            "sentence": "Not even rolling and you look out the window, you see gum clearly."
+          },
+          {
+            "word": "dead stop",
+            "translate": "עצירה מוחלטת",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "gum",
+            "translate": "מסטיק",
+            "sentence": "You look out the window, you see gum clearly."
+          },
+          {
+            "word": "imagine",
+            "translate": "לדמיין",
+            "sentence": "What will happen? Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "possible",
+            "translate": "אפשרי",
+            "sentence": "Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "backwards",
+            "translate": "אחורה",
+            "sentence": "Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "zooming",
+            "translate": "מזנק",
+            "sentence": "Yeah, come on over here, pal. We're zooming over here."
+          },
+          {
+            "word": "nobody",
+            "translate": "אף אחד",
+            "sentence": "This is the secret lane, nobody knows about it."
+          },
+          {
+            "word": "test",
+            "translate": "מבחן",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "ahead",
+            "translate": "קדימה",
+            "sentence": "They're always a little bit ahead."
+          },
+          {
+            "word": "window",
+            "translate": "חלון",
+            "sentence": "You look out the window, you see gum clearly."
+          }
+        ],
+        "hard": [
+          {
+            "word": "expert",
+            "translate": "מומחה",
+            "sentence": "I'm always in traffic with the lane expert."
+          },
+          {
+            "word": "psychological",
+            "translate": "פסיכולוגי",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "rolling",
+            "translate": "מתגלגל",
+            "sentence": "Not even rolling and you look out the window, you see gum clearly."
+          },
+          {
+            "word": "ultimate",
+            "translate": "סופי",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "imagine",
+            "translate": "לדמיין",
+            "sentence": "What will happen? Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "possible",
+            "translate": "אפשרי",
+            "sentence": "Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "backwards",
+            "translate": "אחורה",
+            "sentence": "Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "zooming",
+            "translate": "מזנק",
+            "sentence": "Yeah, come on over here, pal. We're zooming over here."
+          },
+          {
+            "word": "dead stop",
+            "translate": "עצירה מוחלטת",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "future",
+            "translate": "עתיד",
+            "sentence": "But we know that in the future, traffic will get even worse than that."
+          },
+          {
+            "word": "window",
+            "translate": "חלון",
+            "sentence": "You look out the window, you see gum clearly."
+          },
+          {
+            "word": "ultimate",
+            "translate": "סופי",
+            "sentence": "I think the ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "test",
+            "translate": "מבחן",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "stop",
+            "translate": "עצירה",
+            "sentence": "Not even rolling and you look out the window, you see gum clearly."
+          },
+          {
+            "word": "secret",
+            "translate": "סוד",
+            "sentence": "This is the secret lane, nobody knows about it."
+          }
+        ]
+      },
+      "episode-2": {
+        "easy": [
+          {
+            "word": "parents",
+            "translate": "הורים",
+            "sentence": "My parents live in Florida now."
+          },
+          {
+            "word": "Florida",
+            "translate": "פלורידה",
+            "sentence": "They moved there last year."
+          },
+          {
+            "word": "moved",
+            "translate": "עברו",
+            "sentence": "They moved there last year."
+          },
+          {
+            "word": "year",
+            "translate": "שנה",
+            "sentence": "They moved there last year."
+          },
+          {
+            "word": "law",
+            "translate": "חוק",
+            "sentence": "...and that's the law."
+          },
+          {
+            "word": "conversation",
+            "translate": "שיחה",
+            "sentence": "You ever sit there, and the conversation's so boring, it's so dull?"
+          },
+          {
+            "word": "sit",
+            "translate": "לשבת",
+            "sentence": "You ever sit there, and the conversation's so boring, it's so dull?"
+          },
+          {
+            "word": "wonder",
+            "translate": "לתהות",
+            "sentence": "I wonder what would happen if I jumped out the window."
+          },
+          {
+            "word": "crash",
+            "translate": "להתרסק",
+            "sentence": "Just crash right through the glass."
+          },
+          {
+            "word": "glass",
+            "translate": "זכוכית",
+            "sentence": "Just crash right through the glass."
+          },
+          {
+            "word": "gathering",
+            "translate": "אסיפה",
+            "sentence": "I am not much for the family gathering."
+          },
+          {
+            "word": "boring",
+            "translate": "משעמם",
+            "sentence": "You ever sit there, and the conversation's so boring, it's so dull?"
+          },
+          {
+            "word": "fantasize",
+            "translate": "לפנטז",
+            "sentence": "You start to fantasize about jumping out the window."
+          },
+          {
+            "word": "family",
+            "translate": "משפחה",
+            "sentence": "I am not much for the family gathering."
+          },
+          {
+            "word": "police",
+            "translate": "משטרה",
+            "sentence": "They got the leisure police."
+          }
+        ],
+        "medium": [
+          {
+            "word": "leisure",
+            "translate": "פנאי",
+            "sentence": "They got the leisure police."
+          },
+          {
+            "word": "individualist",
+            "translate": "אינדיבידואליסט",
+            "sentence": "Well, the man's an individualist."
+          },
+          {
+            "word": "trench",
+            "translate": "מעיל חפירות",
+            "sentence": "I came up with the idea for the beltless trench coat."
+          },
+          {
+            "word": "incredible",
+            "translate": "לא ייאמן",
+            "sentence": "I made an incredible play in the field."
+          },
+          {
+            "word": "championship",
+            "translate": "אליפות",
+            "sentence": "We'll be in the championship game on Wednesday."
+          },
+          {
+            "word": "field",
+            "translate": "שדה",
+            "sentence": "I made an incredible play in the field."
+          },
+          {
+            "word": "commissioner",
+            "translate": "נציב",
+            "sentence": "The Parks commissioner is recommending Jeffrey for a citation."
+          },
+          {
+            "word": "citation",
+            "translate": "ציון לשבח",
+            "sentence": "The Parks commissioner is recommending Jeffrey for a citation."
+          },
+          {
+            "word": "recommend",
+            "translate": "להמליץ",
+            "sentence": "The Parks commissioner is recommending Jeffrey for a citation."
+          },
+          {
+            "word": "comfortable",
+            "translate": "נוח",
+            "sentence": "I'll get comfortable with the new setup."
+          },
+          {
+            "word": "lifestyle",
+            "translate": "אורח חיים",
+            "sentence": "You're not gonna believe it when you see it. Whole new lifestyle."
+          },
+          {
+            "word": "configuration",
+            "translate": "תצורה",
+            "sentence": "I'm completely changing the configuration of the apartment."
+          },
+          {
+            "word": "levels",
+            "translate": "רמות",
+            "sentence": "I'm getting rid of all my furniture, and I'm gonna build these different levels."
+          },
+          {
+            "word": "plans",
+            "translate": "תוכניות",
+            "sentence": "You drew up plans for this?"
+          },
+          {
+            "word": "bet",
+            "translate": "להמר",
+            "sentence": "I'll even bet you a big dinner with dessert."
+          }
+        ],
+        "hard": [
+          {
+            "word": "ultimate",
+            "translate": "סופי",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "psychological",
+            "translate": "פסיכולוגי",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "imagine",
+            "translate": "לדמיין",
+            "sentence": "What will happen? Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "possible",
+            "translate": "אפשרי",
+            "sentence": "Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "zooming",
+            "translate": "מזנק",
+            "sentence": "Yeah, come on over here, pal. We're zooming over here."
+          },
+          {
+            "word": "backwards",
+            "translate": "לאחור",
+            "sentence": "Will it start moving backwards? Is that possible?"
+          },
+          {
+            "word": "dead stop",
+            "translate": "עצירה מוחלטת",
+            "sentence": "The ultimate psychological test of traffic is the total dead stop."
+          },
+          {
+            "word": "fantasize",
+            "translate": "לפנטז",
+            "sentence": "You start to fantasize about jumping out the window."
+          },
+          {
+            "word": "future",
+            "translate": "עתיד",
+            "sentence": "But we know that in the future, traffic will get even worse than that."
+          },
+          {
+            "word": "window",
+            "translate": "חלון",
+            "sentence": "You look out the window, you see gum clearly."
+          },
+          {
+            "word": "secret",
+            "translate": "סוד",
+            "sentence": "This is the secret lane, nobody knows about it."
+          },
+          {
+            "word": "caring",
+            "translate": "אכפתיות",
+            "sentence": "You think dead people care who's at their funeral?"
+          },
+          {
+            "word": "comment",
+            "translate": "הערה",
+            "sentence": "It was an innocent comment."
+          },
+          {
+            "word": "funeral",
+            "translate": "לוויה",
+            "sentence": "You think dead people care who's at their funeral?"
+          },
+          {
+            "word": "imaginary",
+            "translate": "דמיוני",
+            "sentence": "You start to fantasize about jumping out the window."
+          }
+        ]
+      },
+      "episode-3": {
+        "easy": [
+          {
+            "word": "clothes",
+            "translate": "בגדים",
+            "sentence": "I hate clothes, okay?"
+          },
+          {
+            "word": "buying",
+            "translate": "לקנות",
+            "sentence": "I hate buying them."
+          },
+          {
+            "word": "closet",
+            "translate": "ארון",
+            "sentence": "I hate picking them out of my closet."
+          },
+          {
+            "word": "outfit",
+            "translate": "תלבושת",
+            "sentence": "I can't stand every day trying to come up with little outfits for myself."
+          },
+          {
+            "word": "fashion",
+            "translate": "אופנה",
+            "sentence": "I think eventually... fashion won't even exist."
+          },
+          {
+            "word": "movie",
+            "translate": "סרט",
+            "sentence": "Any time I see a movie or a TV show where there's people from the future..."
+          },
+          {
+            "word": "future",
+            "translate": "עתיד",
+            "sentence": "Any time I see a movie or a TV show where there's people from the future..."
+          },
+          {
+            "word": "silver",
+            "translate": "כסף (צבע)",
+            "sentence": "One-piece silver jumpsuit, V-stripe and boots. That's it."
+          },
+          {
+            "word": "jacket",
+            "translate": "מעיל",
+            "sentence": "This may be the most perfect jacket I have ever put on."
+          },
+          {
+            "word": "back",
+            "translate": "מאחור",
+            "sentence": "I might have something in the back."
+          },
+          {
+            "word": "store",
+            "translate": "חנות",
+            "sentence": "Why don't they open an entire store for the back?"
+          },
+          {
+            "word": "candy",
+            "translate": "ממתק",
+            "sentence": "What's with the pink lining with the candy stripes?"
+          },
+          {
+            "word": "drink",
+            "translate": "משקה",
+            "sentence": "Want a drink?"
+          },
+          {
+            "word": "restaurant",
+            "translate": "מסעדה",
+            "sentence": "We'll head up to the restaurant."
+          },
+          {
+            "word": "ice",
+            "translate": "קרח",
+            "sentence": "I'll have another scotch with plenty of ice."
+          }
+        ],
+        "medium": [
+          {
+            "word": "closet",
+            "translate": "ארון",
+            "sentence": "I hate picking them out of my closet."
+          },
+          {
+            "word": "stand",
+            "translate": "לסבול",
+            "sentence": "I can't stand every day trying to come up with little outfits for myself."
+          },
+          {
+            "word": "exist",
+            "translate": "קיים",
+            "sentence": "I think eventually... fashion won't even exist."
+          },
+          {
+            "word": "people",
+            "translate": "אנשים",
+            "sentence": "Any time I see a movie or a TV show where there's people from the future..."
+          },
+          {
+            "word": "uniform",
+            "translate": "מדים",
+            "sentence": "Somehow they decided, 'This is going to be our uniform.'"
+          },
+          {
+            "word": "propose",
+            "translate": "להציע",
+            "sentence": "Candidates propose different outfits. No speeches."
+          },
+          {
+            "word": "twirl",
+            "translate": "לסובב",
+            "sentence": "They walk out, twirl, walk off."
+          },
+          {
+            "word": "audience",
+            "translate": "קהל",
+            "sentence": "We just sit in the audience and go, 'That was nice. I could wear that.'"
+          },
+          {
+            "word": "comfortable",
+            "translate": "נוח",
+            "sentence": "You'll tell me when you feel comfortable."
+          },
+          {
+            "word": "nervous",
+            "translate": "עצבני",
+            "sentence": "Tonight I might've been a little nervous, but inside this jacket..."
+          },
+          {
+            "word": "confidence",
+            "translate": "ביטחון",
+            "sentence": "...it's with a whole different confidence."
+          },
+          {
+            "word": "audience",
+            "translate": "קהל",
+            "sentence": "We just sit in the audience and go, 'That was nice. I could wear that.'"
+          },
+          {
+            "word": "solid",
+            "translate": "טובה",
+            "sentence": "George, do me a solid. Two minutes."
+          },
+          {
+            "word": "lifetime",
+            "translate": "חיים שלמים",
+            "sentence": "By his conception of time, his life will last over 2000 years."
+          },
+          {
+            "word": "uncomfortable",
+            "translate": "לא נוח",
+            "sentence": "Dad can make some people a little uncomfortable."
+          }
+        ],
+        "hard": [
+          {
+            "word": "eventually",
+            "translate": "בסופו של דבר",
+            "sentence": "I think eventually... fashion won't even exist."
+          },
+          {
+            "word": "decided",
+            "translate": "החליט",
+            "sentence": "Somehow they decided, 'This is going to be our uniform.'"
+          },
+          {
+            "word": "candidates",
+            "translate": "מועמדים",
+            "sentence": "Candidates propose different outfits. No speeches."
+          },
+          {
+            "word": "propose",
+            "translate": "להציע",
+            "sentence": "Candidates propose different outfits. No speeches."
+          },
+          {
+            "word": "outfit",
+            "translate": "תלבושת",
+            "sentence": "I can't stand every day trying to come up with little outfits for myself."
+          },
+          {
+            "word": "audience",
+            "translate": "קהל",
+            "sentence": "We just sit in the audience and go, 'That was nice. I could wear that.'"
+          },
+          {
+            "word": "uniform",
+            "translate": "מדים",
+            "sentence": "Somehow they decided, 'This is going to be our uniform.'"
+          },
+          {
+            "word": "composer",
+            "translate": "מלחין",
+            "sentence": "You don't know Robert Schumann, the composer?"
+          },
+          {
+            "word": "institutionalised",
+            "translate": "מאושפז",
+            "sentence": "He had to be institutionalised."
+          },
+          {
+            "word": "remarkable",
+            "translate": "יוצא דופן",
+            "sentence": "This jacket is remarkable."
+          },
+          {
+            "word": "trembling",
+            "translate": "רועד",
+            "sentence": "The waiter was trembling."
+          },
+          {
+            "word": "brilliant",
+            "translate": "מבריק",
+            "sentence": "I thought it was just brilliant."
+          },
+          {
+            "word": "relocated",
+            "translate": "הועבר",
+            "sentence": "There's no park... and the team has relocated."
+          },
+          {
+            "word": "conception",
+            "translate": "תפיסה",
+            "sentence": "By his conception of time, his life will last over 2000 years."
+          },
+          {
+            "word": "staunch",
+            "translate": "נחוש",
+            "sentence": "I say this with an unblemished record of staunch heterosexuality."
+          }
+        ]
+      },
+      "episode-4": {
+        "easy": [
+          {
+            "word": "television",
+            "translate": "טלוויזיה",
+            "sentence": "The bad thing about television..."
+          },
+          {
+            "word": "commercial",
+            "translate": "פרסומת",
+            "sentence": "The soda commercial people."
+          },
+          {
+            "word": "smiling",
+            "translate": "מחייכת",
+            "sentence": "She was smiling at me."
+          },
+          {
+            "word": "apple",
+            "translate": "תפוח",
+            "sentence": "I started eating an apple."
+          },
+          {
+            "word": "soda",
+            "translate": "סודה",
+            "sentence": "We have soda! We have soda!"
+          },
+          {
+            "word": "fun",
+            "translate": "כיף",
+            "sentence": "Some people have a little too much fun."
+          },
+          {
+            "word": "girls",
+            "translate": "בנות",
+            "sentence": "Girls in bikinis."
+          },
+          {
+            "word": "enthusiastic",
+            "translate": "נלהב",
+            "sentence": "She gives me an enthusiastic 'Hi!'"
+          },
+          {
+            "word": "smile",
+            "translate": "חיוך",
+            "sentence": "When women smile, I don't know what it means."
+          },
+          {
+            "word": "crumbs",
+            "translate": "פירורים",
+            "sentence": "With crumbs on their face."
+          },
+          {
+            "word": "jet-skiing",
+            "translate": "סקי מים",
+            "sentence": "They're jet-skiing."
+          },
+          {
+            "word": "washing",
+            "translate": "כביסה",
+            "sentence": "I can't stand doing laundry."
+          },
+          {
+            "word": "underwear",
+            "translate": "תחתונים",
+            "sentence": "That's why I have 40 pairs of underwear."
+          },
+          {
+            "word": "bikinis",
+            "translate": "ביקיני",
+            "sentence": "Girls in bikinis."
+          },
+          {
+            "word": "interpret",
+            "translate": "לפרש",
+            "sentence": "Sometimes I interpret it like they're psychotic."
+          }
+        ],
+        "medium": [
+          {
+            "word": "volleyballs",
+            "translate": "כדורי עף",
+            "sentence": "They're spiking volleyballs."
+          },
+          {
+            "word": "nervousness",
+            "translate": "לחץ",
+            "sentence": "To cover my nervousness, I started eating an apple."
+          },
+          {
+            "word": "mental",
+            "translate": "מנטלי",
+            "sentence": "I gotta get into a mental state."
+          },
+          {
+            "word": "casual",
+            "translate": "אגב",
+            "sentence": "It makes you sound casual."
+          },
+          {
+            "word": "advertising",
+            "translate": "פרסום",
+            "sentence": "They're advertising right there on TV."
+          },
+          {
+            "word": "shamed",
+            "translate": "התבייש",
+            "sentence": "He shamed me into it."
+          },
+          {
+            "word": "invited",
+            "translate": "הזמין",
+            "sentence": "She invites me up at 12:00 at night for coffee."
+          },
+          {
+            "word": "interpret",
+            "translate": "לפרש",
+            "sentence": "Sometimes I interpret it like they're psychotic."
+          },
+          {
+            "word": "commercial",
+            "translate": "פרסומת",
+            "sentence": "I like that commercial."
+          },
+          {
+            "word": "subtle",
+            "translate": "עדין",
+            "sentence": "That's the subtle point."
+          },
+          {
+            "word": "magnify",
+            "translate": "להגדיל",
+            "sentence": "You have to magnify everything about them."
+          },
+          {
+            "word": "subtle",
+            "translate": "עדין",
+            "sentence": "That's the subtle point."
+          },
+          {
+            "word": "scrutiny",
+            "translate": "בחינה מדוקדקת",
+            "sentence": "The scrutiny you put each other through."
+          },
+          {
+            "word": "rude",
+            "translate": "גס רוח",
+            "sentence": "That's so rude."
+          },
+          {
+            "word": "awkward",
+            "translate": "מביך",
+            "sentence": "I feel awkward in those situations."
+          }
+        ],
+        "hard": [
+          {
+            "word": "enthusiasm",
+            "translate": "התלהבות",
+            "sentence": "Where do they summon this enthusiasm?"
+          },
+          {
+            "word": "psychotic",
+            "translate": "פסיכוטי",
+            "sentence": "Sometimes I interpret it like they're psychotic."
+          },
+          {
+            "word": "interpret",
+            "translate": "לפרש",
+            "sentence": "Sometimes I interpret it like they're psychotic."
+          },
+          {
+            "word": "intolerant",
+            "translate": "בלתי סובלני",
+            "sentence": "I'm lactose intolerant."
+          },
+          {
+            "word": "courtesy",
+            "translate": "אדיבות",
+            "sentence": "It's common courtesy."
+          },
+          {
+            "word": "enthusiastic",
+            "translate": "נלהב",
+            "sentence": "She gives me an enthusiastic 'Hi!'"
+          },
+          {
+            "word": "Mussolini",
+            "translate": "מוסוליני",
+            "sentence": "I let fly like Mussolini from the balcony."
+          },
+          {
+            "word": "volcano",
+            "translate": "הר געש",
+            "sentence": "Yesterday, I'm a volcano."
+          },
+          {
+            "word": "diary",
+            "translate": "יומן",
+            "sentence": "He kept a detailed diary."
+          },
+          {
+            "word": "sarcasm",
+            "translate": "סרקזם",
+            "sentence": "She didn't get my sarcasm."
+          },
+          {
+            "word": "volcano",
+            "translate": "הר געש",
+            "sentence": "Yesterday, I'm a volcano."
+          },
+          {
+            "word": "reluctant",
+            "translate": "מסויג",
+            "sentence": "I was reluctant to ask her out."
+          },
+          {
+            "word": "coincidence",
+            "translate": "צירוף מקרים",
+            "sentence": "Isn't that a coincidence?"
+          },
+          {
+            "word": "nonchalant",
+            "translate": "חסר דאגה",
+            "sentence": "He acted nonchalant about it."
+          },
+          {
+            "word": "ultimatum",
+            "translate": "אולטימטום",
+            "sentence": "I gave her an ultimatum."
+          }
+        ]
+      },
+      "episode-5": {
+        "easy": [
+          {
+            "word": "apartment",
+            "translate": "דירה",
+            "sentence": "Well, I painted my apartment again."
+          },
+          {
+            "word": "living",
+            "translate": "לגור",
+            "sentence": "I've been living there for years."
+          },
+          {
+            "word": "paint",
+            "translate": "לצבוע",
+            "sentence": "Every time I paint it, it gets me down."
+          },
+          {
+            "word": "room",
+            "translate": "חדר",
+            "sentence": "My idea of the perfect living room..."
+          },
+          {
+            "word": "friend",
+            "translate": "חבר",
+            "sentence": "On Sunday, my friend is having a brunch."
+          },
+          {
+            "word": "race",
+            "translate": "מרוץ",
+            "sentence": "Has a perfect view of the race."
+          },
+          {
+            "word": "neighbour",
+            "translate": "שכן",
+            "sentence": "We can exchange keys so we can come in and out."
+          },
+          {
+            "word": "mousse",
+            "translate": "מוס",
+            "sentence": "I put mousse in my hair."
+          },
+          {
+            "word": "think",
+            "translate": "לחשוב",
+            "sentence": "I look around and I think..."
+          },
+          {
+            "word": "perfect",
+            "translate": "מושלם",
+            "sentence": "My idea of the perfect living room..."
+          },
+          {
+            "word": "building",
+            "translate": "בניין",
+            "sentence": "I got you an apartment in this building."
+          },
+          {
+            "word": "shower",
+            "translate": "מקלחת",
+            "sentence": "The water pressure's terrible in my building."
+          },
+          {
+            "word": "breakdown",
+            "translate": "התמוטטות",
+            "sentence": "I'm headed for a breakdown."
+          },
+          {
+            "word": "chair",
+            "translate": "כיסא",
+            "sentence": "Big chair, nice screen, remote control."
+          },
+          {
+            "word": "screen",
+            "translate": "מסך",
+            "sentence": "Big chair, nice screen, remote control."
+          }
+        ],
+        "medium": [
+          {
+            "word": "thickness",
+            "translate": "עובי",
+            "sentence": "It's the thickness of the paint."
+          },
+          {
+            "word": "remote",
+            "translate": "שלט",
+            "sentence": "Big chair, nice screen, remote control."
+          },
+          {
+            "word": "fantasy",
+            "translate": "פנטזיה",
+            "sentence": "Star Trek really was the ultimate male fantasy."
+          },
+          {
+            "word": "bridge",
+            "translate": "גשר",
+            "sentence": "The bridge on the starship Enterprise."
+          },
+          {
+            "word": "marathon",
+            "translate": "מרתון",
+            "sentence": "A brunch for the New York Marathon."
+          },
+          {
+            "word": "clumsy",
+            "translate": "מגושם",
+            "sentence": "I feel clumsy and awkward."
+          },
+          {
+            "word": "tenants",
+            "translate": "דיירים",
+            "sentence": "The tenants in the building are noisy."
+          },
+          {
+            "word": "pressure",
+            "translate": "לחץ",
+            "sentence": "The water pressure's terrible in my building."
+          },
+          {
+            "word": "boring",
+            "translate": "משעמם",
+            "sentence": "The movie was boring."
+          },
+          {
+            "word": "shame",
+            "translate": "בושה",
+            "sentence": "That's a shame."
+          },
+          {
+            "word": "cafeteria",
+            "translate": "קפיטריה",
+            "sentence": "Let's meet at the cafeteria."
+          },
+          {
+            "word": "terrific",
+            "translate": "נפלא",
+            "sentence": "The performance was terrific."
+          },
+          {
+            "word": "married",
+            "translate": "נשוי",
+            "sentence": "It's tough being married."
+          },
+          {
+            "word": "conversation",
+            "translate": "שיחה",
+            "sentence": "I enjoyed our conversation."
+          },
+          {
+            "word": "horrifying",
+            "translate": "מבעית",
+            "sentence": "It was horrifying."
+          }
+        ],
+        "hard": [
+          {
+            "word": "enthusiastically",
+            "translate": "בהתלהבות",
+            "sentence": "He greeted me enthusiastically."
+          },
+          {
+            "word": "psychological",
+            "translate": "פסיכולוגי",
+            "sentence": "It was a psychological experiment."
+          },
+          {
+            "word": "exhausted",
+            "translate": "מותש",
+            "sentence": "I was emotionally exhausted."
+          },
+          {
+            "word": "confront",
+            "translate": "להתעמת",
+            "sentence": "I don't have to confront her."
+          },
+          {
+            "word": "rehabilitation",
+            "translate": "שיקום",
+            "sentence": "She went to a rehabilitation clinic."
+          },
+          {
+            "word": "frequency",
+            "translate": "תדירות",
+            "sentence": "The frequency of the noise was unbearable."
+          },
+          {
+            "word": "clinical",
+            "translate": "קליני",
+            "sentence": "It was a clinical diagnosis."
+          },
+          {
+            "word": "significance",
+            "translate": "משמעות",
+            "sentence": "The significance of the event was profound."
+          },
+          {
+            "word": "trajectory",
+            "translate": "מסלול",
+            "sentence": "The trajectory of the ball was impressive."
+          },
+          {
+            "word": "discomfort",
+            "translate": "אי נוחות",
+            "sentence": "I felt a lot of discomfort."
+          },
+          {
+            "word": "phenomenon",
+            "translate": "תופעה",
+            "sentence": "It was an unusual phenomenon."
+          },
+          {
+            "word": "philosophy",
+            "translate": "פילוסופיה",
+            "sentence": "He studied philosophy in college."
+          },
+          {
+            "word": "unbelievable",
+            "translate": "לא ייאמן",
+            "sentence": "It was unbelievable."
+          },
+          {
+            "word": "catastrophe",
+            "translate": "אסון",
+            "sentence": "The earthquake was a catastrophe."
+          },
+          {
+            "word": "insurmountable",
+            "translate": "בלתי עביר",
+            "sentence": "The challenge seemed insurmountable."
+          }
+        ]
+      },
+      "episode-6": {
+        "easy": [
+          {
+            "word": "exciting",
+            "translate": "מרגש",
+            "sentence": "I did get some very exciting news recently."
+          },
+          {
+            "word": "envelope",
+            "translate": "מעטפה",
+            "sentence": "According to the information that I have in the envelope..."
+          },
+          {
+            "word": "valuable",
+            "translate": "יקר ערך",
+            "sentence": "I may have already won some very valuable prizes."
+          },
+          {
+            "word": "definitely",
+            "translate": "בהחלט",
+            "sentence": "Just tell people the truth one time: 'You have definitely lost.'"
+          },
+          {
+            "word": "tease",
+            "translate": "למשוך",
+            "sentence": "They tease you with, 'You may have already won.'"
+          },
+          {
+            "word": "parents",
+            "translate": "הורים",
+            "sentence": "I was supposed to send it to my parents, but they didn't want it."
+          },
+          {
+            "word": "clothes",
+            "translate": "בגדים",
+            "sentence": "Grandpa clothes. I can't wear them."
+          },
+          {
+            "word": "honest",
+            "translate": "כנה",
+            "sentence": "She's good, she's honest."
+          },
+          {
+            "word": "clean",
+            "translate": "לנקות",
+            "sentence": "Look at this place. I can't wait to get it cleaned."
+          },
+          {
+            "word": "sock",
+            "translate": "גרב",
+            "sentence": "You want these? Knee socks. You don't wear knee socks."
+          },
+          {
+            "word": "statue",
+            "translate": "פסל",
+            "sentence": "When I was 10 years old, my parents had this very same statue."
+          },
+          {
+            "word": "manuscript",
+            "translate": "כתב יד",
+            "sentence": "I'm going to Rava's. I gotta pick up her manuscript."
+          },
+          {
+            "word": "graduation",
+            "translate": "סיום לימודים",
+            "sentence": "Her boyfriend goes to Columbia grad school."
+          },
+          {
+            "word": "friend",
+            "translate": "חבר",
+            "sentence": "Elaine, dear friend."
+          },
+          {
+            "word": "cleaning",
+            "translate": "ניקיון",
+            "sentence": "I didn't just clean your apartment; it was a ritual."
+          }
+        ],
+        "medium": [
+          {
+            "word": "sweepstakes",
+            "translate": "הגרלות",
+            "sentence": "That annoys me about sweepstakes."
+          },
+          {
+            "word": "mantel",
+            "translate": "מדף אח",
+            "sentence": "My parents had this very same statue on the mantel."
+          },
+          {
+            "word": "rehearse",
+            "translate": "לחזור על",
+            "sentence": "They rehearse all the time?"
+          },
+          {
+            "word": "anathema",
+            "translate": "חרם",
+            "sentence": "Students can't clean. It's anathema."
+          },
+          {
+            "word": "suit",
+            "translate": "חליפה",
+            "sentence": "Okay, I'm gonna take the suit and shoes and the hat."
+          },
+          {
+            "word": "ceremony",
+            "translate": "טקס",
+            "sentence": "It was a ritual, a ceremony."
+          },
+          {
+            "word": "celebration",
+            "translate": "חגיגה",
+            "sentence": "A celebration of life."
+          },
+          {
+            "word": "tremendous",
+            "translate": "אדיר",
+            "sentence": "You really did a tremendous job cleaning that apartment."
+          },
+          {
+            "word": "uncoagulated",
+            "translate": "לא קרוש",
+            "sentence": "He uncoagulated the top of the dishwashing liquid."
+          },
+          {
+            "word": "coinicidence",
+            "translate": "צירוף מקרים",
+            "sentence": "Maybe it just looks the same. It's a coincidence."
+          },
+          {
+            "word": "verbose",
+            "translate": "פטפטן",
+            "sentence": "No, actually, I find you quite charming. A bit verbose at times."
+          },
+          {
+            "word": "professional",
+            "translate": "מקצועי",
+            "sentence": "Ray Thomas is my professional name."
+          },
+          {
+            "word": "facial",
+            "translate": "פנים",
+            "sentence": "I just remembered, I'm getting a facial."
+          },
+          {
+            "word": "registrar",
+            "translate": "רשם",
+            "sentence": "I called the registrar's office."
+          },
+          {
+            "word": "cynical",
+            "translate": "ציני",
+            "sentence": "It's made me more cynical, more bitter, more jaded."
+          }
+        ],
+        "hard": [
+          {
+            "word": "preposterous",
+            "translate": "אבסורדי",
+            "sentence": "That is a preposterous notion."
+          },
+          {
+            "word": "subterfuge",
+            "translate": "תחבולה",
+            "sentence": "His subterfuge was uncovered quickly."
+          },
+          {
+            "word": "anachronism",
+            "translate": "אנכרוניזם",
+            "sentence": "The old statue was an anachronism in the modern room."
+          },
+          {
+            "word": "cognizant",
+            "translate": "מודע",
+            "sentence": "You must be cognizant of the consequences."
+          },
+          {
+            "word": "emblazoned",
+            "translate": "מעוטר",
+            "sentence": "The shield was emblazoned with a dragon."
+          },
+          {
+            "word": "jubilant",
+            "translate": "צהלה",
+            "sentence": "The fans were jubilant after the victory."
+          },
+          {
+            "word": "reticent",
+            "translate": "שקט",
+            "sentence": "She was reticent about her plans."
+          },
+          {
+            "word": "verisimilitude",
+            "translate": "אשליה",
+            "sentence": "The play lacked verisimilitude."
+          },
+          {
+            "word": "magnanimous",
+            "translate": "נדיב",
+            "sentence": "He was magnanimous in defeat."
+          },
+          {
+            "word": "discombobulate",
+            "translate": "לבלבל",
+            "sentence": "The twist ending discombobulated the audience."
+          },
+          {
+            "word": "idiosyncratic",
+            "translate": "אידיאוסינקרטי",
+            "sentence": "His behavior was idiosyncratic."
+          },
+          {
+            "word": "lugubrious",
+            "translate": "עַגְמוּמִי",
+            "sentence": "He had a lugubrious expression."
+          },
+          {
+            "word": "circumstantial",
+            "translate": "נסיבתי",
+            "sentence": "The evidence was purely circumstantial."
+          },
+          {
+            "word": "scintillating",
+            "translate": "מרתק",
+            "sentence": "The conversation was scintillating."
+          },
+          {
+            "word": "misconstrue",
+            "translate": "לפרש לא נכון",
+            "sentence": "Don't misconstrue my actions."
+          }
+        ]
+      },
+      "episode-7": {
+        "easy": [
+          {
+            "word": "criminal",
+            "translate": "פושע",
+            "sentence": "Whenever I see the news and they're hauling in some criminal..."
+          },
+          {
+            "word": "terrorist",
+            "translate": "טרוריסט",
+            "sentence": "...hauling in some criminal, terrorist, psycho, maniac, mass-murderer guy..."
+          },
+          {
+            "word": "psycho",
+            "translate": "פסיכו",
+            "sentence": "...hauling in some criminal, terrorist, psycho, maniac, mass-murderer guy..."
+          },
+          {
+            "word": "maniac",
+            "translate": "מאניאק",
+            "sentence": "...hauling in some criminal, terrorist, psycho, maniac, mass-murderer guy..."
+          },
+          {
+            "word": "mass-murderer",
+            "translate": "רוצח המונים",
+            "sentence": "...hauling in some criminal, terrorist, psycho, maniac, mass-murderer guy..."
+          },
+          {
+            "word": "reputation",
+            "translate": "מוניטין",
+            "sentence": "What is this man's reputation that he has to worry about this kind of exposure?"
+          },
+          {
+            "word": "promotion",
+            "translate": "קידום",
+            "sentence": "Is he up for a big job promotion down at the office or something?"
+          },
+          {
+            "word": "office",
+            "translate": "משרד",
+            "sentence": "Is he up for a big job promotion down at the office or something?"
+          },
+          {
+            "word": "aptitude",
+            "translate": "כישרון",
+            "sentence": "He should be in bill collection. I think he's got aptitude."
+          },
+          {
+            "word": "laughingstock",
+            "translate": "מושא ללעג",
+            "sentence": "You are a laughingstock. You are a joke."
+          },
+          {
+            "word": "accomplishing",
+            "translate": "להשיג",
+            "sentence": "At least I'd respect the guy for accomplishing something."
+          },
+          {
+            "word": "announcer",
+            "translate": "כרוז",
+            "sentence": "Maybe I could be, like, an announcer, like, a color man."
+          },
+          {
+            "word": "union",
+            "translate": "איגוד",
+            "sentence": "And it's probably a union thing."
+          },
+          {
+            "word": "projector",
+            "translate": "מקרן",
+            "sentence": "But you got to know how to work the projector."
+          },
+          {
+            "word": "broadcasting",
+            "translate": "שידור",
+            "sentence": "...people that are, you know, in broadcasting."
+          }
+        ],
+        "medium": [
+          {
+            "word": "threatening",
+            "translate": "מאיים",
+            "sentence": "He's been threatening to do this for years."
+          },
+          {
+            "word": "respect",
+            "translate": "כבוד",
+            "sentence": "At least I'd respect the guy for accomplishing something."
+          },
+          {
+            "word": "disgusting",
+            "translate": "מגעיל",
+            "sentence": "We share it with Pace Electronics. It's disgusting!"
+          },
+          {
+            "word": "emotion",
+            "translate": "רגש",
+            "sentence": "You're an emotional person."
+          },
+          {
+            "word": "living",
+            "translate": "חי",
+            "sentence": "The best revenge is living well."
+          },
+          {
+            "word": "laundromat",
+            "translate": "מכבסה",
+            "sentence": "Elaine, take a walk with me to the Laundromat."
+          },
+          {
+            "word": "antagonize",
+            "translate": "לעורר התנגדות",
+            "sentence": "Maybe I antagonized him."
+          },
+          {
+            "word": "aptitude",
+            "translate": "כושר",
+            "sentence": "He should be in bill collection. I think he's got aptitude."
+          },
+          {
+            "word": "embarrassing",
+            "translate": "מביך",
+            "sentence": "It was an embarrassing moment."
+          },
+          {
+            "word": "retaliate",
+            "translate": "לנקום",
+            "sentence": "He's going to retaliate."
+          },
+          {
+            "word": "feign",
+            "translate": "לזייף",
+            "sentence": "He can feign interest."
+          },
+          {
+            "word": "humiliate",
+            "translate": "להשפיל",
+            "sentence": "You can't humiliate him like that."
+          },
+          {
+            "word": "gossip",
+            "translate": "רכילות",
+            "sentence": "Office gossip can be dangerous."
+          },
+          {
+            "word": "office",
+            "translate": "משרד",
+            "sentence": "Working in an office can be stressful."
+          },
+          {
+            "word": "exaggerate",
+            "translate": "להגזים",
+            "sentence": "People tend to exaggerate."
+          }
+        ],
+        "hard": [
+          {
+            "word": "psychological",
+            "translate": "פסיכולוגי",
+            "sentence": "It's a psychological phenomenon."
+          },
+          {
+            "word": "self-conscious",
+            "translate": "מודע לעצמו",
+            "sentence": "He was very self-conscious."
+          },
+          {
+            "word": "reprimand",
+            "translate": "לנזוף",
+            "sentence": "The boss gave him a reprimand."
+          },
+          {
+            "word": "articulate",
+            "translate": "לבטא",
+            "sentence": "He was very articulate in his speech."
+          },
+          {
+            "word": "sophisticated",
+            "translate": "מתוחכם",
+            "sentence": "She had a sophisticated taste."
+          },
+          {
+            "word": "conscientious",
+            "translate": "מצפוני",
+            "sentence": "He was a conscientious worker."
+          },
+          {
+            "word": "superfluous",
+            "translate": "מיותר",
+            "sentence": "The details were superfluous."
+          },
+          {
+            "word": "circumstantial",
+            "translate": "נסיבתי",
+            "sentence": "The evidence was circumstantial."
+          },
+          {
+            "word": "unprecedented",
+            "translate": "חסר תקדים",
+            "sentence": "It was an unprecedented event."
+          },
+          {
+            "word": "contemplate",
+            "translate": "להרהר",
+            "sentence": "He started to contemplate his actions."
+          },
+          {
+            "word": "meticulous",
+            "translate": "מדוקדק",
+            "sentence": "She was meticulous in her work."
+          },
+          {
+            "word": "charismatic",
+            "translate": "כריזמטי",
+            "sentence": "The leader was very charismatic."
+          },
+          {
+            "word": "surreptitious",
+            "translate": "חמקני",
+            "sentence": "He made a surreptitious glance."
+          },
+          {
+            "word": "autonomous",
+            "translate": "אוטונומי",
+            "sentence": "The region is largely autonomous."
+          },
+          {
+            "word": "disparaging",
+            "translate": "מזלזל",
+            "sentence": "He made a disparaging remark."
+          }
+        ]
+      },
+      "episode-8": {
+        "easy": [
+          {
+            "word": "cookie",
+            "translate": "עוגייה",
+            "sentence": "As an adult, if I want a cookie, I have a cookie."
+          },
+          {
+            "word": "appetite",
+            "translate": "תיאבון",
+            "sentence": "Many times, I will intentionally ruin my entire appetite."
+          },
+          {
+            "word": "danger",
+            "translate": "סכנה",
+            "sentence": "There's no danger in running out of appetites."
+          },
+          {
+            "word": "planet",
+            "translate": "כוכב לכת",
+            "sentence": "The planet's on fire!"
+          },
+          {
+            "word": "solar system",
+            "translate": "מערכת השמש",
+            "sentence": "The planets of our solar system incinerating..."
+          },
+          {
+            "word": "fire",
+            "translate": "אש",
+            "sentence": "The planet's on fire!"
+          },
+          {
+            "word": "doctor",
+            "translate": "רופא",
+            "sentence": "Women go after doctors like men go after models."
+          },
+          {
+            "word": "cucumber",
+            "translate": "מלפפון",
+            "sentence": "What do you got, a cucumber?"
+          },
+          {
+            "word": "salad",
+            "translate": "סלט",
+            "sentence": "They refuse to put cucumber in the salad."
+          },
+          {
+            "word": "read",
+            "translate": "לקרוא",
+            "sentence": "I can't read this."
+          },
+          {
+            "word": "heart attack",
+            "translate": "התקף לב",
+            "sentence": "I think I'm having a heart attack."
+          },
+          {
+            "word": "hospital",
+            "translate": "בית חולים",
+            "sentence": "You want me to take you to the hospital?"
+          },
+          {
+            "word": "ambulance",
+            "translate": "אמבולנס",
+            "sentence": "I'll call an ambulance."
+          },
+          {
+            "word": "surprise",
+            "translate": "הפתעה",
+            "sentence": "What a surprise."
+          },
+          {
+            "word": "tonsils",
+            "translate": "שקדים",
+            "sentence": "Have you ever had your tonsils taken out?"
+          }
+        ],
+        "medium": [
+          {
+            "word": "adulthood",
+            "translate": "בגרות",
+            "sentence": "I gotta say that I'm enjoying adulthood for a lot of reasons."
+          },
+          {
+            "word": "intentionally",
+            "translate": "בכוונה",
+            "sentence": "Many times, I will intentionally ruin my entire appetite."
+          },
+          {
+            "word": "incinerating",
+            "translate": "נשרפים",
+            "sentence": "The planets of our solar system incinerating like flaming globes."
+          },
+          {
+            "word": "prophesised",
+            "translate": "ניבא",
+            "sentence": "It is just as you prophesised!"
+          },
+          {
+            "word": "tightness",
+            "translate": "הידוק",
+            "sentence": "Tightness, shortness of breath."
+          },
+          {
+            "word": "radiating",
+            "translate": "קורן",
+            "sentence": "Radiating waves of pain."
+          },
+          {
+            "word": "shortness",
+            "translate": "קוצר",
+            "sentence": "Shortness of breath."
+          },
+          {
+            "word": "surgery",
+            "translate": "ניתוח",
+            "sentence": "You want to take care of your tonsils, do it in a hospital with a doctor."
+          },
+          {
+            "word": "observation",
+            "translate": "תצפית",
+            "sentence": "No, we'd like to keep him overnight for observation, just to be safe."
+          },
+          {
+            "word": "gamma rays",
+            "translate": "קרני גמא",
+            "sentence": "Yeah, if you've been exposed to gamma rays."
+          },
+          {
+            "word": "alternative",
+            "translate": "חלופה",
+            "sentence": "Kramer tells me that you are interested in an alternative to surgery."
+          },
+          {
+            "word": "herbalist",
+            "translate": "הרבליסט",
+            "sentence": "He's an herbalist, a healer, George."
+          },
+          {
+            "word": "holistic",
+            "translate": "הוליסטי",
+            "sentence": "He's holistic."
+          },
+          {
+            "word": "expensive",
+            "translate": "יקר",
+            "sentence": "They want to sell you their most expensive item, which is unnecessary surgery."
+          },
+          {
+            "word": "recommend",
+            "translate": "להמליץ",
+            "sentence": "Anyway, I strongly recommend they come out."
+          }
+        ],
+        "hard": [
+          {
+            "word": "intuitive",
+            "translate": "אינטואיטיבי",
+            "sentence": "You have intuitive abilities."
+          },
+          {
+            "word": "cosmic",
+            "translate": "קוסמי",
+            "sentence": "You're in touch with a lot of cosmic kind of things."
+          },
+          {
+            "word": "glossa",
+            "translate": "גלוסה",
+            "sentence": "Yes, the tongue. Or, in medical terms, the glossa."
+          },
+          {
+            "word": "membrane",
+            "translate": "ממברנה",
+            "sentence": "It's covered by this mucous membrane."
+          },
+          {
+            "word": "concoction",
+            "translate": "תערובת",
+            "sentence": "This will solve your so-called tonsil problem. It's a special concoction."
+          },
+          {
+            "word": "papillae",
+            "translate": "פפילות",
+            "sentence": "These raised little projections here are the papillae."
+          },
+          {
+            "word": "mucous",
+            "translate": "רירי",
+            "sentence": "It's covered by this mucous membrane."
+          },
+          {
+            "word": "harmony",
+            "translate": "הרמוניה",
+            "sentence": "You are in disharmony."
+          },
+          {
+            "word": "invasion",
+            "translate": "פלישה",
+            "sentence": "Tonsillitis, adenoiditis is, in Chinese medical terms, an invasion of heat and wind."
+          },
+          {
+            "word": "disharmony",
+            "translate": "חוסר הרמוניה",
+            "sentence": "You are in disharmony."
+          },
+          {
+            "word": "projections",
+            "translate": "בליטות",
+            "sentence": "These raised little projections here are the papillae."
+          },
+          {
+            "word": "establishment",
+            "translate": "ממסד",
+            "sentence": "The medical establishment tried to frame him."
+          },
+          {
+            "word": "hereditary",
+            "translate": "תורשתי",
+            "sentence": "Is this condition hereditary?"
+          },
+          {
+            "word": "mutant",
+            "translate": "מוטנט",
+            "sentence": "No! I'm a mutant!"
+          },
+          {
+            "word": "hypochondriac",
+            "translate": "היפוכונדר",
+            "sentence": "I have a friend who's a hypochondriac."
+          }
+        ]
+      },
+      "episode-9": {
+        "easy": [
+          {
+            "word": "store",
+            "translate": "חנות",
+            "sentence": "I was watching women in the department store trying on clothes."
+          },
+          {
+            "word": "clothes",
+            "translate": "בגדים",
+            "sentence": "Women don't try on the clothes, they get behind the clothes."
+          },
+          {
+            "word": "dress",
+            "translate": "שמלה",
+            "sentence": "They take a dress off the rack."
+          },
+          {
+            "word": "suit",
+            "translate": "חליפה",
+            "sentence": "You never see a man do that, see a guy take a suit off the rack."
+          },
+          {
+            "word": "shoes",
+            "translate": "נעליים",
+            "sentence": "Put some shoes by the bottom of the pants. I want to make sure."
+          },
+          {
+            "word": "birthday",
+            "translate": "יום הולדת",
+            "sentence": "Guess whose birthday is coming up soon."
+          },
+          {
+            "word": "surgery",
+            "translate": "ניתוח",
+            "sentence": "I'm having my root canal the same week."
+          },
+          {
+            "word": "recollection",
+            "translate": "זיכרון",
+            "sentence": "I have a vague recollection of doing something with someone."
+          },
+          {
+            "word": "routine",
+            "translate": "שגרתי",
+            "sentence": "When we see each other now, we retire to our separate quarters."
+          },
+          {
+            "word": "optional",
+            "translate": "רשות",
+            "sentence": "Spending the night is optional."
+          },
+          {
+            "word": "passionate",
+            "translate": "נלהב",
+            "sentence": "I'll tell you, it was really passionate."
+          },
+          {
+            "word": "mood",
+            "translate": "מצב רוח",
+            "sentence": "You ask me here to have lunch, tell me you slept with Elaine, and then say you're not in the mood for details."
+          },
+          {
+            "word": "impressed",
+            "translate": "התרשם",
+            "sentence": "I have to tell you, I'm very impressed with the first one."
+          },
+          {
+            "word": "birthday",
+            "translate": "יום הולדת",
+            "sentence": "You don't understand. I'm in a very delicate position."
+          },
+          {
+            "word": "relationship",
+            "translate": "מערכת יחסים",
+            "sentence": "If a relationship's having any problems whatsoever, a birthday brings it out."
+          }
+        ],
+        "medium": [
+          {
+            "word": "department",
+            "translate": "מחלקה",
+            "sentence": "I was watching women in the department store trying on clothes."
+          },
+          {
+            "word": "notice",
+            "translate": "לשים לב",
+            "sentence": "And I notice that they do it differently from men."
+          },
+          {
+            "word": "obligation",
+            "translate": "חובה",
+            "sentence": "But if we did that, we might feel a certain obligation to call."
+          },
+          {
+            "word": "system",
+            "translate": "מערכת",
+            "sentence": "Well, we've tried to arrange a situation where we'll be able to do this once in a while and still be friends."
+          },
+          {
+            "word": "obvious",
+            "translate": "ברור",
+            "sentence": "The idea is to combine the this and the that."
+          },
+          {
+            "word": "separate",
+            "translate": "נפרד",
+            "sentence": "When we see each other now, we retire to our separate quarters."
+          },
+          {
+            "word": "optional",
+            "translate": "רשות",
+            "sentence": "Spending the night is optional."
+          },
+          {
+            "word": "routine",
+            "translate": "שגרתי",
+            "sentence": "I thought you'd like that."
+          },
+          {
+            "word": "passionate",
+            "translate": "נלהב",
+            "sentence": "I'll tell you, it was really passionate."
+          },
+          {
+            "word": "mature",
+            "translate": "בוגר",
+            "sentence": "It pains me to say this, but I may be getting too mature for details."
+          },
+          {
+            "word": "impressed",
+            "translate": "התרשם",
+            "sentence": "I have to tell you, I'm very impressed with the first one."
+          },
+          {
+            "word": "relationship",
+            "translate": "מערכת יחסים",
+            "sentence": "If a relationship's having any problems whatsoever, a birthday brings it out."
+          },
+          {
+            "word": "commitment",
+            "translate": "מחויבות",
+            "sentence": "Why is commitment such a big problem for a man?"
+          },
+          {
+            "word": "sensitive",
+            "translate": "רגיש",
+            "sentence": "Yeah. See, I'm very sensitive about that."
+          },
+          {
+            "word": "interpret",
+            "translate": "לפרש",
+            "sentence": "She'll be bringing in experts from all over the country to interpret the meaning behind it."
+          }
+        ],
+        "hard": [
+          {
+            "word": "delicate",
+            "translate": "עדין",
+            "sentence": "You don't understand. I'm in a very delicate position."
+          },
+          {
+            "word": "pitfalls",
+            "translate": "מלכודות",
+            "sentence": "We've designed a set of rules that we can maintain the friendship by avoiding all the relationship pitfalls."
+          },
+          {
+            "word": "gubernatorial",
+            "translate": "מושל",
+            "sentence": "Bust of Nelson Rockefeller? Too gubernatorial."
+          },
+          {
+            "word": "recollection",
+            "translate": "זיכרון",
+            "sentence": "I have a vague recollection of doing something with someone."
+          },
+          {
+            "word": "complicated",
+            "translate": "מסובך",
+            "sentence": "The relationships are so complicated, greeting-card companies now put out cards that are blank."
+          },
+          {
+            "word": "maturity",
+            "translate": "בגרות",
+            "sentence": "I may be getting too mature for details."
+          },
+          {
+            "word": "commitment",
+            "translate": "מחויבות",
+            "sentence": "Why is commitment such a big problem for a man?"
+          },
+          {
+            "word": "interpret",
+            "translate": "לפרש",
+            "sentence": "She'll be bringing in experts from all over the country to interpret the meaning behind it."
+          },
+          {
+            "word": "irritates",
+            "translate": "מכעיס",
+            "sentence": "Any kind of growth really irritates me."
+          },
+          {
+            "word": "impression",
+            "translate": "רושם",
+            "sentence": "I'm getting the impression there's a problem."
+          },
+          {
+            "word": "arrange",
+            "translate": "לארגן",
+            "sentence": "We've tried to arrange a situation where we'll be able to do this once in a while and still be friends."
+          },
+          {
+            "word": "advanced",
+            "translate": "מתקדם",
+            "sentence": "This is very advanced. We've designed a set of rules."
+          },
+          {
+            "word": "pitfalls",
+            "translate": "מלכודות",
+            "sentence": "We've designed a set of rules that we can maintain the friendship by avoiding all the relationship pitfalls."
+          },
+          {
+            "word": "separate",
+            "translate": "נפרד",
+            "sentence": "When we see each other now, we retire to our separate quarters."
+          },
+          {
+            "word": "quarter",
+            "translate": "רבע",
+            "sentence": "When we see each other now, we retire to our separate quarters."
+          }
+        ]
+      },
+      "episode-10": {
+        "easy": [
+          {
+            "word": "television",
+            "translate": "טלוויזיה",
+            "sentence": "Men flip around the television more than women, I think."
+          },
+          {
+            "word": "remote",
+            "translate": "שלט",
+            "sentence": "Men get that remote control in their hands..."
+          },
+          {
+            "word": "channel",
+            "translate": "ערוץ",
+            "sentence": "Well, let me see what the show is before I change the channel."
+          },
+          {
+            "word": "story",
+            "translate": "סיפור",
+            "sentence": "Kings and emperors and pharaohs and such had storytellers that would tell them stories."
+          },
+          {
+            "word": "entertainment",
+            "translate": "בידור",
+            "sentence": "That was their entertainment."
+          },
+          {
+            "word": "pregnant",
+            "translate": "בהריון",
+            "sentence": "Leslie is pregnant?"
+          },
+          {
+            "word": "justice",
+            "translate": "צדק",
+            "sentence": "Oh, see, there is no justice."
+          },
+          {
+            "word": "artist",
+            "translate": "אמן",
+            "sentence": "She's the performance artist, right?"
+          },
+          {
+            "word": "celebrity",
+            "translate": "סלבריטאי",
+            "sentence": "And she's on-stage cooking dinner for some celebrity?"
+          },
+          {
+            "word": "chocolate",
+            "translate": "שוקולד",
+            "sentence": "She throws a big can of chocolate syrup all over my new red shirt."
+          },
+          {
+            "word": "shirt",
+            "translate": "חולצה",
+            "sentence": "She throws a big can of chocolate syrup all over my new red shirt."
+          },
+          {
+            "word": "flies",
+            "translate": "זבובים",
+            "sentence": "Flies are landing on me."
+          },
+          {
+            "word": "shower",
+            "translate": "מקלחת",
+            "sentence": "She asked me to give her a baby shower."
+          },
+          {
+            "word": "approval",
+            "translate": "אישור",
+            "sentence": "For some reason, I seem to want her approval."
+          },
+          {
+            "word": "disease",
+            "translate": "מחלה",
+            "sentence": "My roommate has Lyme disease."
+          }
+        ],
+        "medium": [
+          {
+            "word": "nest",
+            "translate": "קן",
+            "sentence": "Women nest, and men hunt."
+          },
+          {
+            "word": "emperor",
+            "translate": "קיסר",
+            "sentence": "Kings and emperors and pharaohs and such had storytellers that would tell them stories."
+          },
+          {
+            "word": "performer",
+            "translate": "מבצע",
+            "sentence": "She's a performer, a real trouper."
+          },
+          {
+            "word": "accident",
+            "translate": "תאונה",
+            "sentence": "It was an accident."
+          },
+          {
+            "word": "fantasizing",
+            "translate": "מפנטז",
+            "sentence": "I'm boiling, I'm fantasizing all the things I'm gonna say to her."
+          },
+          {
+            "word": "pregnant",
+            "translate": "בהריון",
+            "sentence": "She asked me to give her a baby shower."
+          },
+          {
+            "word": "obligation",
+            "translate": "חובה",
+            "sentence": "But if we did that, we might feel a certain obligation to call."
+          },
+          {
+            "word": "responsibility",
+            "translate": "אחריות",
+            "sentence": "No, I'll take full responsibility."
+          },
+          {
+            "word": "performance",
+            "translate": "ביצועים",
+            "sentence": "They sometimes misjudge their foetal girth."
+          },
+          {
+            "word": "relationship",
+            "translate": "מערכת יחסים",
+            "sentence": "If a relationship's having any problems whatsoever, a birthday brings it out."
+          },
+          {
+            "word": "girth",
+            "translate": "היקף",
+            "sentence": "They sometimes misjudge their foetal girth."
+          },
+          {
+            "word": "redemption",
+            "translate": "גאולה",
+            "sentence": "I still won't forgive myself, but at least it won't be about this."
+          },
+          {
+            "word": "groveling",
+            "translate": "מתרפס",
+            "sentence": "Later, finally, backstage, when I talk to her, I'm like a little grovelling worm."
+          },
+          {
+            "word": "courtesy",
+            "translate": "אדיבות",
+            "sentence": "You don't have the common courtesy to return my calls?"
+          },
+          {
+            "word": "humiliated",
+            "translate": "מושפל",
+            "sentence": "Some sort of a masochist who enjoys being humiliated?"
+          }
+        ],
+        "hard": [
+          {
+            "word": "unequivocally",
+            "translate": "באופן חד משמעי",
+            "sentence": "That woman was unequivocally the worst date of my life."
+          },
+          {
+            "word": "trouper",
+            "translate": "שחקן מקצועי",
+            "sentence": "She's a performer, a real trouper."
+          },
+          {
+            "word": "Chappaquiddick",
+            "translate": "צ'פאקידיק",
+            "sentence": "Should've heard them talk about Chappaquiddick."
+          },
+          {
+            "word": "fantasizing",
+            "translate": "מפנטז",
+            "sentence": "I'm boiling, I'm fantasizing all the things I'm gonna say to her."
+          },
+          {
+            "word": "Epstein-Barr",
+            "translate": "אפשטיין-באר",
+            "sentence": "I thought she had Epstein-Barr syndrome."
+          },
+          {
+            "word": "syndrome",
+            "translate": "תסמונת",
+            "sentence": "She has this in addition to Epstein-Barr."
+          },
+          {
+            "word": "psychotic",
+            "translate": "פסיכוטי",
+            "sentence": "My therapist told me if I go through labour, I might get psychotic."
+          },
+          {
+            "word": "extraordinary",
+            "translate": "יוצא דופן",
+            "sentence": "He's an amazing man."
+          },
+          {
+            "word": "confrontation",
+            "translate": "עימות",
+            "sentence": "Someday, before I die, mark my words, I'm gonna tell that woman what I think of her."
+          },
+          {
+            "word": "masochist",
+            "translate": "מזוכיסט",
+            "sentence": "Some sort of a masochist who enjoys being humiliated?"
+          },
+          {
+            "word": "hypothetical",
+            "translate": "היפותטי",
+            "sentence": "Someday, before I die, mark my words, I'm gonna tell that woman what I think of her."
+          },
+          {
+            "word": "improvised",
+            "translate": "מאולתר",
+            "sentence": "Actually, I never had any formal training."
+          },
+          {
+            "word": "naive",
+            "translate": "תמים",
+            "sentence": "Oh, God. You're so naive."
+          },
+          {
+            "word": "contemporary",
+            "translate": "עכשווי",
+            "sentence": "There are many differences between American and Soviet cultures that you're not aware of."
+          },
+          {
+            "word": "restitution",
+            "translate": "פיצוי",
+            "sentence": "Whose shirt can be ruined without financial restitution?"
+          }
+        ]
+      },
+      "episode-11": {
+        "easy": [
+          {
+            "word": "phone",
+            "translate": "טלפון",
+            "sentence": "I'm on the street the other day, make a pay phone call..."
+          },
+          {
+            "word": "money",
+            "translate": "כסף",
+            "sentence": "The phone company wants more money."
+          },
+          {
+            "word": "cops",
+            "translate": "שוטרים",
+            "sentence": "No, they just have to get more cops on the force."
+          },
+          {
+            "word": "garbage",
+            "translate": "אשפה",
+            "sentence": "All I wanna see are garbage trucks, garbage cans, and garbage men."
+          },
+          {
+            "word": "hungry",
+            "translate": "רעב",
+            "sentence": "Where is someone? I'm starving."
+          },
+          {
+            "word": "table",
+            "translate": "שולחן",
+            "sentence": "Is there a table ready?"
+          },
+          {
+            "word": "movie",
+            "translate": "סרט",
+            "sentence": "We haven't got much time before the movie."
+          },
+          {
+            "word": "restaurant",
+            "translate": "מסעדה",
+            "sentence": "I hate this place. I don't know why we came here."
+          },
+          {
+            "word": "cookies",
+            "translate": "עוגיות",
+            "sentence": "I offered you those cookies in my house."
+          },
+          {
+            "word": "sick",
+            "translate": "חולה",
+            "sentence": "It's enough to make you sick."
+          },
+          {
+            "word": "wait",
+            "translate": "לחכות",
+            "sentence": "You know, we're living in a society!"
+          },
+          {
+            "word": "menu",
+            "translate": "תפריט",
+            "sentence": "Jerry, get menus so when we sit down we'll be able to order right away."
+          },
+          {
+            "word": "police",
+            "translate": "משטרה",
+            "sentence": "I wanna see garbage men."
+          },
+          {
+            "word": "specials",
+            "translate": "מיוחדים",
+            "sentence": "Very good specials tonight."
+          },
+          {
+            "word": "call",
+            "translate": "שיחה",
+            "sentence": "Tell him we wanna catch a movie and that we're late."
+          }
+        ],
+        "medium": [
+          {
+            "word": "quarter",
+            "translate": "רבע דולר",
+            "sentence": "That's a quarter. Yeah, you want that, don't you?"
+          },
+          {
+            "word": "force",
+            "translate": "כוח",
+            "sentence": "No, they just have to get more cops on the force."
+          },
+          {
+            "word": "combine",
+            "translate": "לשלב",
+            "sentence": "They should combine the two jobs. Make it one job."
+          },
+          {
+            "word": "operator",
+            "translate": "מפעיל",
+            "sentence": "Yeah, hello, operator?"
+          },
+          {
+            "word": "coordination",
+            "translate": "תיאום",
+            "sentence": "Look at his little outfit. It's all so coordinated."
+          },
+          {
+            "word": "rumble",
+            "translate": "מריבה",
+            "sentence": "If we decide to go at it."
+          },
+          {
+            "word": "garbage",
+            "translate": "אשפה",
+            "sentence": "All I wanna see are garbage trucks, garbage cans, and garbage men."
+          },
+          {
+            "word": "movie",
+            "translate": "סרט",
+            "sentence": "We haven't got much time before the movie."
+          },
+          {
+            "word": "requirement",
+            "translate": "דרישה",
+            "sentence": "I begin to perceive this impending...intestinal requirement."
+          },
+          {
+            "word": "extricate",
+            "translate": "לחלץ",
+            "sentence": "I know I'm gonna have to stop and say..."
+          },
+          {
+            "word": "misunderstanding",
+            "translate": "אי הבנה",
+            "sentence": "There seems to be a bit of a discrepancy."
+          },
+          {
+            "word": "reservation",
+            "translate": "הזמנה",
+            "sentence": "Seinfeld, four."
+          },
+          {
+            "word": "discrepancy",
+            "translate": "חוסר עקביות",
+            "sentence": "There seems to be a bit of a discrepancy."
+          },
+          {
+            "word": "eating",
+            "translate": "אכילה",
+            "sentence": "Hunger will make people do amazing things."
+          },
+          {
+            "word": "call",
+            "translate": "שיחה",
+            "sentence": "Tell him we wanna catch a movie and that we're late."
+          }
+        ],
+        "hard": [
+          {
+            "word": "impending",
+            "translate": "מתקרב",
+            "sentence": "I begin to perceive this impending...intestinal requirement."
+          },
+          {
+            "word": "extricate",
+            "translate": "לחלץ",
+            "sentence": "I know I'm gonna have to stop and say..."
+          },
+          {
+            "word": "intestinal",
+            "translate": "מעי",
+            "sentence": "I begin to perceive this impending...intestinal requirement."
+          },
+          {
+            "word": "unprecedented",
+            "translate": "חסר תקדים",
+            "sentence": "Struggling to compute this unprecedented turn of events."
+          },
+          {
+            "word": "insignificant",
+            "translate": "לא משמעותי",
+            "sentence": "You're the insignificant piece of dust!"
+          },
+          {
+            "word": "alleviate",
+            "translate": "להקל",
+            "sentence": "I am, in reality, Batman."
+          },
+          {
+            "word": "disgust",
+            "translate": "גועל",
+            "sentence": "I hate this place."
+          },
+          {
+            "word": "misinterpretation",
+            "translate": "אי הבנה",
+            "sentence": "This could only happen to you."
+          },
+          {
+            "word": "antagonism",
+            "translate": "אנטגוניזם",
+            "sentence": "Well, she doesn't deserve a baby shower."
+          },
+          {
+            "word": "extricate",
+            "translate": "לחלץ",
+            "sentence": "I know I'm gonna have to stop and say..."
+          },
+          {
+            "word": "foolishness",
+            "translate": "שטות",
+            "sentence": "Well, I can't go to a bad movie by myself."
+          },
+          {
+            "word": "desperation",
+            "translate": "ייאוש",
+            "sentence": "Hunger will make people do amazing things."
+          },
+          {
+            "word": "misunderstanding",
+            "translate": "אי הבנה",
+            "sentence": "There seems to be a bit of a discrepancy."
+          },
+          {
+            "word": "gratitude",
+            "translate": "הכרת תודה",
+            "sentence": "Tell him we wanna catch a movie and that we're late."
+          },
+          {
+            "word": "naivety",
+            "translate": "תמימות",
+            "sentence": "Oh, God. You're so naive."
+          }
+        ]
+      },
+      "episode-12": {
+        "easy": [
+          {
+            "word": "foodie",
+            "translate": "אוהב אוכל",
+            "sentence": "I'm not a foodie."
+          },
+          {
+            "word": "restaurant",
+            "translate": "מסעדה",
+            "sentence": "Sometimes you go to a restaurant, they put the check in a little book."
+          },
+          {
+            "word": "pesto",
+            "translate": "פסטו",
+            "sentence": "Everybody likes pesto."
+          },
+          {
+            "word": "airport",
+            "translate": "שדה תעופה",
+            "sentence": "Elaine is having a houseguest. She's picking him up at the airport tonight."
+          },
+          {
+            "word": "guest",
+            "translate": "אורח",
+            "sentence": "Elaine is having a houseguest."
+          },
+          {
+            "word": "job",
+            "translate": "עבודה",
+            "sentence": "Look, I feel bad for him too, but he'll get another job."
+          },
+          {
+            "word": "menu",
+            "translate": "תפריט",
+            "sentence": "Oh, the busboy left the menu a little close to the candle."
+          },
+          {
+            "word": "houseguest",
+            "translate": "אורח בבית",
+            "sentence": "Elaine is having a houseguest."
+          },
+          {
+            "word": "busboy",
+            "translate": "מלצר עזר",
+            "sentence": "The busboy's coming."
+          },
+          {
+            "word": "trouble",
+            "translate": "צרות",
+            "sentence": "Did I get him in trouble because of what I said?"
+          },
+          {
+            "word": "car",
+            "translate": "מכונית",
+            "sentence": "Now, I did my job. May I have the car keys, please?"
+          },
+          {
+            "word": "keys",
+            "translate": "מפתחות",
+            "sentence": "Now, I did my job. May I have the car keys, please?"
+          },
+          {
+            "word": "candle",
+            "translate": "נר",
+            "sentence": "Oh, the busboy left the menu a little close to the candle."
+          },
+          {
+            "word": "fire",
+            "translate": "אש",
+            "sentence": "The busboy left the menu a little close to the candle."
+          },
+          {
+            "word": "cat",
+            "translate": "חתול",
+            "sentence": "Paquita, perhaps frightened from the explosion, had miraculously returned."
+          }
+        ],
+        "medium": [
+          {
+            "word": "rare",
+            "translate": "נא",
+            "sentence": "Oh, this is too rare."
+          },
+          {
+            "word": "hallway",
+            "translate": "מסדרון",
+            "sentence": "I've eaten rolls off of room-service trays in hotel hallways."
+          },
+          {
+            "word": "comic",
+            "translate": "קומיקאי",
+            "sentence": "Why would somebody poison a roll and leave it in the hallway for some comic coming down at 2:00 in the morning?"
+          },
+          {
+            "word": "book",
+            "translate": "ספר",
+            "sentence": "Sometimes you go to a restaurant, they put the check in a little book."
+          },
+          {
+            "word": "tassel",
+            "translate": "ציצית",
+            "sentence": "Little gold tassel hanging down."
+          },
+          {
+            "word": "graduate",
+            "translate": "לסיים לימודים",
+            "sentence": "Am I graduating from the restaurant?"
+          },
+          {
+            "word": "tattoo",
+            "translate": "קעקוע",
+            "sentence": "He discovered that the Benes tattoo does not wash off so easily."
+          },
+          {
+            "word": "candle",
+            "translate": "נר",
+            "sentence": "Oh, the busboy left the menu a little close to the candle."
+          },
+          {
+            "word": "dessert",
+            "translate": "קינוח",
+            "sentence": "That ought to get us a free dessert."
+          },
+          {
+            "word": "disconnected",
+            "translate": "מנותק",
+            "sentence": "His phone's been disconnected, but I was able to obtain an address."
+          },
+          {
+            "word": "charm",
+            "translate": "קסם",
+            "sentence": "Does the word 'charm' mean anything to you?"
+          },
+          {
+            "word": "trays",
+            "translate": "מגשים",
+            "sentence": "I've eaten rolls off of room-service trays in hotel hallways."
+          },
+          {
+            "word": "comedy",
+            "translate": "קומדיה",
+            "sentence": "I talk with them in the kitchens at the comedy clubs."
+          },
+          {
+            "word": "wonderful",
+            "translate": "נפלא",
+            "sentence": "Today I am starting my new, wonderful job."
+          },
+          {
+            "word": "reservation",
+            "translate": "הזמנה",
+            "sentence": "I've confirmed the plane reservation."
+          }
+        ],
+        "hard": [
+          {
+            "word": "interpersonal",
+            "translate": "בינאישי",
+            "sentence": "We shared an interpersonal experience."
+          },
+          {
+            "word": "embellish",
+            "translate": "לקשט",
+            "sentence": "Let's face it, it's not a profession where you embellish your résumé."
+          },
+          {
+            "word": "grueling",
+            "translate": "מפרך",
+            "sentence": "Undergo a series of grueling interviews."
+          },
+          {
+            "word": "chickadee",
+            "translate": "פרח",
+            "sentence": "But I am one clever chickadee."
+          },
+          {
+            "word": "obtained",
+            "translate": "השגתי",
+            "sentence": "His phone's been disconnected, but I was able to obtain an address."
+          },
+          {
+            "word": "pricking",
+            "translate": "לדקור",
+            "sentence": "He could walk around the street pricking people with pins."
+          },
+          {
+            "word": "miraculously",
+            "translate": "באופן פלאי",
+            "sentence": "Paquita, perhaps frightened from the explosion, had miraculously returned."
+          },
+          {
+            "word": "gravitates",
+            "translate": "נמשך",
+            "sentence": "They seem to gravitate towards it."
+          },
+          {
+            "word": "commotion",
+            "translate": "המולה",
+            "sentence": "I hope I'm not interrupting anything. It's just that..."
+          },
+          {
+            "word": "numbskull",
+            "translate": "מטומטם",
+            "sentence": "That numbskull would be on a plane for Seattle right now."
+          },
+          {
+            "word": "conscience",
+            "translate": "מצפון",
+            "sentence": "It'll be on your conscience."
+          },
+          {
+            "word": "graduating",
+            "translate": "מסיים לימודים",
+            "sentence": "Am I graduating from the restaurant?"
+          },
+          {
+            "word": "squished",
+            "translate": "מעוך",
+            "sentence": "And I'm sleeping all squished over on the edge of my bed."
+          },
+          {
+            "word": "incident",
+            "translate": "תקרית",
+            "sentence": "And when I returned to the apartment, Paquita had miraculously returned."
+          },
+          {
+            "word": "incidentally",
+            "translate": "אגב",
+            "sentence": "Incidentally, I don't think you have the time."
+          }
+        ]
+      }
+         
+        }
+      }
