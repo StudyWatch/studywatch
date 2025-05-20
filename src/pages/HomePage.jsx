@@ -12,7 +12,7 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchSeries() {
       try {
-        const response = await fetch('/data/seriesList.json');
+        const response = await fetch(import.meta.env.BASE_URL + 'data/seriesList.json');
         const data = await response.json();
         setSeriesList(data);
       } catch (error) {

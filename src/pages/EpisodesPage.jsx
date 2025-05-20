@@ -24,7 +24,7 @@ export default function EpisodesPage() {
   useEffect(() => {
     async function fetchEpisodes() {
       try {
-        const response = await fetch(`/episodes/${seriesId}.json`);
+        const response = await fetch(import.meta.env.BASE_URL + `episodes/${seriesId}.json`);
         const data = await response.json();
         setEpisodesData(data);
         const seasonKeys = Object.keys(data);
