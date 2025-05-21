@@ -1,3 +1,4 @@
+// src/pages/FavoritesPage.jsx
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FavoritesContext } from '../context/FavoritesContext';
@@ -11,7 +12,7 @@ export default function FavoritesPage() {
   useEffect(() => {
     async function fetchSeriesList() {
       try {
-        const response = await fetch('/data/seriesList.json');
+        const response = await fetch(import.meta.env.BASE_URL + 'data/seriesList.json');
         const data = await response.json();
         setSeriesList(data);
       } catch (error) {
@@ -47,7 +48,7 @@ export default function FavoritesPage() {
                     onClick={() => navigate(`/episodes/${series.id}`)}
                   >
                     <img
-                      src={series.image}
+                      src={import.meta.env.BASE_URL + series.image.replace(/^\//, '')}
                       alt={series.name}
                       className="w-28 h-28 rounded-full object-cover mb-4"
                     />

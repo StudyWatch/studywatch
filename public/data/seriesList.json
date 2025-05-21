@@ -3,7 +3,7 @@
     "id": "friends",
     "name": "חברים",
     "description": "קומדיה על קבוצת חברים שחיים בניו יורק.",
-    "image": "img/friends good.webp",
+    "image": "/img/friends good.webp",
     "genre": "comedy",
     "level": "beginner",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה beginner."
@@ -12,7 +12,7 @@
     "id": "brooklyn99",
     "name": "ברוקלין 99",
     "description": "קומדיה משטרתית על תחנת משטרה בברוקלין.",
-    "image": "img/brooklyn.webp",
+    "image": "/img/brooklyn.webp",
     "genre": "comedy",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
@@ -21,7 +21,7 @@
     "id": "the100",
     "name": "ה-100",
     "description": "סדרת מדע בדיוני על חזרה לכדור הארץ אחרי אפוקליפסה.",
-    "image": "img/the 100 good.webp",
+    "image": "/img/the 100 good.webp",
     "genre": "sci-fi",
     "level": "advanced",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה advanced."
@@ -30,7 +30,7 @@
     "id": "bigbang",
     "name": "המפץ הגדול",
     "description": "קומדיה על חבורת מדענים וגיקים.",
-    "image": "img/bigbang theory.webp",
+    "image": "/img/bigbang theory.webp",
     "genre": "comedy",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
@@ -39,7 +39,7 @@
     "id": "modernfamily",
     "name": "משפחה מודרנית",
     "description": "סדרה קומית על משפחות מודרניות מגוונות.",
-    "image": "img/modern family.webp",
+    "image": "/img/modern family.webp",
     "genre": "comedy",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
@@ -48,7 +48,7 @@
     "id": "himym",
     "name": "איך פגשתי את אמא",
     "description": "המסע של טד למצוא את אהבת חייו.",
-    "image": "img/himym.webp",
+    "image": "/img/himym.webp",
     "genre": "comedy",
     "level": "beginner",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה beginner."
@@ -57,7 +57,7 @@
     "id": "seinfeld",
     "name": "סיינפלד",
     "description": "קומדיה אייקונית על כלום ועל החיים עצמם.",
-    "image": "img/seinfeld.webp",
+    "image": "/img/seinfeld.webp",
     "genre": "comedy",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
@@ -66,7 +66,7 @@
     "id": "newgirl",
     "name": "הבחורה החדשה",
     "description": "ג'ס מצטרפת לדירה עם שלושה גברים ומתחילה הרפתקה משעשעת.",
-    "image": "img/new girl 1.webp",
+    "image": "/img/new girl 1.webp",
     "genre": "comedy",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
@@ -75,7 +75,7 @@
     "id": "theoffice",
     "name": "המשרד",
     "description": "קומדיה על צוות עובדים במשרד למכירת נייר.",
-    "image": "img/office.webp",
+    "image": "/img/office.webp",
     "genre": "comedy",
     "level": "beginner",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה beginner."
@@ -84,7 +84,7 @@
     "id": "bigmouth",
     "name": "פה גדול",
     "description": "סדרת אנימציה על גיל ההתבגרות וההורמונים.",
-    "image": "img/Big Mouth.jpeg",
+    "image": "/img/Big Mouth.jpeg",
     "genre": "animation",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
@@ -93,7 +93,7 @@
     "id": "simpsons",
     "name": "משפחת סימפסון",
     "description": "משפחת האנימציה הצהובה הכי מפורסמת בעולם.",
-    "image": "img/simpsons 1.webp",
+    "image": "/img/simpsons 1.webp",
     "genre": "animation",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
@@ -102,7 +102,7 @@
     "id": "thegoodplace",
     "name": "הקודש",
     "description": "קומדיה פילוסופית על חיים אחרי המוות.",
-    "image": "img/the good place.webp",
+    "image": "/img/the good place.webp",
     "genre": "comedy",
     "level": "intermediate",
     "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
