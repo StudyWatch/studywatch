@@ -22,20 +22,17 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen w-full flex flex-col bg-gray-50 dark:bg-gray-900 font-sans" dir="rtl">
+      <div className="min-h-screen w-full flex flex-col overflow-x-hidden bg-gray-50 dark:bg-gray-900 font-sans" dir="rtl">
 
         {/* סרגל ניווט */}
         <header className="fixed top-0 w-full bg-gradient-to-r from-blue-100 via-white to-blue-100 dark:from-gray-800 dark:via-gray-900 shadow-lg z-50">
-          <div className="container mx-auto flex items-center justify-between px-6 py-3" dir="rtl">
-
-            {/* לוגו */}
+          <div className="max-w-screen-xl mx-auto w-full flex items-center justify-between px-4 sm:px-6 py-3" dir="rtl">
             <h1 className="text-2xl font-bold text-blue-700 dark:text-yellow-300 hover:scale-105 transition-transform duration-300">
               <Link to="/" className="flex items-center gap-2">
                 📺 StudyWatch
               </Link>
             </h1>
 
-            {/* תפריט רגיל - מחשב */}
             <nav className="hidden sm:flex flex-wrap gap-4 text-gray-700 dark:text-white font-semibold">
               <Link to="/" className="rounded-full px-4 py-2 transition duration-300 hover:bg-blue-200 hover:text-blue-800 dark:hover:bg-blue-800 dark:hover:text-blue-300">🏠 דף הבית</Link>
               <Link to="/favorites" className="rounded-full px-4 py-2 transition duration-300 hover:bg-yellow-200 hover:text-yellow-700 dark:hover:bg-yellow-700 dark:hover:text-yellow-300">⭐ מועדפים</Link>
@@ -44,7 +41,6 @@ function App() {
               <ThemeToggleButton />
             </nav>
 
-            {/* אייקון המבורגר - מובייל */}
             <div className="sm:hidden">
               <button onClick={toggleMenu} className="text-3xl text-blue-700 dark:text-white">
                 ☰
@@ -52,7 +48,6 @@ function App() {
             </div>
           </div>
 
-          {/* תפריט צד נפתח - מובייל */}
           {menuOpen && (
             <div className="bg-white dark:bg-gray-800 shadow-md sm:hidden flex flex-col items-center gap-6 py-6">
               <Link onClick={closeMenu} to="/" className="text-lg text-blue-700 dark:text-white hover:underline">🏠 דף הבית</Link>
@@ -65,7 +60,7 @@ function App() {
         </header>
 
         {/* תוכן הדף */}
-        <main className="flex-1 w-full px-4 pt-28 pb-8">
+        <main className="flex-1 w-full pt-28 pb-8 overflow-x-hidden">
           <Suspense fallback={<div className="text-center my-10 text-lg">⏳ טוען...</div>}>
             <Routes>
               <Route path="/" element={<HomePage />} />
