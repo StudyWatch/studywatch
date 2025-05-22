@@ -22,34 +22,35 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen w-full flex flex-col overflow-x-hidden bg-gray-50 dark:bg-gray-900 font-sans" dir="rtl">
-
+      <div className="min-h-screen w-full bg-gray-50 dark:bg-gray-900 font-sans overflow-x-hidden" dir="rtl">
+        
         {/* סרגל ניווט */}
         <header className="fixed top-0 w-full bg-gradient-to-r from-blue-100 via-white to-blue-100 dark:from-gray-800 dark:via-gray-900 shadow-lg z-50">
-          <div className="max-w-screen-xl mx-auto w-full flex items-center justify-between px-4 sm:px-6 py-3" dir="rtl">
-            <h1 className="text-2xl font-bold text-blue-700 dark:text-yellow-300 hover:scale-105 transition-transform duration-300">
-              <Link to="/" className="flex items-center gap-2">
-                📺 StudyWatch
-              </Link>
-            </h1>
+          <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
+            
+            {/* לוגו */}
+            <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-blue-700 dark:text-yellow-300 hover:scale-105 transition-transform duration-300">
+              📺 StudyWatch
+            </Link>
 
-            <nav className="hidden sm:flex flex-wrap gap-4 text-gray-700 dark:text-white font-semibold">
-              <Link to="/" className="rounded-full px-4 py-2 transition duration-300 hover:bg-blue-200 hover:text-blue-800 dark:hover:bg-blue-800 dark:hover:text-blue-300">🏠 דף הבית</Link>
-              <Link to="/favorites" className="rounded-full px-4 py-2 transition duration-300 hover:bg-yellow-200 hover:text-yellow-700 dark:hover:bg-yellow-700 dark:hover:text-yellow-300">⭐ מועדפים</Link>
-              <Link to="/bot" className="rounded-full px-4 py-2 transition duration-300 hover:bg-purple-200 hover:text-purple-700 dark:hover:bg-purple-700 dark:hover:text-purple-300">🤖 בוט המלצות</Link>
-              <Link to="/tips" className="rounded-full px-4 py-2 transition duration-300 hover:bg-amber-200 hover:text-amber-700 dark:hover:bg-amber-600 dark:hover:text-amber-300">💡 טיפים</Link>
+            {/* תפריט רגיל - מחשב */}
+            <nav className="hidden sm:flex gap-4 text-gray-700 dark:text-white font-semibold">
+              <Link to="/" className="rounded-full px-4 py-2 transition hover:bg-blue-200 hover:text-blue-800 dark:hover:bg-blue-800 dark:hover:text-blue-300">🏠 דף הבית</Link>
+              <Link to="/favorites" className="rounded-full px-4 py-2 transition hover:bg-yellow-200 hover:text-yellow-700 dark:hover:bg-yellow-700 dark:hover:text-yellow-300">⭐ מועדפים</Link>
+              <Link to="/bot" className="rounded-full px-4 py-2 transition hover:bg-purple-200 hover:text-purple-700 dark:hover:bg-purple-700 dark:hover:text-purple-300">🤖 בוט המלצות</Link>
+              <Link to="/tips" className="rounded-full px-4 py-2 transition hover:bg-amber-200 hover:text-amber-700 dark:hover:bg-amber-600 dark:hover:text-amber-300">💡 טיפים</Link>
               <ThemeToggleButton />
             </nav>
 
-            <div className="sm:hidden">
-              <button onClick={toggleMenu} className="text-3xl text-blue-700 dark:text-white">
-                ☰
-              </button>
-            </div>
+            {/* אייקון המבורגר - מובייל */}
+            <button onClick={toggleMenu} className="sm:hidden text-3xl text-blue-700 dark:text-white">
+              ☰
+            </button>
           </div>
 
+          {/* תפריט צד נפתח - מובייל */}
           {menuOpen && (
-            <div className="bg-white dark:bg-gray-800 shadow-md sm:hidden flex flex-col items-center gap-6 py-6">
+            <div className="bg-white dark:bg-gray-800 shadow-md sm:hidden flex flex-col items-center gap-5 py-5 px-4">
               <Link onClick={closeMenu} to="/" className="text-lg text-blue-700 dark:text-white hover:underline">🏠 דף הבית</Link>
               <Link onClick={closeMenu} to="/favorites" className="text-lg text-yellow-600 dark:text-yellow-300 hover:underline">⭐ מועדפים</Link>
               <Link onClick={closeMenu} to="/bot" className="text-lg text-purple-600 dark:text-purple-300 hover:underline">🤖 בוט המלצות</Link>
@@ -60,7 +61,7 @@ function App() {
         </header>
 
         {/* תוכן הדף */}
-        <main className="flex-1 w-full pt-28 pb-8 overflow-x-hidden">
+        <main className="pt-[72px] pb-8 w-full overflow-x-hidden">
           <Suspense fallback={<div className="text-center my-10 text-lg">⏳ טוען...</div>}>
             <Routes>
               <Route path="/" element={<HomePage />} />
