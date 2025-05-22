@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>StudyWatch - לימוד אנגלית דרך סדרות</title>
+    <title>StudyWatch - לימוד אנגלית דרך סדרות</title>
 
-  <!-- תיאור לאתר (SEO) -->
-  <meta name="description" content="לימדו אנגלית בצורה מהנה דרך הסדרות האהובות עליכם עם StudyWatch. תרגול מילים, צפייה בפרקים, משחקים ומשימות חכמות!" />
+    <!-- תיאור לאתר (SEO) -->
+    <meta name="description" content="לימדו אנגלית בצורה מהנה דרך הסדרות האהובות עליכם עם StudyWatch. תרגול מילים, צפייה בפרקים, משחקים ומשימות חכמות!" />
 
-  <!-- צבע לאפליקציה במובייל -->
-  <meta name="theme-color" content="#f59e0b" />
+    <!-- צבע לאפליקציה במובייל -->
+    <meta name="theme-color" content="#f59e0b" />
 
-  <!-- קישור ל-manifest.json -->
-  <link rel="manifest" href="/manifest.json" />
+    <!-- קישור ל-manifest.json -->
+    <link rel="manifest" href="/manifest.json" />
 
-  <!-- אייקון אתר קטן -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192.png" />
-  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <!-- אייקון אתר קטן -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 
-  <!-- טעינה מוקדמת של אייקונים -->
-  <link rel="preload" href="/icons/icon-192.png" as="image" />
-  <link rel="preload" href="/icons/icon-512.png" as="image" />
+    <!-- טעינה מוקדמת של אייקונים -->
+    <link rel="preload" href="/icons/icon-192.png" as="image" />
+    <link rel="preload" href="/icons/icon-512.png" as="image" />
 
-</head>
+    <!-- איפוס מרווחים וניקוי גלילה אופקית -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
 
-<body class="bg-gray-100 font-sans">
-  <div id="root"></div>
+  <body class="bg-gray-100 font-sans">
+    <div id="root"></div>
 
-  <!-- טעינת ריאקט -->
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <!-- טעינת ריאקט -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
