@@ -2,13 +2,23 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import GamePage from "../../pages/GamePage";
-import synonymsData from "../../data/synonyms.json";
 import statsManager from "../../utils/statsManager";
 import PopUpToast from "../PopUpToast";
 
 export default function SynonymGame() {
   const navigate = useNavigate();
   const location = useLocation();
+const [synonymsData, setSynonymsData] = useState({});
+
+useEffect(() => {
+  fetch("/data/synonyms.json")
+    .then((res) => res.json())
+    .then((data) => setSynonymsData(data))
+    .catch((err) => {
+      console.error("Failed to load synonyms:", err);
+      navigate("/games");
+    });
+}, []);
 
   // 1. קבלת המילים: מ־location.state או מ־context
   const wordsFromState = location.state?.words;
