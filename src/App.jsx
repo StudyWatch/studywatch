@@ -16,14 +16,29 @@ import { LanguageProvider } from "./context/LanguageContext";
 import SettingsProvider, { useSettings } from "./context/SettingsContext.jsx";
 import { I18nProvider, useTranslation } from "./context/I18nContext.jsx";
 import { WordsProvider } from "./context/WordsContext";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import { SavedDataProvider } from "./context/SavedDataContext";
 import { FavoritesProvider } from "./context/FavoritesContext";
 
 import UserPanel from "./components/UserPanel/UserPanel";
 import Header from "./components/Header";
 import ErrorBoundary from "./components/ErrorBoundary";
+
 import "./components/accessibility/accessibility.css";
+
+const PremiumPage = lazy(() => import("./pages/PremiumPage"));
+const LoginPage = lazy(() => import("./pages/LoginPage"));
+const RegisterPage = lazy(() => import("./pages/RegisterPage"));
+const BrowseSeriesPage = lazy(() => import("./pages/BrowseSeriesPage"));
+const EpisodesPage = lazy(() => import("./pages/EpisodesPage"));
+const GameMenuPage = lazy(() => import("./pages/GameMenuPage"));
+const WordTreasureGame = lazy(() => import("./components/games/WordTreasureGame"));
+const MemoryGame = lazy(() => import("./components/games/MemoryGame"));
+const SentenceMatchGame = lazy(() => import("./components/games/SentenceMatchGame"));
+const SentenceScrambleGame = lazy(() => import("./components/games/SentenceScrambleGame"));
+const ListeningGame = lazy(() => import("./components/games/ListeningGame"));
+const SynonymGame = lazy(() => import("./components/games/SynonymGame"));
+const WritingGame = lazy(() => import("./components/games/WritingGame"));
 
 function MaintenancePopup({ onClose }) {
   return (
@@ -47,23 +62,13 @@ function MaintenancePopup({ onClose }) {
   );
 }
 
-const BrowseSeriesPage = lazy(() => import("./pages/BrowseSeriesPage"));
-const EpisodesPage = lazy(() => import("./pages/EpisodesPage"));
-const GameMenuPage = lazy(() => import("./pages/GameMenuPage"));
-const WordTreasureGame = lazy(() => import("./components/games/WordTreasureGame"));
-const MemoryGame = lazy(() => import("./components/games/MemoryGame"));
-const SentenceMatchGame = lazy(() => import("./components/games/SentenceMatchGame"));
-const SentenceScrambleGame = lazy(() => import("./components/games/SentenceScrambleGame"));
-const ListeningGame = lazy(() => import("./components/games/ListeningGame"));
-const SynonymGame = lazy(() => import("./components/games/SynonymGame"));
-const WritingGame = lazy(() => import("./components/games/WritingGame"));
-
 function InnerApp() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [userPanelOpen, setUserPanelOpen] = useState(false);
   const [showMaintenance, setShowMaintenance] = useState(true);
   const { settings, updateSetting } = useSettings();
   const { t } = useTranslation();
+  const { loading } = useAuth();
 
   useEffect(() => {
     document.documentElement.dir = ["he", "ar"].includes(settings.uiLang) ? "rtl" : "ltr";
@@ -71,6 +76,14 @@ function InnerApp() {
 
   const isRtl = ["he", "ar"].includes(settings.uiLang);
   const direction = isRtl ? "rtl" : "ltr";
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-xl">
+        {t("loading") || "טוען..."}
+      </div>
+    );
+  }
 
   return (
     <div className={`min-h-screen font-sans ${settings.darkMode ? "dark" : ""}`} dir={direction}>
@@ -103,6 +116,9 @@ function InnerApp() {
             <Route path="/games/listening" element={<ListeningGame />} />
             <Route path="/games/synonyms" element={<SynonymGame />} />
             <Route path="/games/writing" element={<WritingGame />} />
+            <Route path="/premium" element={<PremiumPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/game-end" element={<GameEndPage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
