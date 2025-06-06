@@ -4,9 +4,20 @@
     <meta charset="UTF-8" />
     <title>StudyWatch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- צבע ראשי לאפליקציה -->
     <meta name="theme-color" content="#f59e0b" />
-    <link rel="icon" href="/icons/icon-192.png" />
+
+    <!-- קובץ manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- favicon תקני לכל הדפדפנים -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- טעינה מוקדמת (רשות) -->
+    <link rel="preload" href="/favicon.png" as="image" />
   </head>
   <body class="m-0 p-0 bg-gray-100 overflow-x-hidden">
     <div id="root"></div>

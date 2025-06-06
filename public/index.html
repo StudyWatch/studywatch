@@ -12,18 +12,18 @@
     <!-- צבע לאפליקציה במובייל -->
     <meta name="theme-color" content="#f59e0b" />
 
-    <!-- קישור ל-manifest.json -->
+    <!-- קובץ manifest -->
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- אייקון אתר קטן -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192.png" />
-    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <!-- אייקונים לכל הדפדפנים -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
 
-    <!-- טעינה מוקדמת של אייקונים -->
-    <link rel="preload" href="/icons/icon-192.png" as="image" />
-    <link rel="preload" href="/icons/icon-512.png" as="image" />
-
-    <!-- איפוס מרווחים וניקוי גלילה אופקית -->
+    <!-- טעינה מוקדמת של האייקון -->
+    <link rel="preload" href="/favicon.png" as="image" />
+    
+    <!-- איפוס גלילה ומרווחים -->
     <style>
       html, body {
         margin: 0;
@@ -37,7 +37,7 @@
   <body class="bg-gray-100 font-sans">
     <div id="root"></div>
 
-    <!-- טעינת ריאקט -->
+    <!-- טעינת אפליקציית React -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
