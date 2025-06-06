@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import GamePage from "../../pages/GamePage";
+import axios from "axios";
 import statsManager from "../../utils/statsManager";
 import PopUpToast from "../PopUpToast";
 
