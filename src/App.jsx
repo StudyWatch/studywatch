@@ -1,86 +1,138 @@
-import React, { Suspense, lazy, useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import BotPage from './pages/BotPage';
-import FavoritesPage from './pages/FavoritesPage';
-import GameEndPage from './pages/GameEndPage';
-import TipsPage from './pages/TipsPage';
-import ThemeToggleButton from './components/ThemeToggleButton';
-import { LanguageProvider } from './context/LanguageContext';
+import React, { Suspense, lazy, useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 
-const EpisodesPage = lazy(() => import('./pages/EpisodesPage'));
-const GameMenuPage = lazy(() => import('./pages/GameMenuPage'));
-const WordTreasureGame = lazy(() => import('./components/games/WordTreasureGame'));
-const MemoryGame = lazy(() => import('./components/games/MemoryGame'));
-const SentenceMatchGame = lazy(() => import('./components/games/SentenceMatchGame'));
+import HomePage from "./pages/HomePage";
+import BotPage from "./pages/BotPage";
+import FavoritesPage from "./pages/FavoritesPage";
+import AllSeriesFavoritesPage from "./pages/AllSeriesFavoritesPage";
+import AllWordsFavoritesPage from "./pages/AllWordsFavoritesPage";
+import ReviewWordPage from "./pages/ReviewWordPage";
+import NotesPage from "./pages/NotesPage";
+import GameEndPage from "./pages/GameEndPage";
+import TipsPage from "./pages/TipsPage";
+import AccessibilityWidget from "./components/accessibility/AccessibilityWidget";
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+import { LanguageProvider } from "./context/LanguageContext";
+import SettingsProvider, { useSettings } from "./context/SettingsContext.jsx";
+import { I18nProvider, useTranslation } from "./context/I18nContext.jsx";
+import { WordsProvider } from "./context/WordsContext";
+import { AuthProvider } from "./context/AuthContext";
+import { SavedDataProvider } from "./context/SavedDataContext";
+import { FavoritesProvider } from "./context/FavoritesContext";
 
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
-  const closeMenu = () => setMenuOpen(false);
+import UserPanel from "./components/UserPanel/UserPanel";
+import Header from "./components/Header";
+import ErrorBoundary from "./components/ErrorBoundary";
+import "./components/accessibility/accessibility.css";
 
+function MaintenancePopup({ onClose }) {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen w-full bg-gray-50 dark:bg-gray-900 font-sans overflow-x-hidden" dir="rtl">
-        
-        {/* סרגל ניווט */}
-        <header className="fixed top-0 w-full bg-gradient-to-r from-blue-100 via-white to-blue-100 dark:from-gray-800 dark:via-gray-900 shadow-lg z-50">
-          <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
-            
-            {/* לוגו */}
-            <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-blue-700 dark:text-yellow-300 hover:scale-105 transition-transform duration-300">
-              📺 StudyWatch
-            </Link>
-
-            {/* תפריט רגיל - מחשב */}
-            <nav className="hidden sm:flex gap-4 text-gray-700 dark:text-white font-semibold">
-              <Link to="/" className="rounded-full px-4 py-2 transition hover:bg-blue-200 hover:text-blue-800 dark:hover:bg-blue-800 dark:hover:text-blue-300">🏠 דף הבית</Link>
-              <Link to="/favorites" className="rounded-full px-4 py-2 transition hover:bg-yellow-200 hover:text-yellow-700 dark:hover:bg-yellow-700 dark:hover:text-yellow-300">⭐ מועדפים</Link>
-              <Link to="/bot" className="rounded-full px-4 py-2 transition hover:bg-purple-200 hover:text-purple-700 dark:hover:bg-purple-700 dark:hover:text-purple-300">🤖 בוט המלצות</Link>
-              <Link to="/tips" className="rounded-full px-4 py-2 transition hover:bg-amber-200 hover:text-amber-700 dark:hover:bg-amber-600 dark:hover:text-amber-300">💡 טיפים</Link>
-              <ThemeToggleButton />
-            </nav>
-
-            {/* אייקון המבורגר - מובייל */}
-            <button onClick={toggleMenu} className="sm:hidden text-3xl text-blue-700 dark:text-white">
-              ☰
-            </button>
-          </div>
-
-          {/* תפריט צד נפתח - מובייל */}
-          {menuOpen && (
-            <div className="bg-white dark:bg-gray-800 shadow-md sm:hidden flex flex-col items-center gap-5 py-5 px-4">
-              <Link onClick={closeMenu} to="/" className="text-lg text-blue-700 dark:text-white hover:underline">🏠 דף הבית</Link>
-              <Link onClick={closeMenu} to="/favorites" className="text-lg text-yellow-600 dark:text-yellow-300 hover:underline">⭐ מועדפים</Link>
-              <Link onClick={closeMenu} to="/bot" className="text-lg text-purple-600 dark:text-purple-300 hover:underline">🤖 בוט המלצות</Link>
-              <Link onClick={closeMenu} to="/tips" className="text-lg text-amber-600 dark:text-amber-300 hover:underline">💡 טיפים</Link>
-              <ThemeToggleButton />
-            </div>
-          )}
-        </header>
-
-        {/* תוכן הדף */}
-        <main className="pt-[72px] pb-8 w-full overflow-x-hidden">
-          <Suspense fallback={<div className="text-center my-10 text-lg">⏳ טוען...</div>}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/favorites" element={<FavoritesPage />} />
-              <Route path="/bot" element={<BotPage />} />
-              <Route path="/tips" element={<TipsPage />} />
-              <Route path="/episodes/:seriesId" element={<EpisodesPage />} />
-              <Route path="/games" element={<GameMenuPage />} />
-              <Route path="/games/word-treasure" element={<WordTreasureGame />} />
-              <Route path="/games/memory" element={<MemoryGame />} />
-              <Route path="/games/sentence-match" element={<SentenceMatchGame />} />
-              <Route path="/game-end" element={<GameEndPage />} />
-              <Route path="*" element={<HomePage />} />
-            </Routes>
-          </Suspense>
-        </main>
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999] flex items-center justify-center">
+      <div className="bg-yellow-300 text-black rounded-xl shadow-2xl max-w-2xl w-full p-10 relative border-4 border-yellow-500">
+        <button
+          className="absolute top-3 right-4 text-3xl font-bold text-gray-800 hover:text-black"
+          onClick={onClose}
+        >
+          &times;
+        </button>
+        <div className="text-center font-extrabold text-2xl md:text-3xl leading-relaxed">
+          🚧 האתר בשיפוצים! 🚧
+          <br />
+          ייתכן שחלק מהפונקציות לא יעבדו כראוי.
+          <br />
+          תודה על הסבלנות 🙏
+        </div>
       </div>
-    </LanguageProvider>
+    </div>
   );
 }
 
-export default App;
+const BrowseSeriesPage = lazy(() => import("./pages/BrowseSeriesPage"));
+const EpisodesPage = lazy(() => import("./pages/EpisodesPage"));
+const GameMenuPage = lazy(() => import("./pages/GameMenuPage"));
+const WordTreasureGame = lazy(() => import("./components/games/WordTreasureGame"));
+const MemoryGame = lazy(() => import("./components/games/MemoryGame"));
+const SentenceMatchGame = lazy(() => import("./components/games/SentenceMatchGame"));
+const SentenceScrambleGame = lazy(() => import("./components/games/SentenceScrambleGame"));
+const ListeningGame = lazy(() => import("./components/games/ListeningGame"));
+const SynonymGame = lazy(() => import("./components/games/SynonymGame"));
+const WritingGame = lazy(() => import("./components/games/WritingGame"));
+
+function InnerApp() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [userPanelOpen, setUserPanelOpen] = useState(false);
+  const [showMaintenance, setShowMaintenance] = useState(true);
+  const { settings, updateSetting } = useSettings();
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.dir = ["he", "ar"].includes(settings.uiLang) ? "rtl" : "ltr";
+  }, [settings.uiLang]);
+
+  const isRtl = ["he", "ar"].includes(settings.uiLang);
+  const direction = isRtl ? "rtl" : "ltr";
+
+  return (
+    <div className={`min-h-screen font-sans ${settings.darkMode ? "dark" : ""}`} dir={direction}>
+      {showMaintenance && <MaintenancePopup onClose={() => setShowMaintenance(false)} />}
+      <Header
+        onMenuToggle={() => setMenuOpen(!menuOpen)}
+        menuOpen={menuOpen}
+        onUserPanelToggle={() => setUserPanelOpen(true)}
+        onLangChange={(langCode) => updateSetting("uiLang", langCode)}
+      />
+
+      <main className="pt-[56px] pb-8 w-full overflow-x-hidden">
+        <Suspense fallback={<div className="text-center my-10 text-lg">⏳ {t("loading") || "Loading..."}</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="/favorites/all-series" element={<AllSeriesFavoritesPage />} />
+            <Route path="/favorites/all-words" element={<AllWordsFavoritesPage />} />
+            <Route path="/review-word/:wordKey" element={<ReviewWordPage />} />
+            <Route path="/notes" element={<NotesPage />} />
+            <Route path="/series" element={<BrowseSeriesPage />} />
+            <Route path="/episodes/:seriesId" element={<EpisodesPage />} />
+            <Route path="/bot" element={<BotPage />} />
+            <Route path="/tips" element={<TipsPage />} />
+            <Route path="/games" element={<GameMenuPage />} />
+            <Route path="/games/word-treasure" element={<WordTreasureGame />} />
+            <Route path="/games/memory" element={<MemoryGame />} />
+            <Route path="/games/sentence-match" element={<SentenceMatchGame />} />
+            <Route path="/games/sentence-scramble" element={<SentenceScrambleGame />} />
+            <Route path="/games/listening" element={<ListeningGame />} />
+            <Route path="/games/synonyms" element={<SynonymGame />} />
+            <Route path="/games/writing" element={<WritingGame />} />
+            <Route path="/game-end" element={<GameEndPage />} />
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        </Suspense>
+      </main>
+
+      {userPanelOpen && <UserPanel onClose={() => setUserPanelOpen(false)} />}
+      <AccessibilityWidget />
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <SettingsProvider>
+        <I18nProvider>
+          <WordsProvider>
+            <AuthProvider>
+              <SavedDataProvider>
+                <FavoritesProvider>
+                  <ErrorBoundary>
+                    <InnerApp />
+                  </ErrorBoundary>
+                </FavoritesProvider>
+              </SavedDataProvider>
+            </AuthProvider>
+          </WordsProvider>
+        </I18nProvider>
+      </SettingsProvider>
+    </LanguageProvider>
+  );
+}

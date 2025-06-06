@@ -1,26 +1,456 @@
+/* ==================================================
+   🎨 ייבוא גופנים (Google Fonts)
+   ================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* הוספות מותאמות אישית */
+/* ==================================================
+   🎨 בסיס עיצוב כלל האתר
+   ================================================== */
 body {
-  @apply bg-gray-100 text-gray-800 font-sans;
+  /* ברירת המחדל – light mode: רקע לבן עם טקסט כהה.
+     dark mode: רקע גרידיאנט כהה עם טקסט בהיר */
+  @apply bg-white text-gray-900 antialiased transition-colors duration-500;
+  @apply dark:bg-gradient-to-br dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#334155] dark:text-gray-100;
+
+  /* הגדרת גופן גוף */
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
 
+/* ==================================================
+   ✍️ כותרות (Headings) – שימוש ב-Poppins
+   ================================================== */
 h1, h2, h3, h4, h5, h6 {
-  @apply text-gray-900 font-bold;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  @apply text-gray-900 dark:text-white tracking-normal;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-button {
-  @apply transition-colors duration-200;
+h1 { @apply text-3xl md:text-4xl lg:text-5xl; line-height: 1.2; }
+h2 { @apply text-2xl md:text-3xl lg:text-4xl; line-height: 1.25; }
+h3 { @apply text-xl md:text-2xl lg:text-3xl; line-height: 1.3; }
+h4 { @apply text-lg md:text-xl lg:text-2xl; line-height: 1.35; }
+h5 { @apply text-base md:text-lg lg:text-xl; line-height: 1.4; }
+h6 { @apply text-sm md:text-base lg:text-lg; line-height: 1.45; }
+
+/* ==================================================
+   🔳 טקסט רגיל (פסקאות, רשימות, span)
+   ================================================== */
+p, li, span {
+  @apply text-gray-900 dark:text-gray-100;
 }
+
+/* ==================================================
+   🎛 כפתורים (Buttons / Anchors)
+   ================================================== */
+button, a {
+  @apply transition-all duration-200 ease-in-out rounded-full font-medium;
+  font-family: 'Inter', sans-serif;
+}
+
+/* כפתור ראשי (Primary) */
+.btn-primary {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-600
+         hover:from-indigo-600 hover:to-purple-700
+         text-white px-5 py-2 shadow-md
+         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-400;
+}
+
+/* כפתור משני (Secondary) */
+.btn-secondary {
+  @apply bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600
+         text-gray-900 dark:text-gray-100 px-4 py-2 border border-gray-300 dark:border-gray-600
+         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400;
+}
+
+/* כפתור אייקון קטן (Icon Button) */
+.btn-icon {
+  @apply p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors;
+}
+
+/* ==================================================
+   🖊 עיצוב Inputs ו־Select
+   ================================================== */
+input, select, textarea {
+  @apply rounded-full px-4 py-2 border border-gray-300 dark:border-gray-600
+         bg-gray-50 dark:bg-gray-800
+         text-gray-900 dark:text-gray-100
+         placeholder-gray-400 dark:placeholder-gray-500
+         focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 shadow-sm;
+  font-family: 'Inter', sans-serif;
+}
+select {
+  appearance: none;
+}
+
+/* ◾ Sidebar – טקסט ותפריטים בתוך סיידבר */
+.sidebar-base label {
+  @apply text-gray-700 dark:text-gray-300;
+}
+.sidebar-base select {
+  @apply text-gray-900 dark:text-white;
+}
+
+/* ==================================================
+   🌙 כפתור מצב לילה (Dark Mode Toggle)
+   ================================================== */
+.theme-toggle {
+  @apply w-12 h-6 flex items-center rounded-full px-1 cursor-pointer
+         transition-colors duration-300 border border-gray-300 dark:border-gray-500
+         bg-gray-200 dark:bg-gray-700;
+}
+.theme-toggle-thumb {
+  @apply w-4 h-4 bg-white rounded-full shadow-md transform
+         transition-transform duration-300;
+}
+.theme-toggle[data-active='true'] .theme-toggle-thumb {
+  transform: translateX(1.5rem);
+}
+
+/* ==================================================
+   ✨ הודעות טוסט (Fade In/Out)
+   ================================================== */
 @keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(10px); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; transform: translateY(0); }
+  0%   { opacity: 0; transform: translateY(10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  90%  { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(10px); }
 }
-
 .animate-fadeInOut {
   animation: fadeInOut 2s ease-in-out forwards;
 }
+
+/* ==================================================
+   💫 אפקט מילים שנעלמות (Fly Out)
+   ================================================== */
+@keyframes flyOut {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.4) translateY(-80px);
+    opacity: 0;
+  }
+}
+.animate-fly-out {
+  animation: flyOut 0.6s ease-in-out;
+}
+
+/* ==================================================
+   🚀 אפקט "מעוף לפינה" (Fly To Favorites)
+   ================================================== */
+@keyframes flyToFavorites {
+  0% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+    opacity: 1;
+    filter: brightness(1);
+  }
+  40% {
+    transform: scale(0.8) translate(-80px, -60px) rotate(-5deg);
+    filter: brightness(1.2);
+  }
+  70% {
+    transform: scale(0.5) translate(-180px, -120px) rotate(5deg);
+    filter: brightness(0.9);
+  }
+  100% {
+    transform: scale(0.2) translate(-260px, -180px) rotate(-10deg);
+    opacity: 0;
+    filter: brightness(0.7);
+  }
+}
+.animate-fly-to-favorites {
+  animation: flyToFavorites 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* ==================================================
+   📦 שכפול אלמנט לצורך אפקט (Fly Clone)
+   ================================================== */
+.fly-clone {
+  @apply fixed rounded-2xl shadow-xl border overflow-hidden bg-white
+         dark:bg-gray-800 z-[100] pointer-events-none transition-all ease-in-out duration-300;
+  transform-origin: center;
+}
+
+/* ==================================================
+   ✅ אנימציית הופעה חלקית (Fade + Slide In)
+   ================================================== */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-slide-in {
+  animation: fadeSlideIn 0.6s ease-out both;
+}
+
+/* ==================================================
+   🔥 אפקט התפוצצות חלקים מהמסך (Explode Pieces)
+   ================================================== */
+@keyframes explodePieces {
+  0% {
+    transform: translate(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(0.1);
+    opacity: 0;
+  }
+}
+.explode .transition-content > * {
+  animation: explodePieces 0.9s ease-out forwards;
+  display: inline-block;
+  position: relative;
+}
+.explode .transition-content > *:nth-child(1) { --x: -100px; --y: -80px;  --r: -15deg; }
+.explode .transition-content > *:nth-child(2) { --x: 100px;  --y: -60px;  --r:  12deg; }
+.explode .transition-content > *:nth-child(3) { --x: -120px; --y: 60px;   --r: -10deg; }
+.explode .transition-content > *:nth-child(4) { --x: 80px;   --y: 100px;  --r:  18deg; }
+
+/* ==================================================
+   🧩 אפקט נפילה חלקית (Fall Apart)
+   ================================================== */
+@keyframes fallApart {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+.animate-fall-apart {
+  animation: fallApart 0.6s ease-in-out forwards;
+}
+
+/* ==================================================
+   🧠 טולטיפ מודרני (Tooltip)
+   ================================================== */
+.tooltip {
+  @apply relative cursor-pointer;
+}
+.tooltip::after {
+  content: attr(data-tip);
+  @apply absolute bottom-full left-1/2 -translate-x-1/2 mb-2
+         text-xs bg-gray-700 text-white py-1 px-2 rounded
+         opacity-0 pointer-events-none transition-all duration-300;
+}
+.tooltip:hover::after {
+  @apply opacity-100;
+}
+
+/* ==================================================
+   ✨ אנימציית Fade In (קומפקטית)
+   ================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out both;
+}
+
+/* ==================================================
+   ⏱ מחלקות לעיכוב אנימציה (Delays)
+   ================================================== */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ==================================================
+   🔖 סטייל לחלק המודגש (<strong> / <mark>) – מילה מודגשת
+   ================================================== */
+strong {
+  @apply font-semibold bg-white text-black dark:bg-white dark:text-black px-1 rounded;
+}
+mark {
+  background-color: #facc15;  /* Light Mode: צהוב בהיר */
+  color: #000000;             /* Light Mode: טקסט שחור */
+  font-weight: 600;
+  padding: 0 0.125rem;
+}
+@media (prefers-color-scheme: dark) {
+  mark {
+    background-color: #ffffff;  /* Dark Mode: רקע לבן */
+    color: #1f2937;             /* Dark Mode: טקסט אפור כהה */
+  }
+}
+
+/* ==================================================
+   🎨 עיצוב כרטיסיות (Cards)
+   ================================================== */
+.card-base {
+  @apply bg-white dark:bg-gray-800
+         border border-gray-200 dark:border-gray-700
+         rounded-lg
+         shadow-sm dark:shadow-none
+         hover:shadow-md dark:hover:shadow-lg
+         transform hover:scale-[1.01] transition-all p-3;
+}
+
+/* ==================================================
+   🧩 עיצוב תבנית הסקשן "איך זה עובד"
+   ================================================== */
+.how-it-works-section {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors;
+}
+.how-it-works-section .card {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700;
+}
+
+/* ==================================================
+   🎨 עיצוב Sidebar (בחירת שפה, עונה וכו')
+   ================================================== */
+.sidebar-base {
+  @apply bg-white/80 dark:bg-gray-900/80
+         backdrop-blur-md p-4 gap-4
+         shadow-lg dark:shadow-none
+         rounded-l-2xl;
+}
+
+/* ==================================================
+   📚 עיצוב כרטיסיות FavoritesPage
+   ================================================== */
+.favorite-series-card {
+  @apply relative w-28 h-28 rounded-full overflow-hidden
+         bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700
+         shadow-md dark:shadow-none hover:shadow-lg transition-shadow duration-300 cursor-pointer;
+}
+.favorite-series-card img {
+  @apply w-full h-full object-cover;
+}
+.favorite-series-card .remove-btn {
+  @apply absolute top-1 right-1 bg-white dark:bg-gray-800
+         p-1 rounded-full text-red-600 hover:text-red-800 hover:bg-red-50
+         transition-colors duration-200;
+  font-size: 0.75rem;
+}
+
+.favorite-word-card {
+  @apply bg-white dark:bg-gray-800 p-4 rounded-xl
+         border border-gray-200 dark:border-gray-700
+         shadow-md dark:shadow-none hover:shadow-lg transition-shadow duration-300
+         flex flex-col justify-between;
+}
+.favorite-word-card .difficulty-badge {
+  @apply text-xs font-medium py-1 px-3 rounded-full;
+}
+.favorite-word-card .difficulty-badge.easy {
+  @apply bg-green-100 text-green-800;
+}
+.favorite-word-card .difficulty-badge.medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+.favorite-word-card .difficulty-badge.hard {
+  @apply bg-red-100 text-red-800;
+}
+.favorite-word-card .remove-word-btn {
+  @apply bg-white dark:bg-gray-800 p-1 rounded-full
+         text-red-600 hover:text-red-800 hover:bg-red-50
+         transition-colors duration-200;
+  font-size: 0.75rem;
+}
+.favorite-word-card .word-from {
+  @apply text-xl font-bold text-gray-900 dark:text-white;
+}
+.favorite-word-card .word-to {
+  @apply text-base font-semibold text-blue-700 dark:text-blue-300;
+}
+.favorite-word-card .speak-btn {
+  @apply bg-blue-100 dark:bg-blue-800 p-1 rounded-full
+         text-blue-600 hover:text-blue-800 hover:bg-blue-200 dark:hover:bg-blue-700
+         transition-colors duration-200;
+  font-size: 0.75rem;
+}
+.favorite-word-card .example-sentence {
+  @apply text-gray-600 dark:text-gray-400 italic text-sm mb-2 leading-snug;
+}
+.favorite-word-card .progress-wrapper {
+  @apply mb-2;
+}
+.favorite-word-card .progress-text {
+  @apply flex justify-between items-center text-xs text-gray-600 dark:text-gray-400;
+}
+.favorite-word-card .progress-bar-bg {
+  @apply w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full mt-1 overflow-hidden;
+}
+.favorite-word-card .progress-bar-fill {
+  @apply h-full bg-indigo-500 dark:bg-indigo-400 transition-all duration-300;
+}
+.favorite-word-card .mastery-level {
+  @apply flex justify-between items-center text-xxs text-gray-500 dark:text-gray-400 mb-3;
+}
+.favorite-word-card .action-buttons {
+  @apply flex justify-end items-center gap-4;
+}
+.favorite-word-card .action-buttons .review-btn {
+  @apply text-indigo-600 dark:text-indigo-400 hover:underline text-xs font-medium;
+}
+.favorite-word-card .action-buttons .add-notes-btn {
+  @apply flex items-center gap-1 text-gray-600 dark:text-gray-300
+         hover:underline text-xs font-medium;
+}
+
+/* ==================================================
+   💠 כפתור "View All" קומפקטי
+   ================================================== */
+.view-all-btn {
+  @apply px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-600
+         hover:from-indigo-600 hover:to-purple-700
+         text-white font-semibold rounded-full shadow-md
+         transition-colors duration-300 text-sm;
+}
+
+/* ==================================================
+   💠 כפתור "Play now with saved words"
+   ================================================== */
+.play-words-btn {
+  @apply flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-500
+         hover:from-purple-700 hover:to-indigo-600
+         text-white font-bold py-3 px-6 rounded-full shadow-lg
+         transition-colors duration-300 text-base;
+}
+.play-words-btn .icon {
+  @apply text-2xl;
+}
+
+/* ==================================================
+   🎮 כפתור "Play Game" מובייל/דסקטופ – מיקום קבוע ב־RTL/RTL 
+   ================================================== */
+/* ברירת מחדל (LTR): fixed bottom-26px, right-1rem */
+html[dir="ltr"] .play-game-btn {
+  right: 1rem;  /* טווילווינד: right-4 */
+  left: auto;
+}
+/* RTL: fixed bottom-26px, left-1rem */
+html[dir="rtl"] .play-game-btn {
+  right: auto;
+  left: 1rem;  /* טווילווינד: left-4 */
+}
+.play-game-btn {
+  @apply fixed bottom-[26px] z-30 bg-blue-600 dark:bg-blue-700 p-3 rounded-full shadow-lg transition-transform hover:scale-105;
+}
+

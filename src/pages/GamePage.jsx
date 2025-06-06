@@ -1,4 +1,3 @@
-// src/pages/GamePage.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,7 +6,7 @@ export default function GamePage({ title, backgroundImage, children }) {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center text-center p-8"
+      className="min-h-screen flex flex-col items-center justify-center text-center p-4 sm:p-8"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -15,25 +14,23 @@ export default function GamePage({ title, backgroundImage, children }) {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* שכבת רקע כהה קלה */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
-      {/* תוכן */}
-      <div className="relative z-10 w-full max-w-4xl bg-white bg-opacity-80 backdrop-blur-md rounded-3xl p-8 shadow-2xl">
-        
-        {/* כותרת המשחק */}
-        <h1 className="text-4xl font-bold text-blue-800 mb-6">{title}</h1>
+      {/* Content box */}
+      <div className="relative z-10 w-full max-w-5xl bg-white bg-opacity-90 backdrop-blur-xl rounded-3xl p-6 sm:p-10 shadow-2xl border border-white/40">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-8 drop-shadow-sm">
+          {title}
+        </h1>
 
-        {/* המשחק עצמו */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center space-y-4 sm:space-y-6">
           {children}
         </div>
 
-        {/* כפתור חזור */}
-        <div className="mt-10">
+        <div className="mt-12">
           <button
             onClick={() => navigate('/games')}
-            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-lg"
+            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-lg hover:scale-105"
           >
             🔙 חזרה לתפריט המשחקים
           </button>

@@ -1,9 +1,10 @@
+// tailwind.config.js
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: 'class', // ← הוספה קריטית כאן
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -12,6 +13,9 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'Alef', 'sans-serif'],
+      },
+      fontSize: {
+        'xxs': '0.625rem', // הוספה של text-xxs
       },
     },
   },

@@ -1,110 +1,890 @@
 [
   {
     "id": "friends",
-    "name": "חברים",
-    "description": "קומדיה על קבוצת חברים שחיים בניו יורק.",
+    "name": {
+      "he": "חברים",
+      "en": "Friends",
+      "es": "Amigos",
+      "ar": "الأصدقاء",
+      "ru": "Друзья"
+    },
+    "description": {
+      "he": "קומדיה על קבוצת חברים שחיים בניו יורק.",
+      "en": "Comedy about a group of friends living in New York.",
+      "es": "Comedia sobre un grupo de amigos que viven en Nueva York.",
+      "ar": "كوميديا عن مجموعة من الأصدقاء يعيشون في نيويورك.",
+      "ru": "Комедия о группе друзей, живущих в Нью-Йорке."
+    },
+    "details": {
+      "he": "סיטקום קלאסי המתרחש בניו יורק, עם שפה יומיומית, הומור בסיסי ודיאלוגים ברורים. מצוין ללומדי אנגלית מתחילים שרוצים להכיר שיחות על מערכות יחסים, עבודה וחיים בעיר.",
+      "en": "A classic sitcom set in New York, featuring everyday language, basic humor, and clear dialogues. Perfect for beginner learners who want to get familiar with conversations about relationships, work, and city life.",
+      "es": "Una comedia clásica ambientada en Nueva York, con lenguaje cotidiano, humor básico y diálogos claros. Perfecta para principiantes que quieren familiarizarse con conversaciones sobre relaciones, trabajo y vida urbana.",
+      "ar": "مسلسل هزلي كلاسيكي تدور أحداثه في نيويورك، يتميز بلغة يومية، وفكاهة بسيطة، وحوارات واضحة. مثالي للمبتدئين الذين يرغبون في التعرف على المحادثات حول العلاقات والعمل والحياة في المدينة.",
+      "ru": "Классический ситком, действие которого происходит в Нью-Йорке, с повседневным языком, простым юмором и понятными диалогами. Идеально подходит для начинающих, желающих освоить разговоры о взаимоотношениях, работе и жизни в городе."
+    },
     "image": "/img/friends good.webp",
     "genre": "comedy",
     "level": "beginner",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה beginner."
+    "platforms": [
+      "Apple TV",
+      "Amazon Prime Video",
+      "HBO Max"
+    ]
+  },
+  {
+    "id": "originals",
+    "name": {
+      "he": "המקוריים",
+      "en": "The Originals",
+      "es": "Los Originales",
+      "ar": "الأساسيون",
+      "ru": "Первородные"
+    },
+    "description": {
+      "he": "עולם של ערפדים, מכשפים ואנושיות בניו אורלינס.",
+      "en": "A world of vampires, witches, and humanity in New Orleans.",
+      "es": "Un mundo de vampiros, brujas y humanidad en Nueva Orleans.",
+      "ar": "عالم من مصاصي الدماء والسحرة والبشر في نيو أورلينز.",
+      "ru": "Мир вампиров, ведьм и человечности в Новом Орлеане."
+    },
+    "details": {
+      "he": "סדרת פנטזיה אפלה ודחוסה בדיאלוגים מורכבים, אוצר מילים ספרותי ורגשי, וטון דרמטי. מצוינת ללומדים מתקדמים שרוצים לאתגר את ההבנה שלהם באנגלית גבוהה.",
+      "en": "A dark fantasy series packed with complex dialogues, literary and emotional vocabulary, and a dramatic tone. Excellent for advanced learners looking to challenge their understanding of high-level English.",
+      "es": "Una serie de fantasía oscura con diálogos complejos, vocabulario literario y emocional, y un tono dramático. Excelente para estudiantes avanzados que buscan desafiar su comprensión del inglés avanzado.",
+      "ar": "سلسلة فانتازيا مظلمة مليئة بالحوار المعقد، والمفردات الأدبية والعاطفية، ونبرة درامية. مثالية للمتعلمين المتقدمين الذين يسعون لتحدي فهمهم للغة الإنجليزية المتقدمة.",
+      "ru": "Мрачный фэнтезийный сериал с насыщенными сложными диалогами, литературной и эмоциональной лексикой и драматическим тоном. Прекрасно подходит для продвинутых изучающих английский язык."
+    },
+    "image": "/img/originals.png",
+    "genre": "fantasy",
+    "level": "advanced",
+    "platforms": [
+      "Amazon Prime Video",
+      "Apple TV",
+      "HBO Max"
+    ]
   },
   {
     "id": "brooklyn99",
-    "name": "ברוקלין 99",
-    "description": "קומדיה משטרתית על תחנת משטרה בברוקלין.",
+    "name": {
+      "he": "ברוקלין 99",
+      "en": "Brooklyn Nine-Nine",
+      "es": "Brooklyn 99",
+      "ar": "بروكلين 99",
+      "ru": "Бруклин 99"
+    },
+    "description": {
+      "he": "קומדיה משטרתית על תחנת משטרה בברוקלין.",
+      "en": "A police comedy about a precinct in Brooklyn.",
+      "es": "Una comedia policial sobre una estación de policía en Brooklyn.",
+      "ar": "كوميديا بوليسية عن مركز شرطة في بروكلين.",
+      "ru": "Полицейская комедия о участке в Бруклине."
+    },
+    "details": {
+      "he": "סדרה קצבית ושנונה עם הומור יבש, סלנג משטרתי ודמויות מגוונות. מתאימה ללומדים ברמה בינונית שרוצים לתרגל אנגלית טבעית ומהירה בסיטואציות משעשעות.",
+      "en": "A fast-paced and witty series with dry humor, police slang, and diverse characters. Suitable for intermediate learners who want to practice natural and quick English in humorous situations.",
+      "es": "Una serie dinámica e ingeniosa con humor seco, jerga policial y personajes diversos. Ideal para estudiantes intermedios que desean practicar inglés natural y rápido en situaciones cómicas.",
+      "ar": "مسلسل سريع الإيقاع وذكي يحتوي על فكاهة جافة، ومصطلحات شرطية، وشخصيات متنوعة. מתאים للمتعلمين ברמה בינונית שמעוניינים לתרגל אנגלית טבעית ומהירה בסיטואציות משעשעות.",
+      "ru": "Быстрый и остроумный сериал с сухим юмором, полицейским сленгом и разнообразными персонажами. Подходит для учащихся среднего уровня, желающих практиковать естественный и быстрый английский в забавных ситуациях."
+    },
     "image": "/img/brooklyn.webp",
     "genre": "comedy",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Netflix",
+      "Apple TV"
+    ]
   },
   {
     "id": "the100",
-    "name": "ה-100",
-    "description": "סדרת מדע בדיוני על חזרה לכדור הארץ אחרי אפוקליפסה.",
+    "name": {
+      "he": "ה-100",
+      "en": "The 100",
+      "es": "Los 100",
+      "ar": "المئة",
+      "ru": "Сотня"
+    },
+    "description": {
+      "he": "סדרת מדע בדיוני על חזרה לכדור הארץ אחרי אפוקליפסה.",
+      "en": "A science fiction series about returning to Earth after an apocalypse.",
+      "es": "Una serie de ciencia ficción sobre el regreso a la Tierra después de un apocalipsis.",
+      "ar": "مسلسل خيال علمي عن العودة إلى الأرض بعد نهاية العالم.",
+      "ru": "Фантастический сериал о возвращении на Землю после апокалипсиса."
+    },
+    "details": {
+      "he": "סדרת מתח עתידנית עם שפה טכנית, מונחים צבאיים ודילמות מוסריות. אידיאלית ללומדים ברמה גבוהה שרוצים לפתח הבנה של שיח דרמטי ומורכב.",
+      "en": "Excellent for language learning through tense dialogues, moral conflicts, and strong characters.",
+      "es": "Excelente para aprender idiomas a través de diálogos tensos, conflictos morales y personajes fuertes.",
+      "ar": "ممتاز لتعلم اللغة من خلال الحوارات المتوترة والصراعات الأخلاقية والشخصيات القوية.",
+      "ru": "Отличный выбор для изучения языка через напряженные диалоги, моральные конфликты и сильных персонажей."
+    },
     "image": "/img/the 100 good.webp",
     "genre": "sci-fi",
     "level": "advanced",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה advanced."
+    "platforms": [
+      "Netflix",
+      "Apple TV",
+      "Amazon Prime Video"
+    ]
   },
   {
     "id": "bigbang",
-    "name": "המפץ הגדול",
-    "description": "קומדיה על חבורת מדענים וגיקים.",
+    "name": {
+      "he": "המפץ הגדול",
+      "en": "The Big Bang Theory",
+      "es": "The Big Bang Theory",
+      "ar": "نظرية الانفجار الكبير",
+      "ru": "Теория большого взрыва"
+    },
+    "description": {
+      "he": "קומדיה על חבורת מדענים וגיקים.",
+      "en": "A comedy about a group of scientists and geeks.",
+      "es": "Una comedia sobre un grupo de científicos y nerds.",
+      "ar": "كوميديا عن مجموعة من العلماء والمهووسين.",
+      "ru": "Комедия о группе ученых и ботаников."
+    },
+    "details": {
+      "he": "סיטקום אינטלקטואלי עם מושגים מדעיים, שיח יומיומי והומור גיקי. טוב ללומדים ברמה בינונית שמעוניינים להרחיב את אוצר המילים בתחום המדעים והחיים החברתיים.",
+      "en": "An intellectual sitcom with scientific terms, casual conversations, and geeky humor. Great for intermediate learners who want to expand vocabulary in science and social topics.",
+      "es": "Una comedia intelectual con términos científicos, conversaciones cotidianas y humor geek. Ideal para estudiantes intermedios que quieren ampliar su vocabulario en ciencia y temas sociales.",
+      "ar": "مسلسل فكاهي ذكي يحتوي על مصطلحات علمية، حوارات يومية، وفكاهة مهووسين. מתאים للمتعلمين ברמה בינונית שמעוניינים להרחיב את אוצר המילים בתחום המדעים והחיים החברתיים.",
+      "ru": "Интеллектуальный ситком с научной терминологией, повседневной речью и «гиковским» юмором. Подходит для учащихся среднего уровня, желающих расширить словарный запас в области науки и общества."
+    },
     "image": "/img/bigbang theory.webp",
     "genre": "comedy",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Netflix",
+      "Apple TV",
+      "Amazon Prime Video",
+      "HBO Max"
+    ]
   },
   {
     "id": "modernfamily",
-    "name": "משפחה מודרנית",
-    "description": "סדרה קומית על משפחות מודרניות מגוונות.",
+    "name": {
+      "he": "משפחה מודרנית",
+      "en": "Modern Family",
+      "es": "Modern Family",
+      "ar": "العائلة العصرية",
+      "ru": "Американская семейка"
+    },
+    "description": {
+      "he": "סדרה קומית על משפחות מודרניות מגוונות.",
+      "en": "A comedy series about diverse modern families.",
+      "es": "Una serie de comedia sobre familias modernas y diversas.",
+      "ar": "سلسلة كوميدية عن عائلات عصرية ومتنوعة.",
+      "ru": "Комедийный сериал о современных и разнообразных семьях."
+    },
+    "details": {
+      "he": "דיאלוגים מהירים, מבטאים מגוונים ומצבים יומיומיים מרובים. מתאימה ללומדים שרוצים להיחשף לשיח אנגלי בסביבות משפחתיות וחברתיות.",
+      "en": "Fast dialogues, varied accents, and many everyday situations. Suitable for learners who want to get exposed to English in family and social contexts.",
+      "es": "Diálogos rápidos, acentos variados y muchas situaciones cotidianas. Ideal para quienes quieren familiarizarse con el inglés en contextos familiares y sociales.",
+      "ar": "حوارات سريعة، لهجات متنوعة، ומواقف حياتية متعددة. مناسبة للمتعلمين الذين يرغبون في التعرف على الإنجليزية في بيئات عائلية واجتماعية.",
+      "ru": "Быстрые диалоги, разные акценты и множество повседневных ситуаций. Подходит для изучающих английский в семейных и социальных контекстах."
+    },
     "image": "/img/modern family.webp",
     "genre": "comedy",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Disney+",
+      "Apple TV"
+    ]
   },
   {
     "id": "himym",
-    "name": "איך פגשתי את אמא",
-    "description": "המסע של טד למצוא את אהבת חייו.",
+    "name": {
+      "he": "איך פגשתי את אמא",
+      "en": "How I Met Your Mother",
+      "es": "Cómo conocí a vuestra madre",
+      "ar": "كيف قابلت أمكما",
+      "ru": "Как я встретил вашу маму"
+    },
+    "description": {
+      "he": "המסע של טד למצוא את אהבת חייו.",
+      "en": "Ted’s journey to find the love of his life.",
+      "es": "El viaje de Ted para encontrar al amor de su vida.",
+      "ar": "رحلة تيد للعثور على حب حياته.",
+      "ru": "Путешествие Теда в поисках любви всей его жизни."
+    },
+    "details": {
+      "he": "שפה פשוטה, מבנה סיפורי חוזר ודמויות חביבות. הסדרה מתאימה מאוד למתחילים שמעוניינים ללמוד דרך סצנות הומוריסטיות ודיאלוגים רומנטיים.",
+      "en": "Simple language, recurring narrative structure, and lovable characters. Great for beginners looking to learn through humorous scenes and romantic dialogues.",
+      "es": "Lenguaje simple, estructura narrativa recurrente y personajes encantadores. Perfecta para principiantes que quieren aprender con escenas divertidas y diálogos románticos.",
+      "ar": "لغة بسيطة، هيكل سردي متكرر وشخصيات محبوبة. مناسبة للمبتدئين الذين يرغبون في التعلم من خلال مشاهد فكاهية وحوارات رومانسية.",
+      "ru": "Простой язык, повторяющаяся структура рассказа и милые персонажи. Подходит для начинающих, желающих учиться с помощью юмористических сцен и романтических диалогов."
+    },
     "image": "/img/himym.webp",
     "genre": "comedy",
     "level": "beginner",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה beginner."
+    "platforms": [
+      "Netflix",
+      "Apple TV",
+      "Amazon Prime Video"
+    ]
   },
   {
     "id": "seinfeld",
-    "name": "סיינפלד",
-    "description": "קומדיה אייקונית על כלום ועל החיים עצמם.",
+    "name": {
+      "he": "סיינפלד",
+      "en": "Seinfeld",
+      "es": "Seinfeld",
+      "ar": "ساينفيلد",
+      "ru": "Сайнфелд"
+    },
+    "description": {
+      "he": "קומדיה אייקונית על כלום ועל החיים עצמם.",
+      "en": "An iconic comedy about nothing and everyday life.",
+      "es": "Una comedia icónica sobre nada y la vida cotidiana.",
+      "ar": "كوميديا أيقونية عن لا شيء وعن الحياة اليومية.",
+      "ru": "Знаменитая комедия о пустяках и повседневной жизни."
+    },
+    "details": {
+      "he": "הומור שנון, משחקי מילים ומונחים מהחיים האמריקאים של שנות ה-90. דורש רמה בינונית כדי להבין רפרנסים תרבותיים ודיאלוגים מהירים.",
+      "en": "Witty humor, wordplay, and references to 90s American culture. Requires intermediate level to catch cultural references and fast-paced dialogues.",
+      "es": "Humor ingenioso, juegos de palabras y referencias a la cultura estadounidense de los años 90. Requiere un nivel intermedio para captar las referencias culturales y los diálogos rápidos.",
+      "ar": "فكاهة ذكية، ألعاب لغوية، وإشارات إلى الثقافة الأمريكية في التسعينات. يتطلب مستوى متوسط لفهم المراجع الثقافية والحوارات السريعة.",
+      "ru": "Остроумный юмор, игра слов и отсылки к американской культуре 90-х. Требуется средний уровень, чтобы понять культурные ссылки и быстрые диалоги."
+    },
     "image": "/img/seinfeld.webp",
     "genre": "comedy",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Netflix"
+    ]
   },
   {
     "id": "newgirl",
-    "name": "הבחורה החדשה",
-    "description": "ג'ס מצטרפת לדירה עם שלושה גברים ומתחילה הרפתקה משעשעת.",
+    "name": {
+      "he": "הבחורה החדשה",
+      "en": "New Girl",
+      "es": "New Girl",
+      "ar": "الفتاة الجديدة",
+      "ru": "Новенькая"
+    },
+    "description": {
+      "he": "ג'ס מצטרפת לדירה עם שלושה גברים ומתחילה הרפתקה משעשעת.",
+      "en": "Jess moves into an apartment with three guys and starts a hilarious adventure.",
+      "es": "Jess se muda a un departamento con tres chicos y comienza una aventura divertida.",
+      "ar": "تنضم جيس إلى شقة עם ثلاثة رجال وتبدأ مغامرة مضحكة.",
+      "ru": "Джесс переезжает в квартиру с тремя парнями и начинает веселое приключение."
+    },
+    "details": {
+      "he": "שפה יומיומית וקלילה, הומור מתוק ואווירה חיובית. מתאימה ללומדים שרוצים לתרגל שיחה בסגנון חברתי וחוויות של מגורים שותפים.",
+      "en": "Light and everyday language, sweet humor, and a positive vibe. Suitable for learners who want to practice social conversation and roommate experiences.",
+      "es": "Lenguaje ligero y cotidiano, humor dulce y ambiente positivo. Ideal para quienes quieren practicar conversaciones sociales y experiencias de convivencia.",
+      "ar": "لغة خفيفة ويומית، فكاهة لطيفة وأجواء إيجابية. مناسبة للمتعلمين الذين يرغبون في ممارسة المحادثات الاجتماعية وتجارب السكن المشترك.",
+      "ru": "Легкий повседневный язык, добрый юмор и позитивная атмосфера. Подходит для изучающих, желающих практиковать общение в дружеской и бытовой среде."
+    },
     "image": "/img/new girl 1.webp",
     "genre": "comedy",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Disney+",
+      "Apple TV"
+    ]
   },
   {
     "id": "theoffice",
-    "name": "המשרד",
-    "description": "קומדיה על צוות עובדים במשרד למכירת נייר.",
+    "name": {
+      "he": "המשרד",
+      "en": "The Office",
+      "es": "The Office",
+      "ar": "ذا أوفيس",
+      "ru": "Офис"
+    },
+    "description": {
+      "he": "קומדיה על צוות עובדים במשרד למכירת נייר.",
+      "en": "A comedy about a paper company office staff.",
+      "es": "Una comedia sobre el personal de una oficina de venta de papel.",
+      "ar": "كوميديا عن موظفي مكتب شركة ورق.",
+      "ru": "Комедия о сотрудниках офиса компании по продаже бумаги."
+    },
+    "details": {
+      "he": "פורמט מוקומנטרי עם דיאלוגים אותנטיים, סלנג עסקי והומור יבש. 매우 מומלץ למתחילים שרוצים ללמוד אנגלית דרך שיח במקום עבודה.",
+      "en": "Mockumentary format with authentic dialogues, business slang, and dry humor. Highly recommended for beginners learning English through workplace conversation.",
+      "es": "Formato de falso documental con diálogos auténticos, jerga empresarial y humor seco. Muy recomendable para principiantes que quieren aprender inglés en un entorno laboral.",
+      "ar": "نمط وثائقي زائف مع حوارات واقعية، مصطلحات تجارية، وفكاهة جافة. موصى به بشدة للمبتدئين الذين يرغبون في تعلم الإنجليزية من خلال محادثات العمل.",
+      "ru": "Мокьюментари с подлинными диалогами, деловым жаргоном и сухим юмором. Очень рекомендуется для начинающих, желающих учить английский через рабочее общение."
+    },
     "image": "/img/office.webp",
     "genre": "comedy",
     "level": "beginner",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה beginner."
+    "platforms": [
+      "Amazon Prime Video",
+      "Apple TV"
+    ]
   },
   {
     "id": "bigmouth",
-    "name": "פה גדול",
-    "description": "סדרת אנימציה על גיל ההתבגרות וההורמונים.",
+    "name": {
+      "he": "פה גדול",
+      "en": "Big Mouth",
+      "es": "Big Mouth",
+      "ar": "بيغ ماوث",
+      "ru": "Большой рот"
+    },
+    "description": {
+      "he": "סדרת אנימציה על גיל ההתבגרות וההורמונים.",
+      "en": "An animated series about puberty and hormones.",
+      "es": "Una serie animada sobre la pubertad y las hormonas.",
+      "ar": "مسلسل رسوم متحركة عن البلوغ والهرمונים.",
+      "ru": "Анимационный сериал о половом созревании и гормонах."
+    },
+    "details": {
+      "he": "שיח גס, נושאים רגישים ודיבור מהיר בגוף ראשון. מתאימה ללומדים מתקדמים בגיל הנעורים שמחפשים ללמוד שפת רחוב.",
+      "en": "Explicit dialogue, sensitive topics, and fast-paced first-person speech. Suitable for advanced teen learners looking to explore street-level English.",
+      "es": "Diálogos explícitos, temas delicados y habla rápida en primera persona. Adecuada para adolescentes avanzados que quieren aprender inglés coloquial.",
+      "ar": "حوارات صريحة، مواضيع حساسة، وكلام سريع بصيغة المتكلم. مناسبة للمراهقين المتقدمين الذين يرغبون في تعلم الإنجليزية العامية.",
+      "ru": "Откровенные диалоги, деликатные темы и быстрая речь от первого лица. Подходит для подростков с высоким уровнем, изучающих разговорный английский."
+    },
     "image": "/img/Big Mouth.jpeg",
     "genre": "animation",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Netflix"
+    ]
   },
   {
     "id": "simpsons",
-    "name": "משפחת סימפסון",
-    "description": "משפחת האנימציה הצהובה הכי מפורסמת בעולם.",
+    "name": {
+      "he": "משפחת סימפסון",
+      "en": "The Simpsons",
+      "es": "Los Simpson",
+      "ar": "عائلة سمبسون",
+      "ru": "Симпсоны"
+    },
+    "description": {
+      "he": "משפחת האנימציה הצהובה הכי מפורסמת בעולם.",
+      "en": "The most famous yellow animated family in the world.",
+      "es": "La familia animada amarilla más famosa del mundo.",
+      "ar": "أشهر عائلة رسوم متحركة صفراء в العالم.",
+      "ru": "Самая известная желтая анимационная семья в мире."
+    },
+    "details": {
+      "he": "שפה פשוטה יחסית, אבל עם סאטירה חברתית ומסרים פוליטיים. מתאימה ללומדים שרוצים להכיר אנגלית בתרבות הפופ.",
+      "en": "Relatively simple language, but includes social satire and political messages. Great for learners wanting to explore English in pop culture.",
+      "es": "Lenguaje relativamente simple, pero incluye sátira social y mensajes políticos. Ideal para quienes desean aprender inglés en el contexto de la cultura pop.",
+      "ar": "لغة بسيطة نسبياً، لكنها تحتوي على سخرية اجتماعية ورسائل سياسية. مناسبة لمن يرغب في تعلم الإنجليزية através الثقافة الشعبية.",
+      "ru": "Относительно простой язык, но с социальной сатирой и политическими посланиями. Отличный выбор для изучающих английский через поп-культуру."
+    },
     "image": "/img/simpsons 1.webp",
     "genre": "animation",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Disney+",
+      "Apple TV"
+    ]
   },
   {
     "id": "thegoodplace",
-    "name": "הקודש",
-    "description": "קומדיה פילוסופית על חיים אחרי המוות.",
+    "name": {
+      "he": "הקודש",
+      "en": "The Good Place",
+      "es": "The Good Place",
+      "ar": "המקום الجيد",
+      "ru": "Хорошее место"
+    },
+    "description": {
+      "he": "קומדיה פילוסופית על חיים אחרי המוות.",
+      "en": "A philosophical comedy about life after death.",
+      "es": "Una comedia filosófica sobre la vida después de la muerte.",
+      "ar": "كوميديا فلسفية عن الحياة بعد الموت.",
+      "ru": "Философская комедия о жизни после смерти."
+    },
+    "details": {
+      "he": "סדרה עם שפה עשירה אך נגישה, הכוללת מושגים פילוסופיים וערכים מוסריים. מומלץ לרמה בינונית-גבוהה.",
+      "en": "A series with rich yet accessible language, including philosophical concepts and moral values. Recommended for upper-intermediate learners.",
+      "es": "Una serie con un lenguaje rico pero accesible, que incluye conceptos filosóficos y valores morales. Recomendado para estudiantes de nivel intermedio alto.",
+      "ar": "سلسلة تحتوي על لغة غنية ولكن مفهومة، تشمل مفاهيم فلسفية وقيم أخلاقية. موصى بها للمتعلمين بالمستوى المتوسط الأعلى.",
+      "ru": "Сериал с богатым, но доступным языком, включает философские понятия и моральные ценности. Рекомендуется учащимся выше среднего уровня."
+    },
     "image": "/img/the good place.webp",
     "genre": "comedy",
     "level": "intermediate",
-    "details": "סדרה פופולרית ללימוד אנגלית דרך סצנות יומיומיות, הומור, ודיאלוגים מגוונים. אידיאלית ללמידה ברמה intermediate."
+    "platforms": [
+      "Netflix",
+      "Apple TV"
+    ]
+  },
+  {
+    "id": "nobody-wants-this",
+    "name": {
+      "he": "אף אחד לא רוצה את זה",
+      "en": "Nobody Wants This",
+      "es": "Nadie Quiere Esto",
+      "ar": "لا أحد يريد هذا",
+      "ru": "Никому это не нужно"
+    },
+    "description": {
+      "he": "קומדיה רומנטית על מנחת פודקאסט ומנהיג רוחני שמסתבכים באהבה לא מתוכננת.",
+      "en": "A romantic comedy about a podcast host and a spiritual leader caught in unexpected love.",
+      "es": "Una comedia romántica sobre una presentadora de pódcast y un líder espiritual atrapados en un amor inesperado.",
+      "ar": "كوميديا رومانسية عن مقدمة بودكاست وقائد روحي يقعون في حب غير متوقع.",
+      "ru": "Романтическая комедия о ведущей подкаста и духовном наставнике, оказавшихся в неожиданной любви."
+    },
+    "details": {
+      "he": "סדרה קומית קלילה וחדשה של נטפליקס, המשלבת דיאלוגים עכשוויים ורגשיים. מצוינת ללימוד אנגלית מדוברת, עם ביטויים מודרניים ואינטראקציות זוגיות שמתאימות ללומדים ברמה בינונית.",
+      "en": "A fresh and light Netflix comedy with emotional and contemporary dialogues. Great for practicing modern spoken English with romantic interactions for intermediate learners.",
+      "es": "Una comedia ligera y reciente de Netflix con diálogos emocionales y contemporáneos. Ideal para practicar inglés moderno con interacciones románticas para estudiantes intermedios.",
+      "ar": "كوميديا خفيفة وحديثة من نتفليكس مع حوارات عاطفية ومعاصرة. مثالية لممارسة اللغة الإنجليزية الحديثة مع تفاعلات عاطفية للمستوى المتوسط.",
+      "ru": "Легкая и свежая комедия Netflix с эмоциональными и современными диалогами. Отлично подходит для практики разговорного английского на среднем уровне, включая романтические ситуации."
+    },
+    "image": "/img/nobodywantsthis.png",
+    "genre": "comedy",
+    "level": "intermediate",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "sirens",
+    "name": {
+      "he": "סירנות",
+      "en": "Sirens",
+      "es": "Sirenas",
+      "ar": "صفارات الإنذار",
+      "ru": "Сирены"
+    },
+    "description": {
+      "he": "דרמת מתח על אישה שמנסה להציל את אחותה מהשפעת כת מסתורית.",
+      "en": "A suspense drama about a woman trying to save her sister from the grip of a mysterious cult.",
+      "es": "Un drama de suspenso sobre una mujer que intenta salvar a su hermana de una secta misteriosa.",
+      "ar": "دراما تشويقية عن امرأة تحاول إنقاذ أختها من تأثير طائفة غامضة.",
+      "ru": "Детективная драма о женщине, пытающейся спасти свою сестру от влияния таинственного культа."
+    },
+    "details": {
+      "he": "סדרה מותחת ועשירה בשפה ספרותית, משפטים מורכבים ודיאלוגים טעונים. הבחירה המושלמת ללומדים מתקדמים שרוצים לשפר את ההבנה ולהעשיר אוצר המילים.",
+      "en": "A gripping series rich in literary language, complex sentences, and intense dialogues. Perfect for advanced learners aiming to improve comprehension and expand their vocabulary.",
+      "es": "Una serie emocionante con lenguaje literario, oraciones complejas y diálogos intensos. Perfecta para estudiantes avanzados que quieren mejorar su comprensión y vocabulario.",
+      "ar": "سلسلة مشوقة وغنية باللغة الأدبية، بجمل معقدة وحوارات مشحونة. مثالية للمتعلمين المتقدمين الذين يرغبون في تحسين الفهم وتوسيع المفردات.",
+      "ru": "Захватывающий сериал с литературным языком, сложными предложениями и напряженными диалогами. Отличный выбор для продвинутых учащихся, желающих улучшить восприятие речи и обогатить словарный запас."
+    },
+    "image": "/img/sirens.png",
+    "genre": "thriller",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "kims-convenience",
+    "name": {
+      "he": "המכולת של קים",
+      "en": "Kim's Convenience",
+      "es": "La tienda de Kim",
+      "ar": "متجر كيم",
+      "ru": "Лавка Кима"
+    },
+    "description": {
+      "he": "סיטקום על משפחה קוריאנית-קנדית שמנהלת חנות נוחות.",
+      "en": "A sitcom about a Korean-Canadian family running a convenience store.",
+      "es": "Una comedia sobre una familia coreano-canadiense que maneja una tienda.",
+      "ar": "مسلسل فكاهي عن عائلة كورية كندية تدير متجرًا صغيرًا.",
+      "ru": "Ситком о корейско-канадской семье, управляющей магазином."
+    },
+    "details": {
+      "he": "סיטקום חמוד ופשוט עם מבטאים מגוונים, שפה בסיסית ודיאלוגים מחיי היומיום. מתאים למתחילים שרוצים להבין אנגלית מדוברת בסביבה משפחתית.",
+      "en": "A cute and simple sitcom with varied accents, basic language, and everyday dialogues. Great for beginners who want to understand spoken English in a family setting.",
+      "es": "Una comedia sencilla y linda con acentos variados, lenguaje básico y diálogos cotidianos. Perfecta para principiantes que quieren entender inglés en un entorno familiar.",
+      "ar": "مسلسل فكاهي بسيط ولطيف بلهجات متنوعة، لغة أساسية وحوارات من الحياة اليومية. مناسب جدًا للمبتدئين الذين يرغبون في فهم الإنجليزية المحكية في بيئة عائلية.",
+      "ru": "Милый и простой ситком с разнообразными акцентами, базовым языком и повседневными диалогами. Отлично подходит для начинающих, изучающих разговорный английский в семейной обстановке."
+    },
+    "image": "/img/kimsconvenience.png",
+    "genre": "comedy",
+    "level": "beginner",
+    "platforms": [
+      "Netflix",
+      "Apple TV"
+    ]
+  },
+  {
+    "id": "grace-and-frankie",
+    "name": {
+      "he": "גרייס ופרנקי",
+      "en": "Grace and Frankie",
+      "es": "Grace y Frankie",
+      "ar": "غريس وفرانكي",
+      "ru": "Грейс и Фрэнки"
+    },
+    "description": {
+      "he": "שתי נשים ננטשות על ידי בעליהן ומתחילות חיים חדשים יחד.",
+      "en": "Two women abandoned by their husbands start a new life together.",
+      "es": "Dos mujeres abandonadas por sus esposos comienzan una nueva vida juntas.",
+      "ar": "امرأتان تتخلى عنهما أزواجهما وتبدآن حياة جديدة معًا.",
+      "ru": "Две женщины, покинутые мужьями, начинают новую жизнь вместе."
+    },
+    "details": {
+      "he": "סדרה מרגשת ומצחיקה עם שיח בוגר ועשיר, המציגה אתגרי החיים בגיל השלישי. דיאלוגים עם הומור ורגש שמאפשרים ללומדים להעשיר את האנגלית.",
+      "en": "A touching and funny show with mature and rich language, presenting life challenges in later years. The dialogues blend humor and emotion, helping learners expand their English in an accessible way.",
+      "es": "Una serie emotiva y divertida con lenguaje maduro y rico que muestra los desafíos de la vida en la tercera edad. Los diálogos combinan humor y emoción, ayudando a los estudiantes a enriquecer su inglés de forma accesible.",
+      "ar": "سلسلة مؤثرة ومضحكة بلغة ناضجة وغنية، تعرض تحديات الحياة في سن متقدمة. الحوارات تمزج بين الفكاهة والعاطفة، مما يساعد المتعلمين على توسيع لغتهم الإنجليزية.",
+      "ru": "Трогательный и веселый сериал с богатым, зрелым языком, отражающий вызовы жизни в пожилом возрасте. Диалоги полны юмора и эмоций, что помогает учащимся улучшать английский доступно."
+    },
+    "image": "/img/graceandfranki.png",
+    "genre": "comedy",
+    "level": "intermediate",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "workin-moms",
+    "name": {
+      "he": "אימהות עובדות",
+      "en": "Workin' Moms",
+      "es": "Madres trabajadoras",
+      "ar": "أمهات عاملات",
+      "ru": "Работающие мамы"
+    },
+    "description": {
+      "he": "סדרה על אמהות שמנסות לאזן בין קריירה לחיים האישיים.",
+      "en": "A show about mothers trying to balance career and personal life.",
+      "es": "Una serie sobre madres que intentan equilibrar su carrera y vida personal.",
+      "ar": "سلسلة عن أمهات يحاولن الموازنة بين حياتهن المهنية والشخصية.",
+      "ru": "Сериал о матерях, пытающихся совмещать карьеру и личную жизнь."
+    },
+    "details": {
+      "he": "סדרה קנדית עכשווית עם שפה עדכנית, מושגים מהעולם התעסוקתי והמשפחתי. שילוב של הומור ומצבים מחיי היומיום מספק דרך טבעית.",
+      "en": "A modern Canadian series with up-to-date language and themes from work and family life. The mix of humor and daily situations offers a natural way to learn English at an intermediate level.",
+      "es": "Una serie canadiense moderna con lenguaje actualizado y temas sobre el trabajo y la familia. Su mezcla de humor y situaciones cotidianas ofrece una forma natural de aprender inglés a nivel intermedio.",
+      "ar": "سلسلة كندية حديثة بلغة معاصرة ومفاهيم من عالم العمل والأسرة. مزيجها من الفكاهة والمواقف اليومية يوفر وسيلة طبيعية لتعلم الإنجليزية في المستوى المتوسط.",
+      "ru": "Современный канадский сериал с актуальной лексикой и темами из сферы работы и семьи. Смешение юмора и повседневных ситуаций позволяет естественно изучать английский на среднем уровне."
+    },
+    "image": "/img/workinmoms.png",
+    "genre": "comedy",
+    "level": "intermediate",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "you",
+    "name": {
+      "he": "את",
+      "en": "You",
+      "es": "Tú",
+      "ar": "أنتَ",
+      "ru": "Ты"
+    },
+    "description": {
+      "he": "מותחן פסיכולוגי על אהבה, אובססיה וזהות.",
+      "en": "A psychological thriller about love, obsession, and identity.",
+      "es": "Un thriller psicológico sobre el amor, la obsesión y la identidad.",
+      "ar": "إثارة نفسية عن الحب والهوس والهوية.",
+      "ru": "Психологический триллер о любви, одержимости и самоидентичности."
+    },
+    "details": {
+      "he": "שפה גבוהה, מונולוגים מורכבים ותיאורים פסיכולוגיים. מתאימה ללומדים מתקדמים המעוניינים להעשיר את השפה בתחומי רגש וניתוח פנימי.",
+      "en": "Advanced language, complex monologues, and psychological descriptions. Suitable for advanced learners aiming to enrich vocabulary in emotional and introspective contexts.",
+      "es": "Lenguaje avanzado, monólogos complejos y descripciones psicológicas. Adecuado para estudiantes avanzados que buscan enriquecer su vocabulario en contextos emocionales e introspectivos.",
+      "ar": "لغة متقدمة، مونولوجات معقدة ووصف نفسي عميق. مناسبة للمتعلمين المتقدمين الذين يريدون توسيع مفرداتهم في سياقات عاطفية وتحليلية.",
+      "ru": "Продвинутый язык, сложные монологи и психологические описания. Подходит продвинутым учащимся, желающим обогатить словарный запас в эмоциональных и аналитических контекстах."
+    },
+    "image": "/img/you.png",
+    "genre": "thriller",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "the-crown",
+    "name": {
+      "he": "הכתר",
+      "en": "The Crown",
+      "es": "La Corona",
+      "ar": "التاج",
+      "ru": "Корона"
+    },
+    "description": {
+      "he": "דרמה היסטורית על המלכה אליזבת השנייה.",
+      "en": "A historical drama about Queen Elizabeth II.",
+      "es": "Un drama histórico sobre la reina Isabel II.",
+      "ar": "دراما تاريخية عن الملكة إليزابيث الثانية.",
+      "ru": "Историческая драма о королеве Елизавете II."
+    },
+    "details": {
+      "he": "שפה בריטית פורמלית, מונחים מלכותיים ונאומים רשמיים. סדרה זו תורמת רבות לשיפור הבנת אנגלית גבוהה ורשמית.",
+      "en": "Formal British language, royal terminology, and official speeches. This series greatly helps with high-level and formal English comprehension.",
+      "es": "Lenguaje británico formal, terminología real y discursos oficiales. Esta serie ayuda mucho a mejorar la comprensión del inglés formal y avanzado.",
+      "ar": "لغة بريطانية رسمية، مصطلحات ملكية وخطابات رسمية. تساعد هذه السلسلة كثيرًا في تحسين فهم اللغة الإنجليزية الرسمية والمتقدمة.",
+      "ru": "Официальный британский язык, королевская терминология и торжественные речи. Этот сериал отлично помогает улучшить понимание формального английского на высоком уровне."
+    },
+    "image": "/img/crown.png",
+    "genre": "drama",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "shadow-and-bone",
+    "name": {
+      "he": "צל ועצם",
+      "en": "Shadow and Bone",
+      "es": "Sombra y Hueso",
+      "ar": "الظل والعظم",
+      "ru": "Тень и Кость"
+    },
+    "description": {
+      "he": "עולם פנטזיה עם קסמים, מלחמות ואהבות מסוכנות.",
+      "en": "A fantasy world with magic, wars, and dangerous love.",
+      "es": "Un mundo de fantasía con magia, guerras y amores peligrosos.",
+      "ar": "عالم خيالي مليء بالسحر والحروب والحب الخطير.",
+      "ru": "Фэнтезийный мир с магией, войнами и опасной любовью."
+    },
+    "details": {
+      "he": "מושגים ספרותיים, שמות דמיוניים ודיאלוגים מתוחים. מצוינת ללומדים ברמה גבוהה שרוצים לשלב הרפתקה ודמיון בלמידת אנגלית.",
+      "en": "Literary terms, fictional names, and tense dialogues. Great for advanced learners wanting to combine adventure and imagination in learning English.",
+      "es": "Términos literarios, nombres ficticios y diálogos intensos. Ideal para estudiantes avanzados que quieran combinar aventura e imaginación al aprender inglés.",
+      "ar": "مصطلحات أدبية، أسماء خيالية، وحوارات مشوقة. مناسبة للمتعلمين المتقدمين الذين يرغبون في دمج المغامرة والخيال في تعلم الإنجليزية.",
+      "ru": "Литературные термины, вымышленные имена и напряженные диалоги. Отлично подходит для продвинутых учащихся, желающих изучать английский через приключения и фантазию."
+    },
+    "image": "/img/shadowandbone.png",
+    "genre": "fantasy",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "bridgerton",
+    "name": {
+      "he": "ברידג'רטון",
+      "en": "Bridgerton",
+      "es": "Los Bridgerton",
+      "ar": "بريدجرتون",
+      "ru": "Бриджертоны"
+    },
+    "description": {
+      "he": "דרמה תקופתית עם רומנטיקה, תככים ונימוסים.",
+      "en": "A period drama with romance, intrigue, and manners.",
+      "es": "Un drama de época con romance, intrigas y modales.",
+      "ar": "دراما تاريخية مع رومانسية ومكائد وآداب.",
+      "ru": "Историческая драма с романтикой, интригами и этикетом."
+    },
+    "details": {
+      "he": "שפה ספרותית, מונחים תקופתיים ודיאלוגים מעודנים. מתאים ללומדים ברמה מתקדמת שרוצים לשפר הבנת אנגלית רשמית ואלגנטית.",
+      "en": "Literary language, period terminology, and refined dialogues. Suitable for advanced learners looking to improve understanding of formal and elegant English.",
+      "es": "Lenguaje literario, términos de época y diálogos refinados. Adecuado para estudiantes avanzados que desean mejorar su comprensión del inglés formal y elegante.",
+      "ar": "لغة أدبية، مصطلحات تاريخية وحوارات راقية. مناسبة للمتعلمين المتقدمين الذين يرغبون في تحسين فهم الإنجليزية الرسمية والأنيقة.",
+      "ru": "Литературный язык, историческая терминология и изысканные диалоги. Подходит для продвинутых, изучающих формальный и элегантный английский."
+    },
+    "image": "/img/bridgerton.png",
+    "genre": "drama",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "lucifer",
+    "name": {
+      "he": "לוציפר",
+      "en": "Lucifer",
+      "es": "Lucifer",
+      "ar": "لوسيفر",
+      "ru": "Люцифер"
+    },
+    "description": {
+      "he": "לוציפר, אדון הגיהנום, פותח מועדון לילה ועוזר למשטרה בלוס אנג'לס.",
+      "en": "Lucifer, Lord of Hell, opens a nightclub and assists the LAPD.",
+      "es": "Lucifer, el Señor del Infierno, abre un club nocturno y ayuda a la policía de Los Ángeles.",
+      "ar": "لوسيفר، سيد الجحيم، يفتح نادٍ ليلي ويساعد شرطة لوس أنجلوس.",
+      "ru": "Люцифер, повелитель ада, открывает ночной клуб и помогает полиции Лос-Анджелеса."
+    },
+    "details": {
+      "he": "הומור ציני, שפה עכשווית, חקירות משטרתיות ודיאלוגים שנונים. מתאים ללומדים מתקדמים שנהנים מקומדיות דרמה מודרניות.",
+      "en": "Sarcastic humor, modern language, police investigations, and witty dialogue. Ideal for advanced learners who enjoy modern dramedies.",
+      "es": "Humor sarcástico, lenguaje moderno, investigaciones policiales y diálogos ingeniosos. Ideal para estudiantes avanzados que disfrutan de las comedias dramáticas modernas.",
+      "ar": "فكاهة ساخرة، لغة عصرية، تحقيقات شرطية وحوارات ذكية. مثالي للمتعلمين المتقدمين الذين يستمتعون بالكوميديا الدرامية الحديثة.",
+      "ru": "Саркастичный юмор, современный язык, полицейские расследования и остроумные диалоги. Идеально для продвинутых учащихся, любящих современные драмеди."
+    },
+    "image": "/img/lucifer.png",
+    "genre": "drama",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "emily-in-paris",
+    "name": {
+      "he": "אמילי בפריז",
+      "en": "Emily in Paris",
+      "es": "Emily en París",
+      "ar": "إميلي في باريس",
+      "ru": "Эмили в Париже"
+    },
+    "description": {
+      "he": "אמריקאית צעירה עוברת לפריז וצריכה להסתגל לתרבות הצרפתית.",
+      "en": "A young American moves to Paris and must adapt to French culture.",
+      "es": "Una joven estadounidense se muda a París y debe adaptarse a la cultura francesa.",
+      "ar": "أمريكية شابة تنتقل إلى باريس ويجب أن تتأقلم مع الثقافة الفرنسية.",
+      "ru": "Молодая американка переезжает в Париж и должна адаптироваться к французской культуре."
+    },
+    "details": {
+      "he": "שפה קלילה, מושגים שיווקיים, דיאלוגים בין תרבותיים. מתאים לרמה בינונית למי שרוצה ללמוד אנגלית בסביבה מודרנית ויזואלית.",
+      "en": "Light language, marketing terms, and intercultural dialogue. Great for intermediate learners interested in learning English in a modern, visual setting.",
+      "es": "Lenguaje ligero, términos de marketing y diálogos interculturales. Ideal para estudiantes intermedios que quieran aprender inglés en un entorno moderno y visual.",
+      "ar": "لغة خفيفة، مصطلحات تسويقية وحوارات بين ثقافات. مناسب للمتعلمين في المستوى المتوسط الراغبين في تعلم الإنجليزية في بيئة عصرية وبصرية.",
+      "ru": "Легкий язык, маркетинговые термины и межкультурные диалоги. Подходит учащимся среднего уровня, желающим учить английский в современном визуальном контексте."
+    },
+    "image": "/img/emilyinparis.png",
+    "genre": "comedy",
+    "level": "intermediate",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "never-have-i-ever",
+    "name": {
+      "he": "אני לא מאמינה שקרה לי",
+      "en": "Never Have I Ever",
+      "es": "Yo nunca",
+      "ar": "لم يحدث أن",
+      "ru": "Я никогда не"
+    },
+    "description": {
+      "he": "נערה הודית-אמריקאית מתמודדת עם גיל ההתבגרות, משפחה ובנים.",
+      "en": "An Indian-American teen navigates high school, family, and boys.",
+      "es": "Una adolescente indo-estadounidense enfrenta la secundaria, la familia y los chicos.",
+      "ar": "مراهقة هندية-أمريكية تتعامل مع المدرسة الثانوية، العائلة والفتيان.",
+      "ru": "Индо-американская подросток сталкивается с учебой, семьей и мальчиками."
+    },
+    "details": {
+      "he": "שפה מודרנית, סלנג של בני נוער, נושאים רגשיים ומשפחתיים. מתאימה לרמה בינונית שרוצה להתחבר לעולמם של צעירים.",
+      "en": "Modern language, teen slang, emotional and family topics. Suitable for intermediate learners who want to connect with youth culture.",
+      "es": "Lenguaje moderno, jerga juvenil, temas emocionales y familiares. Adecuada para estudiantes intermedios que quieran conectarse con la cultura juvenil.",
+      "ar": "لغة حديثة، مصطلحات مراهقين، مواضيع عاطفية وعائلية. مناسبة للمستوى المتوسط الراغبين في التواصل مع ثقافة الشباب.",
+      "ru": "Современный язык, подростковый сленг, эмоциональные и семейные темы. Подходит учащимся среднего уровня, желающим познакомиться с молодежной культурой."
+    },
+    "image": "/img/neverhaveiever.png",
+    "genre": "comedy",
+    "level": "intermediate",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "sex-education",
+    "name": {
+      "he": "חינוך מיני",
+      "en": "Sex Education",
+      "es": "Sex Education",
+      "ar": "التربية الجنسية",
+      "ru": "Половое воспитание"
+    },
+    "description": {
+      "he": "תלמיד ביישן פותח קליניקה סודית בבית הספר לייעוץ מיני.",
+      "en": "A shy student opens a secret sex therapy clinic at school.",
+      "es": "Un estudiante tímido abre una clínica secreta de terapia sexual en la escuela.",
+      "ar": "طالب خجול يفتح عيادة سرية للعلاج الجنسي في المدرسة.",
+      "ru": "Стеснительный школьник открывает секретную клинику сексуальной терапии в школе."
+    },
+    "details": {
+      "he": "שפה פתוחה, ביטויים אינטימיים, ודיאלוגים אותנטיים על מיניות. מתאימה ללומדים מתקדמים בגיל ההתבגרות ומבוגרים פתוחים.",
+      "en": "Open language, intimate expressions, and authentic dialogues about sexuality. Suitable for advanced teen and adult learners with an open mind.",
+      "es": "Lenguaje abierto, expresiones íntimas y diálogos auténticos sobre sexualidad. Ideal para estudiantes avanzados adolescentes y adultos de mente abierta.",
+      "ar": "لغة منفتحة، تعابير حميمة وحوارات صادقة حول الجنس. مناسبة للمراهقين والبالغين المتقدمين المنفتحين.",
+      "ru": "Открытый язык, интимные выражения и откровенные диалоги о сексуальности. Подходит продвинутым подросткам и взрослым с открытым мышлением."
+    },
+    "image": "/img/sexeducation.png",
+    "genre": "comedy",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "love-death-robots",
+    "name": {
+      "he": "אהבה, מוות ורובוטים",
+      "en": "Love, Death & Robots",
+      "es": "Amor, Muerte y Robots",
+      "ar": "الحب والموت والروبוטات",
+      "ru": "Любовь, смерть и роботы"
+    },
+    "description": {
+      "he": "אנתולוגיה של סיפורים קצרים במדע בדיוני, פנטזיה, אימה והומור שחור.",
+      "en": "An anthology of short stories in science fiction, fantasy, horror, and dark humor.",
+      "es": "Una antología de historias cortas de ciencia ficción, fantasía, terror y humor negro.",
+      "ar": "أنثولوجيا من القصص القصيرة في الخيال العلمي، والفانتازيا، والرعب، والفكاهة السوداء.",
+      "ru": "Антология коротких историй в жанрах научной фантастики, фэнтези, ужаса и черного юмора."
+    },
+    "details": {
+      "he": "סדרה מתוחכמת עם עלילות משתנות בכל פרק, כוללת שפה מתקדמת ודיאלוגים קצרים ומדויקים. מתאימה ללומדים מתקדמים שאוהבים גיוון וסגנון חזותי עוצמתי.",
+      "en": "A sophisticated series with different plots in each episode, featuring advanced language and concise dialogues. Great for advanced learners who enjoy variety and bold visuals.",
+      "es": "Una serie sofisticada con tramas diferentes en cada episodio, con lenguaje avanzado y diálogos concisos. Ideal para estudiantes avanzados que disfrutan de variedad y visuales impactantes.",
+      "ar": "سلسلة متقنة مع حبكات مختلفة في كل حلقة، تتضمن لغة متقدمة وحوارات دقيقة. مناسبة للمتعلمين المتقدمين الذين يفضلون التنوع والأسلوب البصري القوي.",
+      "ru": "Сложный сериал с разными сюжетами в каждом эпизоде, продвинутым языком и лаконичными диалогами. Подходит продвинутым учащимся, любящим разнообразие и яркий визуальный стиль."
+    },
+    "image": "/img/lovedeathrobots.png",
+    "genre": "sci-fi",
+    "level": "advanced",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "cuphead-show",
+    "name": {
+      "he": "המופע של קאפהד",
+      "en": "The Cuphead Show",
+      "es": "El Show de Cuphead",
+      "ar": "عرض كوبهيد",
+      "ru": "Шоу Капхеда"
+    },
+    "description": {
+      "he": "אנימציה מוזיקלית ומטורפת על הרפתקאות קאפהד ואחיו מגמן.",
+      "en": "A musical and crazy animation about the adventures of Cuphead and his brother Mugman.",
+      "es": "Una animación musical y alocada sobre las aventuras de Cuphead y su hermano Mugman.",
+      "ar": "رسوم متحركة موسيقية ومجنونة عن مغامرات كوبهيد وأخيه مغمان.",
+      "ru": "Музыкальный и безумный мультсериал о приключениях Капхеда и его брата Магмена."
+    },
+    "details": {
+      "he": "סדרה מצוירת משעשעת עם שפה פשוטה וברורה, מקצבים מוזיקליים וחזרות לשוניות. אידיאלית ללומדים מתחילים וילדים שרוצים להיחשף לאנגלית קלה בסביבה הומוריסטית.",
+      "en": "A funny animated series with simple and clear language, musical rhythm, and verbal repetition. Ideal for beginner learners and children exposed to easy English in a humorous setting.",
+      "es": "Una serie animada divertida con lenguaje claro y simple, ritmo музыкальный y repeticiones verbales. Ideal para principiantes y niños que quieren aprender inglés en un entorno divertido.",
+      "ar": "سلسلة رسوم متحركة مضحكة بلغة بسيطة وواضحة، بإيقاع موسيقي وتكرار لغوي. مثالية للمبتدئين والأطفال الذين يرغبون في تعلم الإنجليزية في جو مرح.",
+      "ru": "Веселый мультсериал с простым и понятным языком, музыкальным ритмом и повторениями. Отлично подходит для начинающих и детей, изучающих легкий английский в юмористической обстановке."
+    },
+    "image": "/img/cupheadshow.png",
+    "genre": "animation",
+    "level": "beginner",
+    "platforms": [
+      "Netflix"
+    ]
+  },
+  {
+    "id": "brown-nation",
+    "name": {
+      "he": "בראון ניישן",
+      "en": "Brown Nation",
+      "es": "Nación Marrón",
+      "ar": "أمة براون",
+      "ru": "Браун Нэйшн"
+    },
+    "description": {
+      "he": "קומדיה על מהגר הודי שמנסה לשלב בין חיי משפחה לקריירה.",
+      "en": "A comedy about an Indian immigrant trying to balance family life and career.",
+      "es": "Una comedia sobre un inmigrante indio que intenta equilibrar la vida familiar y la carrera.",
+      "ar": "كوميديا عن مهاجر هندي يحاول التوازن بين الحياة العائلية والمهنية.",
+      "ru": "Комедия о индийском иммигранте, пытающемся совместить семью и карьеру."
+    },
+    "details": {
+      "he": "קומדיה ריאליסטית עם שיח בינתרבותי וחשיפה למבטא הודי. מומלץ ללומדים ברמה בינונית-גבוהה שמעוניינים להיחשף לאנגלית טבעית בהקשרים משפחתיים ועסקיים.",
+      "en": "A realistic comedy with intercultural dialogue and Indian accent exposure. Recommended for upper-intermediate learners interested in natural English in family and business contexts.",
+      "es": "Una comedia realista con diálogo intercultural y exposición al acento indio. Recomendado para estudiantes de nivel intermedio alto interesados en inglés natural en contextos familiares y empresariales.",
+      "ar": "كوميديا واقعية مع حوار بين الثقافات وتعرض للهجة الهندية. موصى به للمتعلمين في المستوى المتوسط الأعلى المهتمين بالإنجليزية الطبيعية في السياقات العائلية والتجارية.",
+      "ru": "Реалистичная комедия с межкультурным диалогом и индийским акцентом. Рекомендуется учащимся выше среднего уровня, интересующимся естественным английским в семейных и деловых контекстах."
+    },
+    "image": "/img/brownnation.png",
+    "genre": "comedy",
+    "level": "intermediate",
+    "platforms": [
+      "Netflix"
+    ]
   }
 ]

@@ -1,0 +1,386 @@
+{
+  "genreFilter": {
+    "title": "Filtrar por género",
+    "all": "Todos",
+    "open": "Filtrar por género →",
+    "close": "← Cerrar filtro",
+    "openLeft": "Filtrar por género →",
+    "closeLeft": "← Cerrar filtro"
+  },
+ "userPanel": {
+  "dashboard": "Panel de usuario 🧑‍🎓",
+  "title": "Mi área personal",
+  "close": "Cerrar",
+  "settings": "Configuración ⚙️",
+  "progress": "Progreso 📊",
+  "challenges": "Desafíos 🎯"
+},
+
+  "search": {
+    "placeholder": "Buscar una serie...",
+    "noResults": "No se encontraron series coincidentes. Intenta otra palabra 🎯"
+  },
+   "languageNames": {
+    "en": "Inglés",
+    "he": "Hebreo",
+    "es": "Español",
+    "ar": "Árabe",
+    "ru": "Ruso"
+  },
+  "homepage": {
+    "title": "Welcome to StudyWatch",
+    "search_placeholder": "Search for a series...",
+    "filter_genre": "Filter by genre",
+    "no_results": "No matching series found"
+  },
+  "seriesCard": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "watch_on": "Watch on"
+  },
+"episodes": {
+  "learn_words": "Aprende las palabras",
+  "select_season": "Selecciona temporada",
+  "select_episode": "Selecciona episodio",
+  "select_level_easy": "Fácil",
+  "select_level_medium": "Medio",
+  "select_level_hard": "Difícil",
+  "play_games": "Jugar",
+  "mark_known": "Ya conozco esta palabra",
+  "no_spares_message": "No hay más palabras de reserva",
+  "no_data_message": "Lo sentimos, el sitio está en mantenimiento para que puedas aprender más idiomas."
+},
+"home": {
+  "hero": {
+    "title": "Aprende un idioma con tus series favoritas",
+    "subtitle": "Practica vocabulario y comprensión con escenas reales.",
+    "cta": "Comienza a aprender"
+  },
+  "popular": "Series Populares",
+  "howItWorks": "Cómo Funciona",
+  "step1": "Aprende Vocabulario",
+  "step1desc": "Amplía tu vocabulario con palabras y frases de episodios.",
+  "step2": "Mira Episodios",
+  "step2desc": "Mira episodios con subtítulos interactivos.",
+  "step3": "Practica y Responde",
+  "step3desc": "Juega y pon a prueba lo aprendido.",
+   "allSeries": "Todas las series"
+}
+,
+  "games": {
+    "memory": "🧠 Memory Game",
+    "sentenceMatch": "📝 Sentence Match",
+    "wordTreasure": "🎡 Word Treasure",
+    "start": "🎯 Start Game",
+    "what_is_missing": "What word is missing in the sentence?",
+    "correct": "Correct Answer!",
+    "wrong": "Wrong Answer"
+  },
+  "gameEnd": {
+    "title": "You finished the game! 🎉",
+    "replay": "🔁 Play Again",
+    "back_home": "🏠 Back to Homepage"
+  },
+  "settings": {
+    "title": "Configuración",
+    "language_from": "Idioma de origen",
+    "language_to": "Idioma de destino",
+    "save": "Guardar cambios",
+    "language": {
+      "ui": "Idioma de la interfaz",
+      "uiDescription": "Elige el idioma en el que se mostrarán los menús y textos"
+    },
+    "sentence": {
+      "label": "Idioma de las frases",
+      "learningLang": "Idioma de destino",
+      "fromLang": "Idioma de origen",
+      "auto": "Automático",
+      "description": "Elige en qué idioma aparecerán las frases durante los juegos y prácticas",
+      "current": "El idioma actual para mostrar frases es"
+    },
+    "darkMode": "Modo oscuro",
+    "autoPlay": "Reproducción automática",
+    "autoPlayNote": "Si está marcado, las palabras se reproducirán automáticamente"
+  },
+  "profile": {
+    "progress_tab": "Progress",
+    "challenges_tab": "Challenges",
+    "completed": "Completed",
+    "next_challenge": "Next Challenge"
+  },
+  "menu": {
+    "home": "Inicio",
+    "favorites": "Favoritos",
+    "bot": "Bot",
+    "tips": "Consejos",
+    "series": "Series"
+  },
+  "loading": "Cargando...",
+
+  "common": {
+    "back": "Atrás"
+  },
+
+"filters": {
+    "allLevels": "Todos los niveles",
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "successBelowLabel": "Éxito <",
+    "neverPracticed": "Nunca practicada",
+    "withNotes": "Con notas"
+  },
+  "favorites": {
+    "general": {
+      "savedWords": "Palabras guardadas",
+      "avgSuccess": "Éxito promedio",
+      "avgProgress": "Progreso promedio",
+      "lastPracticed": "Última práctica"
+    },
+    "title": "Mis favoritos",
+    "seriesTitle": "Series favoritas",
+    "wordsTitle": "Palabras guardadas",
+    "noSeries": "No hay series en favoritos.",
+    "noWords": "No hay palabras guardadas.",
+    "removeSeries": "Eliminar de favoritos",
+    "removeWord": "Eliminar palabra",
+    "viewAllSeries": "Ver todas las series",
+    "viewAllWords": "Ver todas las palabras",
+    "speakWord": "Reproducir palabra",
+    "review": "¿Revisar?",
+    "addNotes": "Agregar notas",
+    "practicedEpisodes": "Practicado",
+    "lastPracticedLabel": "Última práctica",
+    "neverPracticedLabel": "Nunca",
+    "beginner": "Principiante",
+    "intermediate": "Intermedio",
+    "mastered": "Dominado",
+    "playWithWords": "Juega ahora con palabras guardadas",
+    "checkProgress": "Revisa tu progreso",
+    "attempts": "Intentos",
+    "successRate": "Éxito",
+    "wordNotFound": "Palabra no encontrada."
+  },
+  "difficulty": {
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil"
+  },
+
+  "notes": {
+    "title": "Notas para \"{{word}}\"",
+    "placeholder": "Escribe tus notas aquí...",
+    "saveBtn": "Guardar notas",
+    "savedAlert": "¡Notas guardadas!"
+  },
+
+  "games": {
+    "title": "Menú de juegos",
+    "wordTreasure": "Word Treasure",
+    "memory": "Juego de memoria",
+    "sentenceMatch": "Sentence Match"
+  },
+"bot": {
+  "title": "🤖 Encuentra la Serie Perfecta para Ti",
+  "genreQuestion": "¿Qué tipo de serie quieres ver?",
+  "levelQuestion": "¿Cuál es tu nivel de inglés?",
+  "noResults": "😔 No se encontraron series coincidentes. Intenta otro género o nivel.",
+  "readMore": "📖 Leer más",
+  "startLearning": "🚀 Comienza a aprender de esta serie",
+  "notRelevant": "🙈 No relevante"
+},
+"genres": {
+  "all": "Todos",
+  "comedy": "Comedia 🎭",
+  "drama": "Drama 🎬",
+  "sci-fi": "Ciencia ficción 🧬",
+  "animation": "Animación 🖍️",
+  "crime": "Crimen 🕵️",
+  "romance": "Romance ❤️",
+  "documentary": "Documental 📚",
+  "fantasy": "Fantasía ✨",
+  "thriller": "Suspenso 🔪"
+},
+"progress": {
+  "title": "Tu Progreso",
+  "chartTitle": "Tu Progreso Semanal de Aprendizaje",
+  "wordsLearned": "Palabras Aprendidas",
+  "totalWords": "Palabras Totales",
+  "activeDays": "Días Activos",
+  "gamesPlayed": "Juegos Jugados",
+  "favorites": "Palabras Favoritas",
+  "statsTab": "📈 Estadísticas",
+  "challengesTab": "🎯 Retos"
+},
+"challenges": {
+  "title": "Retos Avanzados",
+  "learn10": "📘 Aprende 10 palabras en un día",
+  "play3": "🎮 Juega 3 juegos hoy",
+  "fav5": "⭐ Marca 5 palabras como favoritas",
+  "hardWord": "💪 Aprende 2 palabras difíciles",
+  "streak3": "🔥 Mantén una racha de 3 días",
+  "completed": "Completados",
+  "note": "Los retos se reinician a diario. ¡Gana insignias y sube de nivel!"
+},
+"dashboard": {
+  "overview": "Panel de control",
+  "wordsLearned": "Palabras aprendidas",
+  "gamesPlayed": "Juegos jugados",
+  "streak": "Racha diaria",
+  "level": "Nivel",
+  "points": "Puntos",
+  "languages": "Idiomas de aprendizaje",
+  "genres": "Géneros favoritos",
+  "upgradeMsg": "Únete a Premium para desbloquear análisis y sincronización",
+  "upgradeButton": "Actualizar a Premium",
+  "wordsLearnedTip": "Las palabras aprendidas son aquellas completadas con éxito en los juegos",
+
+  "encouragement": {
+    "pro": "¡Campeón!",
+    "great": "¡Buen trabajo!",
+    "good": "¡Buen progreso!",
+    "gamer": "¡Maestro de juegos!",
+    "streak": "Racha de",
+    "keepGoing": "¡Sigue así – lo estás haciendo genial!",
+    "words": "palabras aprendidas",
+    "games": "juegos jugados"
+  },
+  "days": "días"
+},
+"news": {
+  "title": "Novedades",
+  "update1Title": "Nuevo Panel de Progreso ✨",
+  "update1Desc": "Revisa tus estadísticas semanales y desafíos en el panel mejorado.",
+  "date1": "Actualizado: Julio 2025",
+  "comingSoon": "¡Más funciones están en camino!"
+},
+"browse": {
+  "title": "Explorar series",
+  "subtitle": "Elige una serie para empezar a aprender idiomas"
+},
+"limitModal": {
+  "wordsTitle": "🎁 ¡Has alcanzado el límite para guardar palabras!",
+  "seriesTitle": "🎁 ¡Has alcanzado el límite para guardar series!",
+  "wordsDesc": "Para guardar más de 6 palabras, inicia sesión o regístrate ahora y obtén 3 meses de acceso Premium gratis.",
+  "seriesDesc": "Para guardar más de 2 series, inicia sesión o regístrate ahora y obtén 3 meses de acceso Premium gratis.",
+  "spotsLeft": "¡Últimos lugares para obtener Premium gratis!",
+  "register": "Regístrate gratis 🎁",
+  "login": "Ya tengo cuenta – Iniciar sesión",
+  "cancel": "Ahora no",
+  "learnMore": "¿Qué incluye el plan Premium?"
+},
+"premium": {
+  "heroTitle": "🎩 ¡Bienvenido a Premium!",
+  "heroSubtitle": "Únete ahora para disfrutar una experiencia de aprendizaje excepcional, beneficios exclusivos y un servicio de primer nivel.",
+  "subscribeNow": "🛡️ Unirse ahora",
+  "finalSubscribe": "🎁 Quiero ser Premium",
+  "pricingTitle": "💎 Comparación de planes",
+
+  "freeTier": {
+    "title": "Gratis",
+    "subtitle": "Acceso limitado con anuncios y un número restringido de episodios.",
+    "bullet1": "Guardar hasta 6 palabras",
+    "bullet2": "Guardar hasta 2 series",
+    "bullet3": "Acceso limitado a juegos",
+    "bullet4": "Sin prueba semanal/mensual",
+    "bullet5": "Sin guardado en la nube",
+    "bullet6": "Anuncios en el sitio",
+    "current": "Plan actual"
+  },
+
+  "premiumTier": {
+    "title": "Premium",
+    "subtitle": "La experiencia completa: todas las funciones y más.",
+    "bullet1": "Guardar palabras y series sin límite",
+    "bullet2": "Acceso completo a todos los juegos, incluidos exámenes semanales/mensuales",
+    "bullet3": "Sincronización en la nube – continúa desde cualquier dispositivo",
+    "bullet4": "Contenido exclusivo de aprendizaje",
+    "bullet5": "Sin anuncios en absoluto",
+    "bullet6": "Soporte prioritario y acceso anticipado a nuevas funciones",
+    "price": "$2/mes",
+    "subscribe": "🚀 Suscribirse a Premium"
+  },
+
+  "adFree": {
+    "title": "🌟 Sin anuncios",
+    "summary": "Aprende sin distracciones y mantén la concentración.",
+    "details": "Con Premium, disfrutas de un sitio completamente libre de anuncios. Valoramos tu tiempo – cada segundo está enfocado en tu aprendizaje."
+  },
+
+  "unlimitedAccess": {
+    "title": "📺 Acceso completo a todos los episodios e idiomas",
+    "summary": "Sin restricciones – cada serie, en cualquier idioma.",
+    "details": "Premium te da acceso completo a todos los episodios y te permite elegir libremente tu idioma de origen y destino."
+  },
+
+  "exclusiveContent": {
+    "title": "🔒 Contenido exclusivo",
+    "summary": "Videos, ejercicios y recursos solo para suscriptores.",
+    "details": "Accede a ejercicios avanzados de vocabulario, videos guiados, libros de ejercicios, podcasts y mucho más – solo para usuarios Premium."
+  },
+
+  "prioritySupport": {
+    "title": "📞 Soporte prioritario",
+    "summary": "Respuestas más rápidas y disponibilidad prioritaria.",
+    "details": "Los usuarios Premium reciben respuestas rápidas, asistencia técnica y soporte dedicado 24/7."
+  },
+
+  "earlyAccess": {
+    "title": "🚀 Acceso anticipado a nuevas funciones",
+    "summary": "¡Sé el primero en probar nuestras novedades!",
+    "details": "Los Premium disfrutan antes que nadie de herramientas nuevas, diseños mejorados y funciones impulsadas por IA. ¡Tu opinión nos importa!"
+  },
+
+  "cloudSave": {
+    "title": "☁️ Guardado en la nube",
+    "summary": "Tus avances y favoritos siempre estarán seguros.",
+    "details": "Cada palabra, nota o serie que guardes estará sincronizada en la nube para que puedas seguir desde cualquier dispositivo."
+  },
+
+  "unlimitedFavorites": {
+    "title": "📚 Favoritos sin límite",
+    "summary": "Guarda todas las palabras y series que quieras.",
+    "details": "A diferencia de la versión gratuita, Premium no tiene límites. Crea tu banco personal de vocabulario y series sin restricciones."
+  },
+
+  "games": {
+    "title": "🎮 Acceso total a todos los juegos",
+    "summary": "Incluye prueba semanal y mensual para medir tu progreso.",
+    "details": "Accede a todos los juegos – memoria, construcción de frases y desafíos de revisión para mantener tu aprendizaje activo cada semana."
+  },
+
+  "first1000": {
+    "title": "🎁 3 meses gratis para los primeros 1,000",
+    "summary": "¡Sé de los primeros y consigue 3 meses de Premium gratis!",
+    "details": "Para celebrar nuestro lanzamiento, los primeros 1,000 usuarios recibirán 3 meses de Premium totalmente gratis – sin compromiso."
+  },
+
+  "future": {
+    "title": "🚀 Próximamente: nuevas funciones",
+    "summary": "Los usuarios Premium acceden primero.",
+    "details": "Estamos desarrollando más juegos, contenido y herramientas inteligentes. Los usuarios Premium siempre serán los primeros en probarlo."
+  },
+
+  "faqTitle": "❓ Preguntas frecuentes",
+  "faq": {
+    "q1": "¿Puedo cancelar mi suscripción en cualquier momento?",
+    "a1": "Sí, puedes cancelarla en cualquier momento desde tu perfil.",
+    "q2": "¿El pago se renueva automáticamente?",
+    "a2": "Sí, pero puedes desactivar la renovación automática antes del siguiente ciclo.",
+    "q3": "¿Hay descuento para suscripción anual?",
+    "a3": "Sí, los suscriptores anuales obtienen un 20% de descuento.",
+    "q4": "¿Puedo usar Premium en varios dispositivos?",
+    "a4": "Sí, puedes estar conectado en hasta 3 dispositivos al mismo tiempo."
+  },
+
+  "footerText": "¡No te lo pierdas! Únete hoy y disfruta todos los beneficios Premium exclusivos."
+}
+
+
+
+
+
+
+
+}

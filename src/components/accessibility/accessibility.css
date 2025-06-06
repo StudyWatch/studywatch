@@ -1,0 +1,54 @@
+/* הגדלת טקסט – גודל טקסט מעט מוגדל לקריאה נוחה */
+.large-text body,
+.large-text * {
+  font-size: 1.05em !important;
+  line-height: 1.6 !important;
+}
+
+/* גווני אפור */
+.grayscale body {
+  filter: grayscale(100%) !important;
+}
+
+/* ניגודיות גבוהה (רקע כהה עדין וטקסט בהיר) */
+.high-contrast body {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
+}
+
+.high-contrast a {
+  color: #ffd700 !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast * {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: #888 !important;
+}
+
+/* רקע בהיר עם טקסט כהה */
+.light-background body {
+  background-color: #fefefe !important;
+  color: #222 !important;
+}
+
+.light-background * {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* הדגשת קישורים */
+.highlight-links a {
+  background-color: #ffff99 !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.highlight-links a:hover {
+  background-color: #ffeb3b !important;
+}
