@@ -112,7 +112,8 @@
     "favorites": "מועדפים",
     "bot": "הבוט שלנו",
     "tips": "טיפים",
-    "series": "סדרות"
+    "series": "סדרות",
+    "categories": "קטגוריות"
 
   },
  "loading": "טוען...",
@@ -166,7 +167,17 @@
     "medium": "בינוני",
     "hard": "קשה"
   },
-
+  "categoriesPage": {
+    "title": "מילון לפי קטגוריות",
+    "filterByLevel": "סינון לפי רמה",
+    "levels": {
+      "all": "כל הרמות",
+      "easy": "מתחילים",
+      "medium": "בינוניים",
+      "hard": "מתקדמים"
+    },
+    "wordsLabel": "מילים"
+  },
   "notes": {
     "title": "הערות עבור \"{{word}}\"",
     "placeholder": "הקלד כאן את ההערות שלך...",

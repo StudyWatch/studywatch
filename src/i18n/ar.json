@@ -113,7 +113,8 @@
     "favorites": "المفضلة",
     "bot": "الروبوت",
     "tips": "نصائح",
-    "series": "المسلسلات"
+    "series": "المسلسلات",
+    "categories": "الفئات"
   },
 "loading": "جارٍ التحميل...",
 
@@ -166,7 +167,17 @@
     "medium": "متوسط",
     "hard": "صعب"
   },
-
+"categoriesPage": {
+    "title": "المفردات حسب الفئة",
+    "filterByLevel": "تصفية حسب المستوى",
+    "levels": {
+      "all": "جميع المستويات",
+      "easy": "مبتدئ",
+      "medium": "متوسط",
+      "hard": "متقدم"
+    },
+    "wordsLabel": "كلمات"
+  },
 
   "notes": {
     "title": "ملاحظات لـ \"{{word}}\"",

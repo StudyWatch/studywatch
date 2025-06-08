@@ -114,7 +114,8 @@
     "favorites": "Favoritos",
     "bot": "Bot",
     "tips": "Consejos",
-    "series": "Series"
+    "series": "Series",
+    "categories": "Categorías"
   },
   "loading": "Cargando...",
 
@@ -138,6 +139,18 @@
       "avgProgress": "Progreso promedio",
       "lastPracticed": "Última práctica"
     },
+    "categoriesPage": {
+    "title": "Vocabulario por Categoría",
+    "filterByLevel": "Filtrar por Nivel",
+    "levels": {
+      "all": "Todos los niveles",
+      "easy": "Principiante",
+      "medium": "Intermedio",
+      "hard": "Avanzado"
+    },
+    "wordsLabel": "palabras"
+  },
+
     "title": "Mis favoritos",
     "seriesTitle": "Series favoritas",
     "wordsTitle": "Palabras guardadas",

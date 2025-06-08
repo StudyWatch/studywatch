@@ -85,7 +85,8 @@
     "favorites": "Избранное",
     "bot": "Бот",
     "tips": "Советы",
-    "series": "Сериалы"
+    "series": "Сериалы",
+    "categories": "Категории"
   },
  "filters": {
     "allLevels": "Все уровни",
@@ -127,10 +128,16 @@
     "successRate": "Успех",
     "wordNotFound": "Слово не найдено."
   },
-  "difficulty": {
-    "easy": "Лёгкий",
-    "medium": "Средний",
-    "hard": "Сложный"
+"categoriesPage": {
+    "title": "Словарь по категориям",
+    "filterByLevel": "Фильтровать по уровню",
+    "levels": {
+      "all": "Все уровни",
+      "easy": "Начальный",
+      "medium": "Средний",
+      "hard": "Продвинутый"
+    },
+    "wordsLabel": "слов"
   },
 "episodes": {
   "select_season": "сезон",

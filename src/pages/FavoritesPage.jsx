@@ -22,7 +22,7 @@ export default function FavoritesPage() {
   // --- פילטרים למילים ---
   const [filter, setFilter] = useState({
     difficulty: 'all',      // 'all' | 'easy' | 'medium' | 'hard'
-    successBelow: 100,      // אחוז ההצלחה (0–100)
+    successBelow: 101,      // אחוז ההצלחה (0–100)
     neverPracticed: false,  // רק מילים שלא נתרגלו כלל
     withNotes: false        // רק מילים עם הערה
   });
@@ -417,10 +417,19 @@ export default function FavoritesPage() {
                   const learningLang = w.learningLang;
                   const wordFrom = w.displayFrom;
                   const wordTo = w.displayTo;
-                  const sentence =
-                    typeof w.displaySentence === 'object'
-                      ? w.displaySentence[learningLang] || w.displaySentence.en
-                      : w.displaySentence;
+ let sentence = '—';
+
+if (w.tgtSentence) {
+  sentence = w.tgtSentence;
+} else if (w.displaySentence) {
+  if (typeof w.displaySentence === 'object') {
+    sentence = w.displaySentence[learningLang] || w.displaySentence.en || '—';
+  } else if (typeof w.displaySentence === 'string') {
+    sentence = w.displaySentence;
+  }
+}
+
+
                   const dirSentence = ['he', 'ar'].includes(learningLang) ? 'rtl' : 'ltr';
 
                   // 1. נתוני סטטיסטיקות מה־statsManager

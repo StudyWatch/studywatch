@@ -117,7 +117,8 @@
     "favorites": "Favorites",
     "bot": "Bot",
     "tips": "Tips",
-    "series": "Series" 
+    "series": "Series" ,
+    "categories": "Categories"
   },
  "loading": "Loading...",
 
@@ -169,7 +170,17 @@
     "medium": "Medium",
     "hard": "Hard"
   },
-
+  "categoriesPage": {
+    "title": "Vocabulary by Category",
+    "filterByLevel": "Filter by Level",
+    "levels": {
+      "all": "All Levels",
+      "easy": "Beginner",
+      "medium": "Intermediate",
+      "hard": "Advanced"
+    },
+    "wordsLabel": "words"
+  },
   "notes": {
     "title": "Notes for \"{{word}}\"",
     "placeholder": "Write your notes here...",

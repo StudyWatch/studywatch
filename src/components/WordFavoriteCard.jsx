@@ -1,3 +1,4 @@
+// src/components/WordFavoriteCard.jsx
 import React, { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import heLocale from 'date-fns/locale/he';
@@ -11,30 +12,40 @@ export default function WordFavoriteCard({
   settings,
   t
 }) {
-  const { key, displayFrom, displayTo, displaySentence, practicedEpisodes, totalEpisodes, difficulty, lastPracticed } = wordObj;
+  const {
+    key,
+    displayFrom,
+    displayTo,
+    displaySentence,
+    practicedEpisodes,
+    totalEpisodes,
+    difficulty,
+    lastPracticed,
+    tgtSentence
+  } = wordObj;
 
-  // --- State פנימי לכל כרטיסיית מילה ---
+  // --- State פנימי לכל כרטיס---
   const [isEditingNote, setIsEditingNote] = useState(false);
   const savedNoteKey = `note_${key}`;
   const existingNote = localStorage.getItem(savedNoteKey) || '';
   const [tempNote, setTempNote] = useState(existingNote);
 
-  // --- שליפת סטטיסטיקות עבור המילה הזו ---
+  // --- סטטיסטיקות ---
   const progInfo = statsManager.getWordProgress(key) || { attempts: 0, correct: 0, successRate: 0 };
-  const attemptsCount = progInfo.attempts || 0;
-  const successRate = progInfo.successRate || 0;
+  const attemptsCount = progInfo.attempts;
+  const successRate = progInfo.successRate;
 
-  // --- חישוב אחוז חשיפה (Exposure) ---
+  // --- Exposure אחוז חשיפה ---
   const practicedCount = practicedEpisodes ?? 0;
   const totalEp = totalEpisodes ?? 10;
   const pctPracticed = totalEp > 0
     ? Math.min(Math.round((practicedCount / totalEp) * 100), 100)
     : 0;
 
-  // --- חישוב "Hybrid" אחוז (Exposure + Success) ---
+  // --- Hybrid אחוז ממוצע ---
   const hybridPct = Math.round((pctPracticed + successRate) / 2);
 
-  // --- רקע תגית קושי ---
+  // --- רקע תג difficulty---
   const difficultyBg =
     difficulty === 'easy'
       ? 'bg-green-50 text-green-800'
@@ -42,19 +53,18 @@ export default function WordFavoriteCard({
       ? 'bg-yellow-50 text-yellow-800'
       : 'bg-red-50 text-red-800';
 
-  // --- בדיקת "צריך תרגול" אם עברו > 7 ימים מאז תרגול אחרון ---
+  // --- needsPracticeIcon אם עברו >7 ימים ---
   const lastDateObj = lastPracticed ? new Date(lastPracticed) : null;
   const daysSince = lastDateObj
     ? Math.floor((Date.now() - lastDateObj.getTime()) / (1000 * 60 * 60 * 24))
     : null;
-  const needsPracticeIcon = daysSince !== null && daysSince > 7;
 
-  // --- סגנון גרדיאנט לסרגל הצלחה ---
+  // --- הצלחה גרדיאנט לסרגל ---
   const gradientStyle = {
     background: `linear-gradient(to right, #34D399 ${successRate}%, #EF4444 ${successRate}% 100%)`
   };
 
-  // --- קביעת תווית רמת שליטה (Mastery) ---
+  // --- Mastery תווית רמת שליטה ---
   let masteryLabel = t('favorites.beginner') || '🌀 מתחילים';
   let masteryEmoji = '🌀';
   if (hybridPct >= 80) {
@@ -65,9 +75,13 @@ export default function WordFavoriteCard({
     masteryEmoji = '📘';
   }
 
-  // --- השגת המשפט באיזו שפה: אם אובייקט, מוציאים לפי השפה, אחרת הטקסט עצמו ---
+  // --- השגת המשפט המתאים (קטגוריה או פרקים) ---
   let sentenceText = '—';
-  if (displaySentence) {
+  if (tgtSentence) {
+    // category-sourced sentence
+    sentenceText = tgtSentence;
+  } else if (displaySentence) {
+    // episode-sourced sentence
     sentenceText = typeof displaySentence === 'object'
       ? (displaySentence[learningLang] || displaySentence.en || '—')
       : displaySentence;
@@ -83,7 +97,7 @@ export default function WordFavoriteCard({
         flex flex-col justify-between
       "
     >
-      {/* Top row: Difficulty + Remove button */}
+      {/* Top row: difficulty + remove */}
       <div className="flex justify-between items-center mb-2">
         <span className={`text-xs font-medium py-1 px-2 rounded-full ${difficultyBg}`}>
           {t(`difficulty.${difficulty}`) || difficulty}
@@ -102,11 +116,11 @@ export default function WordFavoriteCard({
         </button>
       </div>
 
-      {/* Middle: WordFrom + 🔊, WordTo + 🔊 */}
+      {/* Middle: original + translation + audio */}
       <div className="flex justify-between items-start mb-2">
-        {/* מקור + שקשור לשמע */}
+        {/* מקור + 🔊 */}
         <div className="flex flex-col">
-          <div className="text-xl font-bold text-gray-900 dark:text-white whitespace-normal break-words">
+          <div className="text-xl font-bold text-gray-900 dark:text-white break-words">
             {displayFrom || '—'}
           </div>
           <button
@@ -129,9 +143,9 @@ export default function WordFavoriteCard({
           </button>
         </div>
 
-        {/* תרגום + שקשור לשמע */}
+        {/* תרגום + 🔊 */}
         <div className="flex flex-col items-end">
-          <div className="text-base font-semibold text-indigo-700 dark:text-indigo-300 whitespace-normal break-words">
+          <div className="text-base font-semibold text-indigo-700 dark:text-indigo-300 break-words">
             {displayTo || '—'}
           </div>
           <button
@@ -157,7 +171,7 @@ export default function WordFavoriteCard({
 
       {/* Example sentence */}
       <p
-        className="text-gray-600 dark:text-gray-400 italic text-xs mb-2 leading-tight whitespace-normal break-words"
+        className="text-gray-600 dark:text-gray-400 italic text-xs mb-2 leading-tight break-words"
         dir={dirSentence}
       >
         {sentenceText}
@@ -170,19 +184,14 @@ export default function WordFavoriteCard({
           <span>{t('favorites.successRate') || 'הצלחה'}: {successRate}%</span>
         </div>
         <div className="w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-          <div
-            className="h-full transition-all duration-300"
-            style={gradientStyle}
-          />
+          <div className="h-full transition-all duration-300" style={gradientStyle} />
         </div>
       </div>
 
       {/* Exposure bar */}
       <div className="mb-2">
         <div className="flex justify-between items-center text-xxs text-gray-600 dark:text-gray-400 mb-1">
-          <span>
-            {t('favorites.practicedEpisodes') || 'תרגולים'}: {pctPracticed}/{totalEp}
-          </span>
+          <span>{t('favorites.practicedEpisodes') || 'תרגולים'}: {pctPracticed}/{totalEp}</span>
           <span>{pctPracticed}%</span>
         </div>
         <div className="w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
@@ -195,9 +204,7 @@ export default function WordFavoriteCard({
 
       {/* Mastery + Last Practiced */}
       <div className="flex justify-between items-center text-xxs text-gray-500 dark:text-gray-400 mb-2">
-        <span>
-          {masteryEmoji} {masteryLabel}
-        </span>
+        <span>{masteryEmoji} {masteryLabel}</span>
         <span>
           {t('favorites.lastPracticed') || 'אחרון'}:{' '}
           {lastPracticed
@@ -209,7 +216,7 @@ export default function WordFavoriteCard({
         </span>
       </div>
 
-      {/* Inline Edit Notes */}
+      {/* Notes editing */}
       <div className="mb-2">
         {isEditingNote ? (
           <div className="flex flex-col gap-2">
@@ -243,36 +250,31 @@ export default function WordFavoriteCard({
         ) : (
           <button
             onClick={() => {
-              const existing = localStorage.getItem(savedNoteKey) || '';
-              setTempNote(existing);
+              setTempNote(localStorage.getItem(savedNoteKey) || '');
               setIsEditingNote(true);
             }}
             className="
               w-full flex items-center justify-center gap-1
               bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600
               text-gray-800 dark:text-gray-200 text-xs font-semibold
-              py-1 rounded-lg shadow-sm
-              transition-colors duration-200
+              py-1 rounded-lg shadow-sm transition-colors duration-200
             "
           >
-            <span>✏️</span>
-            <span>{t('favorites.addNotes') || 'הוסף הערה'}</span>
+            <span>✏️</span> <span>{t('favorites.addNotes') || 'הוסף הערה'}</span>
           </button>
         )}
       </div>
 
-      {/* Review Button */}
+      {/* Review button */}
       <button
         onClick={() => window.location.assign(`/review-word/${key}`)}
         className="
           w-full flex items-center justify-center gap-1
           bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600
-          text-white text-xs font-semibold py-1 rounded-lg shadow-sm
-          transition-colors duration-200
+          text-white text-xs font-semibold py-1 rounded-lg shadow-sm transition-colors duration-200
         "
       >
-        <span>📖</span>
-        <span>{t('favorites.review') || 'תרגל'}</span>
+        <span>📖</span> <span>{t('favorites.review') || 'תרגל'}</span>
       </button>
     </div>
   );

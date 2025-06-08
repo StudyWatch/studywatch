@@ -332,7 +332,7 @@ const statsManager = {
       stats.wordAttempts = {};
     }
     if (!stats.wordAttempts[wordKey]) {
-      stats.wordAttempts[wordKey] = { attempts: 1, correct: 0, successRate: 0 };
+      stats.wordAttempts[wordKey] = { attempts: 0, correct: 0, successRate: 0 };
     }
 
     // 2. נוודא אם צריך לאפס את favoritesToday (אם עבר יום מאז העדכון האחרון)

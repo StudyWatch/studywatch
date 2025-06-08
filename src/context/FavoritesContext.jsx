@@ -1,17 +1,16 @@
 // src/context/FavoritesContext.jsx
-
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 import statsManager from '../utils/statsManager';
+import sentencesByWord from '../../public/data/sentencesByWord';
 
 export const FavoritesContext = createContext();
 
 export function FavoritesProvider({ children }) {
-  const [favorites, setFavorites] = useState([]);       // סדרות מועדפות
-  const [wordFavorites, setWordFavorites] = useState([]); // מילים מועדפות
-  const [toastMessage, setToastMessage] = useState("");
+  const [favorites, setFavorites] = useState([]);
+  const [wordFavorites, setWordFavorites] = useState([]);
+  const [toastMessage, setToastMessage] = useState('');
   const [showToast, setShowToast] = useState(false);
 
-  // טעינה מ־localStorage
   useEffect(() => {
     try {
       const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -19,11 +18,10 @@ export function FavoritesProvider({ children }) {
       setFavorites(storedFavorites);
       setWordFavorites(storedWordFavorites);
     } catch (err) {
-      console.error('Failed to parse favorites from storage:', err);
+      console.error('❌ Failed to parse favorites from storage:', err);
     }
   }, []);
 
-  // שמירה ל־localStorage
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
@@ -32,59 +30,65 @@ export function FavoritesProvider({ children }) {
     localStorage.setItem('wordFavorites', JSON.stringify(wordFavorites));
   }, [wordFavorites]);
 
-  const addFavorite = (seriesId) => {
-    if (!favorites.includes(seriesId)) {
-      setFavorites(prev => [...prev, seriesId]);
-      triggerToast("נוסף למועדפים!");
-    }
-  };
-
-  const removeFavorite = (seriesId) => {
-    setFavorites(prev => prev.filter(id => id !== seriesId));
-    triggerToast("הוסר מהמועדפים");
-  };
-
-  /**
-   * שמירת מילה למועדפים:
-   * 1) מוסיף ל־wordFavorites את האובייקט wordObj המלא (כולל key אחיד).
-   * 2) קורא ל־statsManager.addFavoriteWord עם ה־key הנכון כדי לרשום ניסיון ראשוני (attempts=1, correct=0).
-   */
-  const addWordFavorite = (wordObj) => {
-    // נוודא שיש לנו key אחיד:
-    const generatedKey = `${wordObj.seriesId}_${wordObj.season}_${wordObj.episode}_${wordObj.difficulty}_${wordObj.word}`;
-    const finalKey = wordObj.key || generatedKey;
-
-    // אם כבר קיים מישהו עם אותו key, לא נוסיף שנית
-    if (wordFavorites.some(fav => fav.key === finalKey)) return;
-
-    // נבנה אובייקט מלא עם כל השדות (force של finalKey, fromLang, learningLang)
-    const fromLang = wordObj.fromLang || localStorage.getItem('fromLang') || 'en';
-    const learningLang = wordObj.learningLang || localStorage.getItem('learningLang') || 'he';
-
-    const fullWord = {
-      ...wordObj,
-      key: finalKey,
-      fromLang,
-      learningLang
-    };
-
-    setWordFavorites(prev => [...prev, fullWord]);
-
-    // לוג סטטיסטי כדי למנוע NaN (נרשום ניסיון “כושל” עם attempts=1, correct=0)
-    statsManager.addFavoriteWord(finalKey);
-
-    triggerToast("המילה נשמרה!");
-  };
-
-  const removeWordFavorite = (key) => {
-    setWordFavorites(prev => prev.filter(fav => fav.key !== key));
-    triggerToast("המילה הוסרה");
-  };
-
   const triggerToast = (message) => {
     setToastMessage(message);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 2000);
+  };
+
+  const addFavorite = (seriesId) => {
+    if (!favorites.includes(seriesId)) {
+      setFavorites((prev) => [...prev, seriesId]);
+      triggerToast('נוסף למועדפים!');
+    }
+  };
+
+  const removeFavorite = (seriesId) => {
+    setFavorites((prev) => prev.filter((id) => id !== seriesId));
+    triggerToast('הוסר מהמועדפים');
+  };
+
+  const generateKey = (wordObj) => {
+    return wordObj.key ||
+      `${wordObj.seriesId || 'cat'}_${wordObj.season || 0}_${wordObj.episode || 0}_${wordObj.difficulty || 'none'}_${wordObj.word || wordObj.displayTo || ''}`;
+  };
+
+  const addWordFavorite = (wordObj) => {
+    const fromLang = wordObj.fromLang || localStorage.getItem('fromLang') || 'en';
+    const learningLang = wordObj.learningLang || localStorage.getItem('learningLang') || 'he';
+    const difficulty = wordObj.difficulty || 'easy';
+    const word = wordObj.word || wordObj.displayTo;
+    const key = generateKey(wordObj);
+
+    if (wordFavorites.some((fav) => fav.key === key)) return;
+
+    const sentObj = (sentencesByWord[difficulty] || {})[word] || {};
+    const sentenceByLang = sentObj.sentence || {};
+    const tgtSentence = sentenceByLang[learningLang] || '';
+
+    const fullWord = {
+      key,
+      word,
+      translate: wordObj.translate || '',
+      difficulty,
+      seriesId: wordObj.seriesId || 'cat',
+      season: wordObj.season || 0,
+      episode: wordObj.episode || 0,
+      fromLang,
+      learningLang,
+      displayFrom: wordObj.displayFrom || '',
+      displayTo: wordObj.displayTo || '',
+      tgtSentence
+    };
+
+    setWordFavorites((prev) => [...prev, fullWord]);
+    statsManager.addFavoriteWord(key);
+    triggerToast('המילה נשמרה!');
+  };
+
+  const removeWordFavorite = (key) => {
+    setWordFavorites((prev) => prev.filter((fav) => fav.key !== key));
+    triggerToast('המילה הוסרה');
   };
 
   return (
@@ -101,4 +105,8 @@ export function FavoritesProvider({ children }) {
       {children}
     </FavoritesContext.Provider>
   );
+}
+
+export function useFavorites() {
+  return useContext(FavoritesContext);
 }

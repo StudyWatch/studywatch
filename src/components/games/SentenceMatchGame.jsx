@@ -1,176 +1,201 @@
-// src/components/games/MemoryGame.jsx
+// src/components/games/SentenceMatchGame.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import GamePage from '../../pages/GamePage';
 import statsManager from '../../utils/statsManager';
 
-export default function MemoryGame() {
+export default function SentenceMatchGame() {
   const navigate = useNavigate();
   const location = useLocation();
 
   const words = location.state?.words || [];
-  const sourceLang = location.state?.sourceLang || 'en';
-  const targetLang = location.state?.targetLang || 'he';
+  const learningLang = location.state?.targetLang || 'he';
+  const fromLang = location.state?.sourceLang || 'en';
 
-  const [fromCards, setFromCards] = useState([]);
-  const [toCards, setToCards] = useState([]);
-  const [selectedCards, setSelectedCards] = useState([]);
-  const [matchedCards, setMatchedCards] = useState([]);
+  const [availableWords, setAvailableWords] = useState([]);
+  const [usedWords, setUsedWords] = useState([]);
+  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [options, setOptions] = useState([]);
+  const [selectedOption, setSelectedOption] = useState(null);
   const [score, setScore] = useState(0);
-  const [usedResults, setUsedResults] = useState([]);
-
-  const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
 
   useEffect(() => {
     if (!words || words.length === 0) {
-      console.warn('⚠️ No words provided to MemoryGame. Redirecting...');
       navigate('/games');
       return;
     }
-
-    // ניקח עד 15 מילים, כדי שלא יהיה עומס על המסך
-    const limited = words.slice(0, 15);
-
-    // כל קלף בשפה שלומדים (displayTo), וכל קלף שמאל בשפה המקורית (displayFrom)
-    const from = limited.map((w, i) => {
-      const content = w.displayTo || w.word;
-      return {
-        id: `from-${i}`,
-        content,
-        pairId: i,
-        side: 'from', // מייצג את ה־"שפה שלומדים"
-        wordObj: w,
-      };
-    });
-
-    const to = limited.map((w, i) => {
-      const content = w.displayFrom || w.word;
-      return {
-        id: `to-${i}`,
-        content,
-        pairId: i,
-        side: 'to', // מייצג את ה־"שפה מקורית"
-        wordObj: w,
-      };
-    });
-
-    setFromCards(shuffle(from));
-    setToCards(shuffle(to));
-
+    setAvailableWords(shuffle([...words]));
+    setUsedWords([]);
     statsManager.updateDailyActivity(); // עדכון יומי
-  }, [words, navigate, sourceLang, targetLang]);
+  }, [words, navigate]);
 
-  const handleCardClick = (card) => {
+  useEffect(() => {
+    // כשנגמרו המילים לטעינה, מסיימים ושומרים סטטיסטיקות
     if (
-      selectedCards.length === 2 ||
-      selectedCards.some((c) => c.id === card.id) ||
-      matchedCards.includes(card.id)
-    ) return;
+      availableWords.length === 0 &&
+      currentQuestion !== null &&
+      usedWords.length > 0
+    ) {
+      // כל מילה ב־usedWords כבר קיבלה isCorrect ו־נרשם בה logWordAttempt ו־logWordLearned אם צריך
+      // כאן רק נסיים את המשחק
+      statsManager.logGameResult('SentenceMatch', true);
 
-    setSelectedCards((prev) => [...prev, card]);
-  };
-
-  useEffect(() => {
-    if (selectedCards.length === 2) {
-      const [a, b] = selectedCards;
-
-      const keyA = `${a.wordObj.word}_${sourceLang}_${targetLang}`;
-      const keyB = `${b.wordObj.word}_${sourceLang}_${targetLang}`;
-
-      if (a.pairId === b.pairId && a.side !== b.side) {
-        // נכון
-        statsManager.logWordAttempt(keyA, true);
-        statsManager.logWordAttempt(keyB, true);
-        statsManager.logWordLearned(keyA, 'memory');
-        statsManager.logGameResult('memory', true);
-
-        setMatchedCards((prev) => [...prev, a.id, b.id]);
-        setScore((prev) => prev + 10);
-        setUsedResults((prev) => [
-          ...prev,
-          {
-            ...a.wordObj,
-            isCorrect: true,
-          },
-        ]);
-        setSelectedCards([]);
-      } else {
-        // שגוי
-        statsManager.logWordAttempt(keyA, false);
-        statsManager.logWordAttempt(keyB, false);
-        statsManager.logGameResult('memory', false);
-
-        setTimeout(() => setSelectedCards([]), 600);
-      }
-    }
-  }, [selectedCards, sourceLang, targetLang]);
-
-  // אם נגמרו כל הקלפים – מסיימים
-  useEffect(() => {
-    const total = fromCards.length + toCards.length;
-    if (matchedCards.length === total && total > 0) {
-      // תום המשחק
       setTimeout(() => {
         navigate('/game-end', {
           state: {
             score,
-            words: usedResults,
-            fromGame: '/games/memory',
-          },
+            words: usedWords,
+            fromGame: '/games/sentence-match'
+          }
         });
-      }, 800);
+      }, 1200);
     }
-  }, [matchedCards, fromCards, toCards, usedResults, navigate, score]);
+  }, [
+    availableWords,
+    currentQuestion,
+    usedWords,
+    fromLang,
+    learningLang,
+    score,
+    navigate
+  ]);
+
+  const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
+
+  const createSentenceWithBlank = (sentence, word) => {
+    if (!sentence || typeof sentence !== 'string') return '—';
+    const pattern = new RegExp(`\\b${word}\\b`, 'i');
+    return pattern.test(sentence)
+      ? sentence.replace(pattern, '______')
+      : `______ ${sentence}`;
+  };
+
+  const loadNewQuestion = () => {
+    if (availableWords.length === 0) return;
+
+    const idx = Math.floor(Math.random() * availableWords.length);
+    const selected = availableWords[idx];
+    const correctWord = selected.displayTo || selected.word;
+    const rawSentence =
+      selected.sentence?.[learningLang] ||
+      selected.displaySentence ||
+      '';
+    const sentenceForDisplay = createSentenceWithBlank(rawSentence, correctWord);
+
+    // בונים את רשימת התשובות (displayFrom = התרגום)
+    const wrong = shuffle(
+      words.filter((w) => w.word !== selected.word)
+    )
+      .slice(0, 3)
+      .map((w) => ({
+        word: w.displayFrom || w.word,
+        correct: false
+      }));
+
+    const all = shuffle([{ word: selected.displayFrom || selected.word, correct: true }, ...wrong]);
+
+    setCurrentQuestion({
+      ...selected,
+      correctAnswer: selected.displayFrom || selected.word,
+      displaySentence: sentenceForDisplay
+    });
+    setOptions(all);
+    setAvailableWords((prev) => prev.filter((_, i) => i !== idx));
+    setSelectedOption(null);
+  };
+
+  const handleAnswer = (option) => {
+    if (selectedOption || !currentQuestion) return;
+    setSelectedOption(option);
+
+    const isCorrect = option.correct;
+    const keyStat = `${currentQuestion.word}_${fromLang}_${learningLang}`;
+    statsManager.logWordAttempt(keyStat, isCorrect);
+    if (isCorrect) {
+      setScore((p) => p + 10);
+      statsManager.logWordLearned(keyStat, 'SentenceMatch');
+    }
+    // בכל מקרה – לוג תוצאת משחק
+    statsManager.logGameResult('SentenceMatch', isCorrect);
+
+    setUsedWords((prev) => [
+      ...prev,
+      {
+        ...currentQuestion,
+        isCorrect,
+        fromLang,
+        learningLang,
+        season: currentQuestion.season,
+        episode: currentQuestion.episode,
+        difficulty: currentQuestion.difficulty
+      }
+    ]);
+
+    setTimeout(() => loadNewQuestion(), 800);
+  };
+
+  useEffect(() => {
+    if (availableWords.length > 0 && currentQuestion === null) {
+      loadNewQuestion();
+    }
+  }, [availableWords, currentQuestion]);
+
+  const dir = ['he', 'ar'].includes(learningLang) ? 'rtl' : 'ltr';
 
   return (
-    <GamePage title="🧠 משחק זיכרון" backgroundImage="/images/backgrounds/memory-game.jpg">
-      <div className="flex flex-col items-center mt-8 w-full px-4 max-w-screen-lg mx-auto">
-        <div className="grid grid-cols-2 max-w-md w-full mb-4 text-center text-gray-700 dark:text-gray-300 font-bold text-lg">
-          <div>{targetLang.toUpperCase()}</div>
-          <div>{sourceLang.toUpperCase()}</div>
-        </div>
+    <GamePage
+      title="📝 התאמת מילים למשפטים"
+      backgroundImage="/images/backgrounds/sentence-match.png"
+    >
+      <div className="flex flex-col items-center gap-6 mt-8 w-full px-4 max-w-screen-md mx-auto" dir={dir}>
+        {currentQuestion && (
+          <>
+            <p className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2 text-center">
+              {learningLang === 'he'
+                ? 'מהי המילה החסרה במשפט הבא?'
+                : 'Which word is missing in the sentence?'}
+            </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl w-full mb-4">
-          {/* צד לימוד (להצגה על שני עמודות במסך רחב, על עמודה אחת במסך צר) */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {fromCards.map((card) => renderCard(card))}
-          </div>
-          {/* צד מקור */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {toCards.map((card) => renderCard(card))}
-          </div>
-        </div>
+            <div className="bg-white dark:bg-gray-800 border border-blue-300 dark:border-blue-600 rounded-xl shadow-lg px-6 py-4 max-w-xl w-full text-center text-lg sm:text-xl font-bold text-blue-700 dark:text-blue-200">
+              {currentQuestion.displaySentence || '—'}
+            </div>
 
-        <div className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-          ניקוד: <span className="font-bold text-blue-700 dark:text-blue-300">{score}</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 w-full max-w-md">
+              {options.map((option, idx) => {
+                const isSelected = selectedOption?.word === option.word;
+                const isCorrect = option.correct;
+                const base =
+                  'py-3 px-6 rounded-xl font-bold text-lg w-full transition-all shadow-md ';
+                let style = '';
+                if (selectedOption) {
+                  if (isSelected) {
+                    style = isCorrect
+                      ? 'bg-green-500 text-white'
+                      : 'bg-red-500 text-white animate-shake';
+                  } else {
+                    style = 'bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-200';
+                  }
+                } else {
+                  style = 'bg-blue-100 hover:bg-blue-200 text-blue-700 dark:text-blue-300';
+                }
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => handleAnswer(option)}
+                    className={base + style}
+                  >
+                    {option.word}
+                  </button>
+                );
+              })}
+            </div>
+          </>
+        )}
+        <div className="mt-8 text-lg text-gray-700 dark:text-gray-300">
+          {learningLang === 'he' ? 'ניקוד' : 'Score'}:{' '}
+          <span className="font-bold text-blue-700 dark:text-blue-300">{score}</span>
         </div>
       </div>
     </GamePage>
   );
-
-  function renderCard(card) {
-    const isSelected = selectedCards.some((c) => c.id === card.id);
-    const isMatched = matchedCards.includes(card.id);
-
-    const baseClasses =
-      'w-full h-20 sm:h-24 flex items-center justify-center text-center text-sm sm:text-base font-bold rounded-lg cursor-pointer shadow-sm transition-all duration-300 select-none ';
-    let style = '';
-    if (isMatched) {
-      style = 'bg-green-200 border-2 border-green-500 text-green-800 dark:bg-green-700';
-    } else if (isSelected) {
-      style = 'bg-blue-100 border border-blue-400 text-blue-800 dark:bg-blue-800 dark:text-blue-200';
-    } else {
-      style = 'bg-white hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200';
-    }
-
-    return (
-      <div
-        key={card.id}
-        onClick={() => handleCardClick(card)}
-        className={baseClasses + style}
-      >
-        {(isSelected || isMatched) ? String(card.content) : ''}
-      </div>
-    );
-  }
 }
