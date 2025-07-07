@@ -129,16 +129,20 @@
     "wordNotFound": "Слово не найдено."
   },
 "categoriesPage": {
-    "title": "Словарь по категориям",
-    "filterByLevel": "Фильтровать по уровню",
-    "levels": {
-      "all": "Все уровни",
-      "easy": "Начальный",
-      "medium": "Средний",
-      "hard": "Продвинутый"
-    },
-    "wordsLabel": "слов"
+  "bannerTitle": "Словарь по категориям",
+  "bannerSubtitle": "Выберите категорию, чтобы посмотреть соответствующие слова",
+  "searchPlaceholder": "Поиск категорий…",
+  "filterByLevel": "Фильтровать по уровню",
+  "levels": {
+    "all": "Все уровни",
+    "easy": "Начальный",
+    "medium": "Средний",
+    "hard": "Продвинутый"
   },
+  "wordsLabel": "слов",
+  "startLearning": "Начать обучение"
+}
+,
 "episodes": {
   "select_season": "сезон",
   "select_episode": "эпизод",

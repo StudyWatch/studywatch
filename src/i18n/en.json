@@ -170,17 +170,20 @@
     "medium": "Medium",
     "hard": "Hard"
   },
-  "categoriesPage": {
-    "title": "Vocabulary by Category",
-    "filterByLevel": "Filter by Level",
-    "levels": {
-      "all": "All Levels",
-      "easy": "Beginner",
-      "medium": "Intermediate",
-      "hard": "Advanced"
-    },
-    "wordsLabel": "words"
+"categoriesPage": {
+  "bannerTitle": "Vocabulary by Category",
+  "bannerSubtitle": "Choose a category to explore relevant words",
+  "searchPlaceholder": "Search categories...",
+  "filterByLevel": "Filter by Level",
+  "levels": {
+    "all": "All Levels",
+    "easy": "Beginner",
+    "medium": "Intermediate",
+    "hard": "Advanced"
   },
+  "wordsLabel": "words",
+  "startLearning": "Start Learning"
+},
   "notes": {
     "title": "Notes for \"{{word}}\"",
     "placeholder": "Write your notes here...",

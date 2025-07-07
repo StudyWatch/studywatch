@@ -1,0 +1,7 @@
+# חוסם את כל הסורקים מכל האתר
+User-agent: *
+Disallow: /
+
+# אם תרצה לאפשר בעתיד לגוגל בלבד:
+# User-agent: Googlebot
+# Allow: /

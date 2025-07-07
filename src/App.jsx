@@ -109,7 +109,6 @@ function InnerApp() {
     document.documentElement.dir = ["he", "ar"].includes(settings.uiLang) ? "rtl" : "ltr";
   }, [settings.uiLang]);
 
-  // אתחול שפה לפי מדינה בפעם הראשונה בלבד
   useEffect(() => {
     const savedLang = localStorage.getItem("uiLang");
     if (!savedLang) {
@@ -117,8 +116,7 @@ function InnerApp() {
         .then(res => res.json())
         .then(data => {
           const country = data.country_code;
-          let lang = "en"; // ברירת מחדל
-
+          let lang = "en";
           switch (country) {
             case "IL": lang = "he"; break;
             case "RU": lang = "ru"; break;
@@ -126,7 +124,6 @@ function InnerApp() {
             case "ES": lang = "es"; break;
             default: lang = "en";
           }
-
           updateSetting("uiLang", lang);
           localStorage.setItem("uiLang", lang);
         })
@@ -146,55 +143,58 @@ function InnerApp() {
 
   return (
     <div className={`min-h-screen font-sans ${settings.darkMode ? "dark" : ""}`}>
-      {showMaintenance && <MaintenancePopup onClose={() => setShowMaintenance(false)} />}
+<div className="min-h-screen w-full bg-gradient-to-br from-teal-400 via-cyan-300 to-pink-300 dark:from-teal-600 dark:via-cyan-700 dark:to-pink-700">
+        {showMaintenance && <MaintenancePopup onClose={() => setShowMaintenance(false)} />}
 
-      <Header
-        onMenuToggle={() => setMenuOpen((o) => !o)}
-        menuOpen={menuOpen}
-        onUserPanelToggle={() => setUserPanelOpen(true)}
-        onLangChange={(code) => {
-          updateSetting("uiLang", code);
-          localStorage.setItem("uiLang", code);
-        }}
-      />
+        <Header
+          onMenuToggle={() => setMenuOpen((o) => !o)}
+          menuOpen={menuOpen}
+          onUserPanelToggle={() => setUserPanelOpen(true)}
+          onLangChange={(code) => {
+            updateSetting("uiLang", code);
+            localStorage.setItem("uiLang", code);
+          }}
+        />
 
-      <main className="pt-[56px] pb-8 w-full overflow-x-hidden">
-        <Suspense fallback={<div className="text-center my-10 text-lg">⏳ {t("loading")}</div>}>
-          <Routes>
-            <Route path="/"                         element={<HomePage />} />
-            <Route path="/favorites"                element={<FavoritesPage />} />
-            <Route path="/favorites/all-series"     element={<AllSeriesFavoritesPage />} />
-            <Route path="/favorites/all-words"      element={<AllWordsFavoritesPage />} />
-            <Route path="/review-word/:wordKey"     element={<ReviewWordPage />} />
-            <Route path="/notes"                    element={<NotesPage />} />
-            <Route path="/series"                   element={<BrowseSeriesPage />} />
-            <Route path="/episodes/:seriesId"       element={<EpisodesPage />} />
-            <Route path="/bot"                      element={<BotPage />} />
-            <Route path="/tips"                     element={<TipsPage />} />
-            <Route path="/games"                    element={<GameMenuPage />} />
-            <Route path="/games/word-treasure"      element={<WordTreasureGame />} />
-            <Route path="/games/memory"             element={<MemoryGame />} />
-            <Route path="/games/sentence-match"     element={<SentenceMatchGame />} />
-            <Route path="/games/sentence-scramble"  element={<SentenceScrambleGame />} />
-            <Route path="/games/listening"          element={<ListeningGame />} />
-            <Route path="/games/synonyms"           element={<SynonymGame />} />
-            <Route path="/games/writing"            element={<WritingGame />} />
-            <Route path="/premium"                  element={<PremiumPage />} />
-            <Route path="/login"                    element={<LoginPage />} />
-            <Route path="/register"                 element={<RegisterPage />} />
-            <Route path="/categories"               element={<CategoriesPage />} />
-            <Route path="/categories/:id"           element={<CategoryDetailPage />} />
-            <Route path="/game-end"                 element={<GameEndPage />} />
-            <Route path="*"                         element={<HomePage />} />
-          </Routes>
-        </Suspense>
-      </main>
+        <main className="pt-[56px] pb-8 w-full overflow-x-hidden">
+          <Suspense fallback={<div className="text-center my-10 text-lg">⏳ {t("loading")}</div>}>
+            <Routes>
+              <Route path="/"                         element={<HomePage />} />
+              <Route path="/favorites"                element={<FavoritesPage />} />
+              <Route path="/favorites/all-series"     element={<AllSeriesFavoritesPage />} />
+              <Route path="/favorites/all-words"      element={<AllWordsFavoritesPage />} />
+              <Route path="/review-word/:wordKey"     element={<ReviewWordPage />} />
+              <Route path="/notes"                    element={<NotesPage />} />
+              <Route path="/series"                   element={<BrowseSeriesPage />} />
+              <Route path="/episodes/:seriesId"       element={<EpisodesPage />} />
+              <Route path="/bot"                      element={<BotPage />} />
+              <Route path="/tips"                     element={<TipsPage />} />
+              <Route path="/games"                    element={<GameMenuPage />} />
+              <Route path="/games/word-treasure"      element={<WordTreasureGame />} />
+              <Route path="/games/memory"             element={<MemoryGame />} />
+              <Route path="/games/sentence-match"     element={<SentenceMatchGame />} />
+              <Route path="/games/sentence-scramble"  element={<SentenceScrambleGame />} />
+              <Route path="/games/listening"          element={<ListeningGame />} />
+              <Route path="/games/synonyms"           element={<SynonymGame />} />
+              <Route path="/games/writing"            element={<WritingGame />} />
+              <Route path="/premium"                  element={<PremiumPage />} />
+              <Route path="/login"                    element={<LoginPage />} />
+              <Route path="/register"                 element={<RegisterPage />} />
+              <Route path="/categories"               element={<CategoriesPage />} />
+              <Route path="/categories/:id"           element={<CategoryDetailPage />} />
+              <Route path="/game-end"                 element={<GameEndPage />} />
+              <Route path="*"                         element={<HomePage />} />
+            </Routes>
+          </Suspense>
+        </main>
 
-      {userPanelOpen && <UserPanel onClose={() => setUserPanelOpen(false)} />}
-      <AccessibilityWidget />
+        {userPanelOpen && <UserPanel onClose={() => setUserPanelOpen(false)} />}
+        <AccessibilityWidget />
+      </div>
     </div>
   );
 }
+
 
 export default function App() {
   return (

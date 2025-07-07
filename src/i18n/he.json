@@ -167,17 +167,21 @@
     "medium": "בינוני",
     "hard": "קשה"
   },
-  "categoriesPage": {
-    "title": "מילון לפי קטגוריות",
-    "filterByLevel": "סינון לפי רמה",
-    "levels": {
-      "all": "כל הרמות",
-      "easy": "מתחילים",
-      "medium": "בינוניים",
-      "hard": "מתקדמים"
-    },
-    "wordsLabel": "מילים"
+ "categoriesPage": {
+  "bannerTitle": "אוצר מילים לפי קטגוריה",
+  "bannerSubtitle": "בחר קטגוריה כדי לעיין במילים הרלוונטיות",
+  "searchPlaceholder": "חפש קטגוריות…",
+  "filterByLevel": "סינון לפי רמה",
+  "levels": {
+    "all": "כל הרמות",
+    "easy": "מתחילים",
+    "medium": "בינוניים",
+    "hard": "מתקדמים"
   },
+  "wordsLabel": "מילים",
+  "startLearning": "התחל ללמוד"
+}
+,
   "notes": {
     "title": "הערות עבור \"{{word}}\"",
     "placeholder": "הקלד כאן את ההערות שלך...",

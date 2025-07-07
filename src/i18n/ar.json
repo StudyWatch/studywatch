@@ -168,16 +168,20 @@
     "hard": "صعب"
   },
 "categoriesPage": {
-    "title": "المفردات حسب الفئة",
-    "filterByLevel": "تصفية حسب المستوى",
-    "levels": {
-      "all": "جميع المستويات",
-      "easy": "مبتدئ",
-      "medium": "متوسط",
-      "hard": "متقدم"
-    },
-    "wordsLabel": "كلمات"
+  "bannerTitle": "المفردات حسب الفئة",
+  "bannerSubtitle": "اختر فئة لاستكشاف الكلمات ذات الصلة",
+  "searchPlaceholder": "ابحث في الفئات…",
+  "filterByLevel": "تصفية حسب المستوى",
+  "levels": {
+    "all": "جميع المستويات",
+    "easy": "مبتدئ",
+    "medium": "متوسط",
+    "hard": "متقدم"
   },
+  "wordsLabel": "كلمات",
+  "startLearning": "ابدأ التعلم"
+}
+,
 
   "notes": {
     "title": "ملاحظات لـ \"{{word}}\"",

@@ -98,8 +98,23 @@ function SettingsProvider({ children }) {
     setSettings((prev) => ({ ...prev, [key]: value }));
   };
 
+  // פונקציות עזר ממוקדות (שקולות ל-updateSetting אבל נוחות)
+  const setUiLang = (lang) => updateSetting('uiLang', lang);
+  const setLearningLang = (lang) => updateSetting('learningLang', lang);
+  const setFromLang = (lang) => updateSetting('fromLang', lang);
+  const setDarkMode = (isDark) => updateSetting('darkMode', isDark);
+
   return (
-    <SettingsContext.Provider value={{ settings, updateSetting }}>
+    <SettingsContext.Provider
+      value={{
+        settings,
+        updateSetting,
+        setUiLang,
+        setLearningLang,
+        setFromLang,
+        setDarkMode
+      }}
+    >
       {children}
     </SettingsContext.Provider>
   );

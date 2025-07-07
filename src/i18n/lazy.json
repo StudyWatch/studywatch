@@ -1,0 +1,23 @@
+// he.json
+"games": {
+  "start": "שחק עכשיו",
+  "needMoreWords": "צריך לפחות 5 מילים כדי לשחק"
+}
+
+// es.json
+"games": {
+  "start": "Jugar ahora",
+  "needMoreWords": "Agrega 5 palabras para jugar"
+}
+
+// ar.json
+"games": {
+  "start": "العب الآن",
+  "needMoreWords": "أضف 5 كلمات للعب"
+}
+
+// ru.json
+"games": {
+  "start": "Играть сейчас",
+  "needMoreWords": "Добавьте 5 слов для игры"
+}

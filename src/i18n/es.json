@@ -140,16 +140,20 @@
       "lastPracticed": "Última práctica"
     },
     "categoriesPage": {
-    "title": "Vocabulario por Categoría",
-    "filterByLevel": "Filtrar por Nivel",
-    "levels": {
-      "all": "Todos los niveles",
-      "easy": "Principiante",
-      "medium": "Intermedio",
-      "hard": "Avanzado"
-    },
-    "wordsLabel": "palabras"
+  "bannerTitle": "Vocabulario por categoría",
+  "bannerSubtitle": "Elige una categoría para explorar palabras relevantes",
+  "searchPlaceholder": "Buscar categorías…",
+  "filterByLevel": "Filtrar por nivel",
+  "levels": {
+    "all": "Todos los niveles",
+    "easy": "Principiante",
+    "medium": "Intermedio",
+    "hard": "Avanzado"
   },
+  "wordsLabel": "palabras",
+  "startLearning": "Comenzar a aprender"
+}
+,
 
     "title": "Mis favoritos",
     "seriesTitle": "Series favoritas",

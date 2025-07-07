@@ -1,176 +1,178 @@
-// src/components/games/MemoryGame.jsx
-import React, { useState, useEffect } from 'react';
+// ✅ MemoryGame.jsx – גרסה מושלמת עם עיצוב 5 טורים מימין לשפת יעד ו-5 משמאל לשפת מקור
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import GamePage from '../../pages/GamePage';
+import MemoryCard from '../../components/games/MemoryCard';
 import statsManager from '../../utils/statsManager';
 
 export default function MemoryGame() {
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const words = location.state?.words || [];
-  const sourceLang = location.state?.sourceLang || 'en';
-  const targetLang = location.state?.targetLang || 'he';
+  const { state } = useLocation();
+  const words = state?.words || [];
+  const sourceLang = state?.sourceLang || 'en';
+  const targetLang = state?.targetLang || 'he';
 
   const [fromCards, setFromCards] = useState([]);
   const [toCards, setToCards] = useState([]);
-  const [selectedCards, setSelectedCards] = useState([]);
-  const [matchedCards, setMatchedCards] = useState([]);
+  const [selected, setSelected] = useState([]);
+  const [matched, setMatched] = useState([]);
   const [score, setScore] = useState(0);
-  const [usedResults, setUsedResults] = useState([]);
-
-  const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
+  const [moves, setMoves] = useState(0);
+  const [time, setTime] = useState(0);
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    if (!words || words.length === 0) {
-      console.warn('⚠️ No words provided to MemoryGame. Redirecting...');
+    if (!words.length) {
       navigate('/games');
       return;
     }
-
-    // ניקח עד 15 מילים, כדי שלא יהיה עומס על המסך
     const limited = words.slice(0, 15);
 
-    // כל קלף בשפה שלומדים (displayTo), וכל קלף שמאל בשפה המקורית (displayFrom)
-    const from = limited.map((w, i) => {
-      const content = w.displayTo || w.word;
-      return {
-        id: `from-${i}`,
-        content,
-        pairId: i,
-        side: 'from', // מייצג את ה־"שפה שלומדים"
-        wordObj: w,
-      };
-    });
+    const from = limited.map((w, i) => ({
+      id: `from-${i}`,
+      pair: i,
+      side: 'from',
+      text: w.displayFrom || w.word,
+      wordKey: w.word,
+      wordObj: w
+    }));
 
-    const to = limited.map((w, i) => {
-      const content = w.displayFrom || w.word;
-      return {
-        id: `to-${i}`,
-        content,
-        pairId: i,
-        side: 'to', // מייצג את ה־"שפה מקורית"
-        wordObj: w,
-      };
-    });
+    const to = limited.map((w, i) => ({
+      id: `to-${i}`,
+      pair: i,
+      side: 'to',
+      text: w.displayTo || w.translate?.[targetLang] || w.word,
+      wordKey: w.word,
+      wordObj: w
+    }));
 
     setFromCards(shuffle(from));
     setToCards(shuffle(to));
-
-    statsManager.updateDailyActivity(); // עדכון יומי
-  }, [words, navigate, sourceLang, targetLang]);
-
-  const handleCardClick = (card) => {
-    if (
-      selectedCards.length === 2 ||
-      selectedCards.some((c) => c.id === card.id) ||
-      matchedCards.includes(card.id)
-    ) return;
-
-    setSelectedCards((prev) => [...prev, card]);
-  };
+    statsManager.updateDailyActivity();
+    timerRef.current = setInterval(() => setTime(t => t + 1), 1000);
+    return () => clearInterval(timerRef.current);
+  }, [words, targetLang, navigate]);
 
   useEffect(() => {
-    if (selectedCards.length === 2) {
-      const [a, b] = selectedCards;
+    if (selected.length !== 2) return;
+    const [a, b] = selected;
+    setMoves(m => m + 1);
+    const wordKey = a.wordKey;
 
-      const keyA = `${a.wordObj.word}_${sourceLang}_${targetLang}`;
-      const keyB = `${b.wordObj.word}_${sourceLang}_${targetLang}`;
-
-      if (a.pairId === b.pairId && a.side !== b.side) {
-        // נכון
-        statsManager.logWordAttempt(keyA, true);
-        statsManager.logWordAttempt(keyB, true);
-        statsManager.logWordLearned(keyA, 'memory');
-        statsManager.logGameResult('memory', true);
-
-        setMatchedCards((prev) => [...prev, a.id, b.id]);
-        setScore((prev) => prev + 10);
-        setUsedResults((prev) => [
-          ...prev,
-          {
-            ...a.wordObj,
-            isCorrect: true,
-          },
-        ]);
-        setSelectedCards([]);
-      } else {
-        // שגוי
-        statsManager.logWordAttempt(keyA, false);
-        statsManager.logWordAttempt(keyB, false);
-        statsManager.logGameResult('memory', false);
-
-        setTimeout(() => setSelectedCards([]), 600);
-      }
+    if (a.pair === b.pair && a.side !== b.side) {
+      statsManager.logWordAttempt(wordKey, true);
+      statsManager.logWordLearned(wordKey, 'memory');
+      statsManager.logGameResult('memory', true);
+      setMatched(m => [...m, a.id, b.id]);
+      setScore(s => s + 10);
+      resetSelection(500);
+    } else {
+      statsManager.logWordAttempt(wordKey, false);
+      statsManager.logGameResult('memory', false);
+      statsManager.logMissedWord(wordKey, 'memory');
+      resetSelection(1000);
     }
-  }, [selectedCards, sourceLang, targetLang]);
+  }, [selected]);
 
-  // אם נגמרו כל הקלפים – מסיימים
   useEffect(() => {
-    const total = fromCards.length + toCards.length;
-    if (matchedCards.length === total && total > 0) {
-      // תום המשחק
+    if ((fromCards.length + toCards.length) > 0 && matched.length === fromCards.length + toCards.length) {
+      clearInterval(timerRef.current);
       setTimeout(() => {
         navigate('/game-end', {
           state: {
             score,
-            words: usedResults,
+            moves,
+            time,
             fromGame: '/games/memory',
+            words,
+            sourceLang,
+            targetLang,
           },
         });
       }, 800);
     }
-  }, [matchedCards, fromCards, toCards, usedResults, navigate, score]);
+  }, [matched, fromCards, toCards, navigate, score, moves, time, words, sourceLang, targetLang]);
+
+  const resetSelection = (delay) => setTimeout(() => setSelected([]), delay);
+
+  const handleClick = (card) => {
+    if (
+      selected.length === 2 ||
+      selected.some((c) => c.id === card.id) ||
+      matched.includes(card.id)
+    ) return;
+    setSelected((s) => [...s, card]);
+  };
 
   return (
-    <GamePage title="🧠 משחק זיכרון" backgroundImage="/images/backgrounds/memory-game.jpg">
-      <div className="flex flex-col items-center mt-8 w-full px-4 max-w-screen-lg mx-auto">
-        <div className="grid grid-cols-2 max-w-md w-full mb-4 text-center text-gray-700 dark:text-gray-300 font-bold text-lg">
-          <div>{targetLang.toUpperCase()}</div>
-          <div>{sourceLang.toUpperCase()}</div>
+    <div className="min-h-screen w-full px-4 py-30 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-800 dark:text-white text-center mb-8">
+        🧠 משחק זיכרון
+      </h1>
+
+      <div className="flex justify-center gap-10 text-sm md:text-lg font-medium mb-6">
+        <div>⏱️ זמן: <span className="font-bold">{formatTime(time)}</span></div>
+        <div>מהלכים: <span className="font-bold">{moves}</span></div>
+        <div>נקודות: <span className="font-bold text-green-600">{score}</span></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto grid grid-cols-10 gap-4">
+        {/* טור ימין – שפה נלמדת */}
+        <div className="col-span-5">
+          <div className="text-center font-bold text-indigo-700 dark:text-indigo-300 mb-3">
+            שפה נלמדת ({targetLang.toUpperCase()})
+          </div>
+<div className="grid grid-cols-5 gap-12 translate-x-6">
+            {toCards.map((card) => (
+              <MemoryCard
+                key={card.id}
+                content={card.text}
+                isFlipped={selected.some(c => c.id === card.id) || matched.includes(card.id)}
+                isMatched={matched.includes(card.id)}
+                disabled={selected.length === 2}
+                onClick={() => handleClick(card)}
+              />
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl w-full mb-4">
-          {/* צד לימוד (להצגה על שני עמודות במסך רחב, על עמודה אחת במסך צר) */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {fromCards.map((card) => renderCard(card))}
+        {/* טור שמאל – שפת מקור */}
+        <div className="col-span-5">
+          <div className="text-center font-bold text-indigo-700 dark:text-indigo-300 mb-3">
+            שפת מקור ({sourceLang.toUpperCase()})
           </div>
-          {/* צד מקור */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {toCards.map((card) => renderCard(card))}
+<div className="grid grid-cols-5 gap-12 -translate-x-6">
+            {fromCards.map((card) => (
+              <MemoryCard
+                key={card.id}
+                content={card.text}
+                isFlipped={selected.some(c => c.id === card.id) || matched.includes(card.id)}
+                isMatched={matched.includes(card.id)}
+                disabled={selected.length === 2}
+                onClick={() => handleClick(card)}
+              />
+            ))}
           </div>
-        </div>
-
-        <div className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-          ניקוד: <span className="font-bold text-blue-700 dark:text-blue-300">{score}</span>
         </div>
       </div>
-    </GamePage>
+
+      <div className="text-center mt-12">
+        <button
+          className="py-3 px-10 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 transition text-lg"
+          onClick={() => window.location.reload()}
+        >
+          🔁 התחל מחדש
+        </button>
+      </div>
+    </div>
   );
+}
 
-  function renderCard(card) {
-    const isSelected = selectedCards.some((c) => c.id === card.id);
-    const isMatched = matchedCards.includes(card.id);
+function shuffle(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
+}
 
-    const baseClasses =
-      'w-full h-20 sm:h-24 flex items-center justify-center text-center text-sm sm:text-base font-bold rounded-lg cursor-pointer shadow-sm transition-all duration-300 select-none ';
-    let style = '';
-    if (isMatched) {
-      style = 'bg-green-200 border-2 border-green-500 text-green-800 dark:bg-green-700';
-    } else if (isSelected) {
-      style = 'bg-blue-100 border border-blue-400 text-blue-800 dark:bg-blue-800 dark:text-blue-200';
-    } else {
-      style = 'bg-white hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200';
-    }
-
-    return (
-      <div
-        key={card.id}
-        onClick={() => handleCardClick(card)}
-        className={baseClasses + style}
-      >
-        {(isSelected || isMatched) ? String(card.content) : ''}
-      </div>
-    );
-  }
+function formatTime(sec) {
+  const m = String(Math.floor(sec / 60)).padStart(2, '0');
+  const s = String(sec % 60).padStart(2, '0');
+  return `${m}:${s}`;
 }
