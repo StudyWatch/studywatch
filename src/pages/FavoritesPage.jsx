@@ -1,3 +1,4 @@
+// src/pages/FavoritesPage.jsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -25,8 +26,6 @@ import {
   BookOpen,
   Gamepad2,
   Filter,
-  ChevronsDown,
-  ChevronsUp,
   Volume2,
   Edit3,
 } from "lucide-react";
@@ -48,7 +47,6 @@ import he from "../i18n/he.json";
 import es from "../i18n/es.json";
 import ar from "../i18n/ar.json";
 import ru from "../i18n/ru.json";
-
 
 const locales = { en, he, es, ar, ru };
 
@@ -142,7 +140,10 @@ export default function FavoritesPage() {
       if (difficultyFilter !== "all" && word.difficulty !== difficultyFilter)
         return false;
       if (word.successRate >= successRateFilter) return false;
-      if (neverPracticedOnly && word.lastPracticed !== t.favorites.general.neverPracticedLabel)
+      if (
+        neverPracticedOnly &&
+        word.lastPracticed !== t.favorites.general.neverPracticedLabel
+      )
         return false;
       if (withNotesOnly && !word.notes) return false;
       return true;
@@ -154,9 +155,9 @@ export default function FavoritesPage() {
     );
 
   // speech synthesis
-  const speak = (text, lang) => {
+  const speak = (text, langCode) => {
     const msg = new SpeechSynthesisUtterance(text);
-    msg.lang = lang;
+    msg.lang = langCode;
     window.speechSynthesis.speak(msg);
   };
 
@@ -191,24 +192,30 @@ export default function FavoritesPage() {
 
   return (
     <div
-  className={cn(
-    "min-h-screen p-6 bg-gradient-to-br",
-    "from-teal-400 via-cyan-300 to-pink-300" // אותו צבע יפה תמיד
-  )}
-  dir={isRtl ? "rtl" : "ltr"}
->
-
+      className={cn(
+        "min-h-screen p-6 bg-gradient-to-br",
+        // ☀️ Light: פסטלי עדין; 🌙 Dark: טורקיז עמוק (נשאר כמו שאהבת)
+        "from-violet-50 via-sky-50 to-emerald-50",
+        "dark:from-teal-900 dark:via-cyan-900 dark:to-sky-900"
+      )}
+      dir={isRtl ? "rtl" : "ltr"}
+    >
       <div className="max-w-screen-xl mx-auto space-y-10 md:space-y-12">
-
         {/* Favorite Series Section */}
         <motion.section
-className="space-y-6 backdrop-blur-lg bg-white/10 rounded-2xl shadow-xl p-2"
+          className={cn(
+            "space-y-6 rounded-2xl p-4 md:p-6 shadow-xl border transition-colors",
+            // Light surface
+            "bg-white/90 border-gray-200",
+            // Dark glass
+            "dark:bg-white/10 dark:border-white/20 dark:backdrop-blur-lg"
+          )}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <motion.h2
-            className="text-2xl font-bold text-white flex items-center gap-3 justify-center"
+            className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 justify-center"
             whileHover={{ scale: 1.05 }}
           >
             <motion.span
@@ -219,12 +226,16 @@ className="space-y-6 backdrop-blur-lg bg-white/10 rounded-2xl shadow-xl p-2"
               📺
             </motion.span>
             {t.favorites.seriesTitle}
-            <Sparkles className="text-yellow-300" />
+            <Sparkles className="text-yellow-500 dark:text-yellow-300" />
           </motion.h2>
 
           {savedSeries.length === 0 ? (
             <motion.div
-              className="text-center py-6 backdrop-blur-lg bg-white/20 rounded-2xl border border-white/20"
+              className={cn(
+                "text-center py-6 rounded-2xl border",
+                "bg-white/80 border-gray-200",
+                "dark:bg-white/15 dark:border-white/20 dark:backdrop-blur"
+              )}
               whileHover={{ scale: 1.02 }}
             >
               <motion.div
@@ -234,7 +245,7 @@ className="space-y-6 backdrop-blur-lg bg-white/10 rounded-2xl shadow-xl p-2"
               >
                 📺
               </motion.div>
-              <p className="text-white/70 text-lg">
+              <p className="text-gray-700 dark:text-white/70 text-lg">
                 {t.favorites.noSeries}
               </p>
             </motion.div>
@@ -248,14 +259,14 @@ className="space-y-6 backdrop-blur-lg bg-white/10 rounded-2xl shadow-xl p-2"
                     return (
                       <motion.div
                         key={id}
-onClick={() => navigate(`/episodes/${id}`)}
+                        onClick={() => navigate(`/episodes/${id}`)}
                         className="cursor-pointer relative group"
                         initial={{ opacity: 0, scale: 0.8, rotateY: -180 }}
                         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                         transition={{ delay: 0.3 + idx * 0.15, duration: 0.6 }}
-                        whileHover={{ scale: 1.1, y: -8 }}
+                        whileHover={{ scale: 1.08, y: -6 }}
                       >
-                        <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-lg ring-4 ring-white/20 group-hover:ring-white/40 transition-all duration-300">
+                        <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-lg ring-4 ring-gray-200/60 dark:ring-white/20 group-hover:ring-gray-300 dark:group-hover:ring-white/40 transition-all duration-300 bg-white">
                           <img
                             src={s.coverImage || s.image}
                             alt={name}
@@ -288,7 +299,7 @@ onClick={() => navigate(`/episodes/${id}`)}
                   <Button
                     onClick={() => setShowAllSeries(!showAllSeries)}
                     variant="ghost"
-                    className="text-white/80 hover:bg-white/10"
+                    className="text-gray-700 hover:bg-gray-100 dark:text-white/80 dark:hover:bg-white/10"
                   >
                     {showAllSeries
                       ? t.favorites.general.showLess || t.favorites.viewAllSeries
@@ -311,44 +322,57 @@ onClick={() => navigate(`/episodes/${id}`)}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <motion.h2
-            className="text-2xl font-bold text-white flex items-center gap-3 justify-center"
+            className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 justify-center"
             whileHover={{ scale: 1.05 }}
           >
             <span className="text-3xl">📘</span>
             {t.favorites.wordsTitle.replace("{count}", filteredWords.length)}
-            <BookOpen className="text-blue-300" />
+            <BookOpen className="text-blue-600 dark:text-blue-300" />
           </motion.h2>
 
           {/* Search + Filters */}
           <motion.div
-            className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-4 shadow-lg space-y-4"
+            className={cn(
+              "rounded-xl p-4 shadow-lg space-y-4 border",
+              "bg-white/90 border-gray-200",
+              "dark:bg-white/10 dark:border-white/20 dark:backdrop-blur-lg"
+            )}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div className="flex items-center gap-2">
-                <Filter className="text-white" size={16} />
-                <h3 className="text-sm font-bold text-white">{t.filters.allLevels}</h3>
+                <Filter className="text-gray-700 dark:text-white" size={16} />
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white">
+                  {t.filters.allLevels}
+                </h3>
               </div>
-              <div className="relative w-full md:w-80">
-  <input
-    type="text"
-    placeholder={t.search.placeholder}
-    value={searchTerm}
-    onChange={(e) => setSearchTerm(e.target.value)}
-    className="w-full bg-white/20 placeholder-white/60 text-white px-4 py-2 pr-10 rounded-md border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all duration-200"
-  />
-  <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/60 pointer-events-none">
-    🔍
-  </span>
-</div>
 
+              {/* Search */}
+              <div className="relative w-full md:w-80">
+                <input
+                  type="text"
+                  placeholder={t.search.placeholder}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className={cn(
+                    "w-full px-4 py-2 rounded-md border transition-all duration-200",
+                    "bg-white text-gray-800 placeholder-gray-400 border-gray-300 focus:ring-2 focus:ring-purple-400",
+                    "dark:bg-white/10 dark:text-white dark:placeholder-white/60 dark:border-white/30"
+                  )}
+                />
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-white/60 pointer-events-none">
+                  🔍
+                </span>
+              </div>
             </div>
+
+            {/* Filters row */}
             <div className="flex flex-wrap items-center gap-4">
               {/* Difficulty */}
               <div className="flex items-center gap-2">
-                <span className="text-xs text-white/80 font-medium">
+                <span className="text-xs text-gray-700 dark:text-white/80 font-medium">
                   {t.filters.allLevels.replace("All Levels", "Difficulty")}
                 </span>
                 <ToggleGroup
@@ -362,19 +386,24 @@ onClick={() => navigate(`/episodes/${id}`)}
                       key={v}
                       value={v}
                       size="sm"
-                      className="text-xs px-2 py-1 bg-white/10 text-white border-white/20 data-[state=on]:bg-purple-500 data-[state=on]:text-white"
+                      className={cn(
+                        "text-xs px-2 py-1 border rounded-md",
+                        "bg-white text-gray-700 border-gray-300 data-[state=on]:bg-purple-600 data-[state=on]:text-white",
+                        "dark:bg-white/10 dark:text-white dark:border-white/20 dark:data-[state=on]:bg-purple-500"
+                      )}
                     >
                       {t.filters[v] || v}
                     </ToggleGroupItem>
                   ))}
                 </ToggleGroup>
               </div>
+
               {/* Success Rate */}
-              <div className="flex items-center gap-2 min-w-[140px]">
-                <span className="text-xs text-white/80 font-medium">
+              <div className="flex items-center gap-2 min-w-[160px]">
+                <span className="text-xs text-gray-700 dark:text-white/80 font-medium">
                   {t.filters.successBelowLabel} {successRateFilter}%
                 </span>
-                <div className="w-20">
+                <div className="w-24">
                   <Slider
                     value={[successRateFilter]}
                     onValueChange={(vals) => setSuccessRateFilter(vals[0])}
@@ -385,36 +414,32 @@ onClick={() => navigate(`/episodes/${id}`)}
                   />
                 </div>
               </div>
+
               {/* Never Practiced */}
-              <div className="flex items-center space-x-1">
+              <label className="flex items-center gap-2 cursor-pointer">
                 <Checkbox
                   id="never-practiced"
                   checked={neverPracticedOnly}
                   onCheckedChange={setNeverPracticedOnly}
-                  className="border-white/30 w-4 h-4"
+                  className="border-gray-300 dark:border-white/30 w-4 h-4"
                 />
-                <label
-                  htmlFor="never-practiced"
-                  className="text-xs text-white/90 cursor-pointer"
-                >
+                <span className="text-xs text-gray-800 dark:text-white/90">
                   {t.filters.neverPracticed}
-                </label>
-              </div>
+                </span>
+              </label>
+
               {/* With Notes */}
-              <div className="flex items-center space-x-1">
+              <label className="flex items-center gap-2 cursor-pointer">
                 <Checkbox
                   id="with-notes"
                   checked={withNotesOnly}
                   onCheckedChange={setWithNotesOnly}
-                  className="border-white/30 w-4 h-4"
+                  className="border-gray-300 dark:border-white/30 w-4 h-4"
                 />
-                <label
-                  htmlFor="with-notes"
-                  className="text-xs text-white/90 cursor-pointer"
-                >
+                <span className="text-xs text-gray-800 dark:text-white/90">
                   {t.filters.withNotes}
-                </label>
-              </div>
+                </span>
+              </label>
             </div>
           </motion.div>
 
@@ -424,33 +449,37 @@ onClick={() => navigate(`/episodes/${id}`)}
               {(showAllWords ? filteredWords : filteredWords.slice(0, 3)).map(
                 (word, idx) => {
                   const diffColors = {
-                    easy: "from-green-400 to-emerald-500",
-                    medium: "from-yellow-400 to-orange-500",
-                    hard: "from-red-400 to-pink-500",
+                    easy: "from-green-500 to-emerald-600",
+                    medium: "from-yellow-500 to-orange-600",
+                    hard: "from-red-500 to-pink-600",
                   }[word.difficulty];
                   const mastery =
                     word.successRate >= 80
                       ? {
                           emoji: "👑",
                           text: t.favorites.mastered,
-                          color: "text-yellow-300",
+                          color: "text-yellow-600 dark:text-yellow-300",
                         }
                       : word.successRate >= 50
                       ? {
                           emoji: "📘",
                           text: t.favorites.intermediate,
-                          color: "text-blue-300",
+                          color: "text-blue-600 dark:text-blue-300",
                         }
                       : {
                           emoji: "🌀",
                           text: t.favorites.review,
-                          color: "text-orange-300",
+                          color: "text-orange-600 dark:text-orange-300",
                         };
 
                   return (
                     <motion.div
                       key={word.id}
-                      className="bg-white/10 border border-white/20 rounded-lg p-4 shadow-lg"
+                      className={cn(
+                        "rounded-lg p-4 shadow-lg border transition",
+                        "bg-white/95 border-gray-200",
+                        "dark:bg-white/10 dark:border-white/20 dark:backdrop-blur"
+                      )}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 + idx * 0.05 }}
@@ -464,15 +493,13 @@ onClick={() => navigate(`/episodes/${id}`)}
                           >
                             {t.difficulty[word.difficulty]}
                           </span>
-                          <span
-                            className={`${mastery.color} text-xs font-medium flex items-center gap-1`}
-                          >
+                          <span className={`${mastery.color} text-xs font-medium flex items-center gap-1`}>
                             {mastery.emoji} {mastery.text}
                           </span>
                         </div>
                         <button
                           onClick={() => removeWord(word.id)}
-                          className="bg-white/10 p-1 rounded-full text-white/60 hover:text-red-400 transition-colors"
+                          className="bg-gray-100 text-gray-600 p-1 rounded-full hover:bg-red-50 hover:text-red-500 transition-colors dark:bg-white/10 dark:text-white/60 dark:hover:text-red-400"
                         >
                           <X size={16} />
                         </button>
@@ -481,23 +508,23 @@ onClick={() => navigate(`/episodes/${id}`)}
                       {/* Word + TTS */}
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2 flex-1">
-                          <h3 className="text-lg font-bold text-white">
+                          <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                             {word.sourceWord}
                           </h3>
                           <button
                             onClick={() => speak(word.sourceWord, lang)}
-                            className="text-white/60 hover:text-blue-400 transition-colors"
+                            className="text-gray-600 hover:text-blue-600 transition-colors dark:text-white/60 dark:hover:text-blue-400"
                           >
                             <Volume2 size={16} />
                           </button>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="text-cyan-300 font-medium">
+                          <span className="font-medium text-sky-700 dark:text-cyan-300">
                             → {word.translation}
                           </span>
                           <button
                             onClick={() => speak(word.translation, lang)}
-                            className="text-white/60 hover:text-blue-400 transition-colors"
+                            className="text-gray-600 hover:text-blue-600 transition-colors dark:text-white/60 dark:hover:text-blue-400"
                           >
                             <Volume2 size={16} />
                           </button>
@@ -507,13 +534,13 @@ onClick={() => navigate(`/episodes/${id}`)}
                       {/* Example Sentence */}
                       <p
                         dir="auto"
-                        className="italic text-xs text-white/70 bg-white/10 p-2 rounded mb-2"
+                        className="italic text-xs text-gray-700 bg-gray-50 p-2 rounded mb-2 border border-gray-200 dark:text-white/70 dark:bg-white/10 dark:border-white/20"
                       >
                         💬 {word.exampleSentence}
                       </p>
 
                       {/* Stats Row */}
-                      <div className="flex justify-between text-xs text-white/80 mb-2">
+                      <div className="flex justify-between text-xs text-gray-700 dark:text-white/80 mb-2">
                         <span>
                           🎯 {word.correct}/{word.attempts} ({word.successRate}
                           %)
@@ -529,13 +556,13 @@ onClick={() => navigate(`/episodes/${id}`)}
                       {!editingKey || editingKey !== word.id ? (
                         <div className="flex items-center justify-between">
                           {word.notes ? (
-                            <p className="text-xs text-white/80 bg-white/10 p-2 rounded border border-white/20 flex-1">
+                            <p className="text-xs text-gray-800 bg-gray-50 p-2 rounded border border-gray-200 flex-1 dark:text-white/80 dark:bg-white/10 dark:border-white/20">
                               📝 {word.notes}
                             </p>
                           ) : (
                             <button
                               onClick={() => startEdit(word.id)}
-                              className="text-xs text-white/60 hover:text-yellow-400 bg-white/10 p-2 rounded border border-white/20 transition-colors"
+                              className="text-xs text-gray-700 hover:text-yellow-600 bg-gray-50 p-2 rounded border border-gray-200 transition-colors dark:text-white/60 dark:hover:text-yellow-400 dark:bg-white/10 dark:border-white/20"
                             >
                               <Edit3 size={14} className="inline-block mr-1" />
                               {t.favorites.addNotes}
@@ -544,7 +571,7 @@ onClick={() => navigate(`/episodes/${id}`)}
                           {word.notes && (
                             <button
                               onClick={() => startEdit(word.id)}
-                              className="text-white/60 p-1 rounded-full hover:bg-yellow-500/20 transition-colors"
+                              className="text-gray-600 p-1 rounded-full hover:bg-yellow-100 transition-colors dark:text-white/60 dark:hover:bg-yellow-500/20"
                             >
                               <Edit3 size={14} />
                             </button>
@@ -564,13 +591,13 @@ onClick={() => navigate(`/episodes/${id}`)}
                               "{{word}}",
                               word.sourceWord
                             )}
-                            className="w-full bg-white/10 border-white/20 text-white placeholder-white/60 text-xs"
+                            className="w-full bg-gray-50 border-gray-200 text-gray-800 placeholder-gray-400 text-xs dark:bg-white/10 dark:border-white/20 dark:text-white"
                           />
                           <div className="flex gap-2">
                             <Button
                               onClick={() => saveNote(word.id)}
                               size="sm"
-                              className="bg-green-500 hover:bg-green-600 text-xs px-3 py-1"
+                              className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1"
                             >
                               {t.notes.saveBtn}
                             </Button>
@@ -578,7 +605,7 @@ onClick={() => navigate(`/episodes/${id}`)}
                               onClick={cancelEdit}
                               variant="outline"
                               size="sm"
-                              className="border-white/20 text-white hover:bg-white/10 text-xs px-3 py-1"
+                              className="border-gray-300 text-gray-700 hover:bg-gray-100 text-xs px-3 py-1 dark:border-white/20 dark:text-white dark:hover:bg-white/10"
                             >
                               {t.common.back}
                             </Button>
@@ -592,7 +619,7 @@ onClick={() => navigate(`/episodes/${id}`)}
             </div>
           ) : (
             <motion.div className="text-center py-6" whileHover={{ scale: 1.02 }}>
-              <p className="text-white/70">{t.favorites.noWords}</p>
+              <p className="text-gray-700 dark:text-white/70">{t.favorites.noWords}</p>
             </motion.div>
           )}
 
@@ -600,16 +627,22 @@ onClick={() => navigate(`/episodes/${id}`)}
           {filteredWords.length > 3 && (
             <div className="text-center pt-2">
               <motion.button
-  onClick={() => setShowAllWords(!showAllWords)}
-  className="text-white font-bold bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/30 shadow-md"
-  animate={{ scale: [1, 1.05, 1], opacity: [0.8, 1, 0.8] }}
-  transition={{ duration: 2, repeat: Infinity }}
->
-  {showAllWords
-    ? t.favorites.general.showLess || t.favorites.viewAllWords
-    : t.favorites.viewAllWords.replace("{count}", filteredWords.length)}
-</motion.button>
-
+                onClick={() => setShowAllWords(!showAllWords)}
+                className={cn(
+                  "font-bold px-4 py-2 rounded-full shadow-md border",
+                  "text-gray-800 bg-white hover:bg-gray-100 border-gray-300",
+                  "dark:text-white dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/30"
+                )}
+                animate={{ scale: [1, 1.05, 1], opacity: [0.9, 1, 0.9] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                {showAllWords
+                  ? t.favorites.general.showLess || t.favorites.viewAllWords
+                  : t.favorites.viewAllWords.replace(
+                      "{count}",
+                      filteredWords.length
+                    )}
+              </motion.button>
             </div>
           )}
         </motion.section>
@@ -622,7 +655,7 @@ onClick={() => navigate(`/episodes/${id}`)}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
           <motion.h2
-            className="text-3xl font-bold text-white flex items-center gap-3 justify-center mb-6"
+            className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3 justify-center mb-6"
             whileHover={{ scale: 1.05 }}
           >
             <motion.span
@@ -633,7 +666,7 @@ onClick={() => navigate(`/episodes/${id}`)}
               🎮
             </motion.span>
             {t.favorites.playWithWords.replace("{count}", selectedCount)}
-            <Gamepad2 className="text-emerald-300" />
+            <Gamepad2 className="text-emerald-700 dark:text-emerald-300" />
           </motion.h2>
 
           {/* Count Selector */}
@@ -641,41 +674,46 @@ onClick={() => navigate(`/episodes/${id}`)}
             {gameOptions.map((opt) => (
               <Button
                 key={opt}
-                variant={selectedCount === opt ? "default" : "ghost"}
+                variant={selectedCount === opt ? "default" : "outline"}
                 onClick={() => setSelectedCount(opt)}
                 disabled={wordsData.length < opt}
-                className="text-white border-white/30"
+                className={cn(
+                  "px-3",
+                  selectedCount === opt
+                    ? "bg-purple-600 hover:bg-purple-700 text-white"
+                    : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-100",
+                  "dark:border-white/30 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+                )}
               >
-                {opt} {t.common.back /* replace with words label if needed */}
+                {opt}
               </Button>
             ))}
           </div>
 
           {/* Play Button */}
           <Button
-  onClick={handlePlay}
-  disabled={wordsData.length < selectedCount}
-  className={cn(
-    "bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 text-white px-6 py-3 rounded-full text-md font-bold shadow-2xl border border-white/20 backdrop-blur-sm relative overflow-hidden",
-    wordsData.length < selectedCount && "opacity-50 cursor-not-allowed"
-  )}
->
-  <motion.div
-    className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 via-teal-400/20 to-cyan-400/20"
-    animate={{ x: ["-100%", "100%"] }}
-    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-  />
-  <div className="relative flex items-center gap-2 justify-center">
-    <Sparkles className="text-white w-5 h-5" />
-    {wordsData.length >= selectedCount
-      ? t.games.start || "Play Now"
-      : t.games.needMoreWords || "Add 5 words to play"}
-  </div>
-</Button>
-
+            onClick={handlePlay}
+            disabled={wordsData.length < selectedCount}
+            className={cn(
+              "bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 text-white px-6 py-3 rounded-full text-md font-bold shadow-2xl border border-emerald-700/30 relative overflow-hidden",
+              "disabled:opacity-50 disabled:cursor-not-allowed"
+            )}
+          >
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/0 to-white/10"
+              animate={{ x: ["-100%", "100%"] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            />
+            <div className="relative flex items-center gap-2 justify-center">
+              <Sparkles className="w-5 h-5" />
+              {wordsData.length >= selectedCount
+                ? t.games.start || "Play Now"
+                : t.games.needMoreWords || "Add 5 words to play"}
+            </div>
+          </Button>
 
           <motion.p
-            className="text-white/80 text-lg font-semibold bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-white/20 inline-block"
+            className="text-gray-800 dark:text-white/80 text-lg font-semibold bg-white/80 dark:bg-white/10 rounded-full px-6 py-2 border border-gray-200 dark:border-white/20 inline-block"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
@@ -692,18 +730,18 @@ onClick={() => navigate(`/episodes/${id}`)}
           transition={{ delay: 1, duration: 0.6 }}
         >
           <motion.h2
-            className="text-3xl font-bold text-white flex items-center gap-3 justify-center"
+            className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3 justify-center"
             whileHover={{ scale: 1.05 }}
           >
             <motion.span
               className="text-4xl"
-              animate={{ scale: [1, 1.2, 1], rotate: [0, 10,-10,0] }}
+              animate={{ scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
               📊
             </motion.span>
             {t.favorites.general.checkProgress}
-            <TrendingUp className="text-orange-300" />
+            <TrendingUp className="text-orange-600 dark:text-orange-300" />
           </motion.h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -712,7 +750,7 @@ onClick={() => navigate(`/episodes/${id}`)}
                 emoji: "📚",
                 title: t.favorites.general.savedWords,
                 value: wordsData.length.toString(),
-                color: "from-blue-400 to-cyan-500",
+                color: "from-blue-500 to-cyan-600",
                 caption: t.favorites.general.avgProgress,
                 icon: BookOpen,
               },
@@ -726,7 +764,7 @@ onClick={() => navigate(`/episodes/${id}`)}
                           wordsData.length
                       )}%`
                     : "—",
-                color: "from-green-400 to-emerald-500",
+                color: "from-green-500 to-emerald-600",
                 caption: t.favorites.general.avgSuccess,
                 icon: Target,
               },
@@ -742,7 +780,7 @@ onClick={() => navigate(`/episodes/${id}`)}
                         ) / wordsData.length
                       )}%`
                     : "—",
-                color: "from-purple-400 to-pink-500",
+                color: "from-purple-500 to-pink-600",
                 caption: t.favorites.general.avgProgress,
                 icon: TrendingUp,
               },
@@ -751,9 +789,12 @@ onClick={() => navigate(`/episodes/${id}`)}
                 title: t.favorites.general.lastPracticedLabel,
                 value: (() => {
                   const practiced = wordsData.filter(
-                    (w) => w.lastPracticed !== t.favorites.general.neverPracticedLabel
+                    (w) =>
+                      w.lastPracticed !==
+                      t.favorites.general.neverPracticedLabel
                   );
-                  if (!practiced.length) return t.favorites.general.neverPracticedLabel;
+                  if (!practiced.length)
+                    return t.favorites.general.neverPracticedLabel;
                   return practiced.reduce((prev, w) =>
                     prev.lastPracticed.includes("hour")
                       ? prev
@@ -764,14 +805,18 @@ onClick={() => navigate(`/episodes/${id}`)}
                       : prev
                   ).lastPracticed;
                 })(),
-                color: "from-orange-400 to-red-500",
+                color: "from-orange-500 to-red-600",
                 caption: t.favorites.general.lastPracticedLabel,
                 icon: Clock,
               },
             ].map((stat, idx) => (
               <motion.div
                 key={stat.title}
-                className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-6 text-center space-y-4 hover:bg-white/15 transition-all duration-300 shadow-2xl relative overflow-hidden"
+                className={cn(
+                  "rounded-2xl p-6 text-center space-y-4 shadow-2xl border relative overflow-hidden transition-all",
+                  "bg-white/90 border-gray-200 hover:bg-white",
+                  "dark:bg-white/10 dark:border-white/20 dark:hover:bg-white/15 dark:backdrop-blur-xl"
+                )}
                 initial={{ opacity: 0, y: 20, rotateY: -90 }}
                 animate={{ opacity: 1, y: 0, rotateY: 0 }}
                 transition={{ delay: 1.1 + idx * 0.1, duration: 0.8 }}
@@ -802,9 +847,9 @@ onClick={() => navigate(`/episodes/${id}`)}
                     >
                       {stat.emoji}
                     </motion.span>
-                    <stat.icon className="text-white/60" size={20} />
+                    <stat.icon className="text-gray-700 dark:text-white/60" size={20} />
                   </div>
-                  <h3 className="text-sm font-semibold text-white/80 mb-2">
+                  <h3 className="text-sm font-semibold text-gray-800 dark:text-white/80 mb-2">
                     {stat.title}
                   </h3>
                   <motion.div
@@ -813,7 +858,7 @@ onClick={() => navigate(`/episodes/${id}`)}
                   >
                     {stat.value}
                   </motion.div>
-                  <p className="text-xs text-white/60 font-medium">
+                  <p className="text-xs text-gray-600 dark:text-white/60 font-medium">
                     {stat.caption}
                   </p>
                 </div>
@@ -821,7 +866,6 @@ onClick={() => navigate(`/episodes/${id}`)}
             ))}
           </div>
         </motion.section>
-
       </div>
     </div>
   );

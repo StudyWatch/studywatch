@@ -2,11 +2,111 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, ArrowRight, PawPrint } from 'lucide-react';
+import { Star, ArrowRight, PawPrint, Languages, ArrowLeftRight, ChevronDown } from 'lucide-react';
 import categories from '../../public/data/newcategory.js';
 import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from '../context/I18nContext';
 import { ScrollToTop } from '../components/ScrollToTop';
+
+/* ---------------------- LanguageBar (קורא/כותב את אותם מפתחות) ---------------------- */
+function LanguageBar({ compact = false, dir = 'rtl' }) {
+  const { t } = useTranslation();
+  const [fromLang, setFromLang] = useState(localStorage.getItem('fromLang') || 'en');
+  const [learningLang, setLearningLang] = useState(localStorage.getItem('learningLang') || 'he');
+  const isRTL = dir === 'rtl';
+
+  const write = (k, v) => {
+    localStorage.setItem(k, v);
+    window.dispatchEvent(new CustomEvent('app:lang-change', { detail: { [k]: v } }));
+  };
+
+  const onSwap = () => {
+    const a = learningLang, b = fromLang;
+    setFromLang(a); setLearningLang(b);
+    write('fromLang', a); write('learningLang', b);
+  };
+
+  const onChangeFrom = e => { const v = e.target.value; setFromLang(v); write('fromLang', v); };
+  const onChangeTo   = e => { const v = e.target.value; setLearningLang(v); write('learningLang', v); };
+
+  useEffect(() => {
+    const onCustom = e => {
+      if (e?.detail?.fromLang) setFromLang(e.detail.fromLang);
+      if (e?.detail?.learningLang) setLearningLang(e.detail.learningLang);
+    };
+    const onStorage = e => {
+      if (e.key === 'fromLang' && e.newValue) setFromLang(e.newValue);
+      if (e.key === 'learningLang' && e.newValue) setLearningLang(e.newValue);
+    };
+    window.addEventListener('app:lang-change', onCustom);
+    window.addEventListener('storage', onStorage);
+    return () => {
+      window.removeEventListener('app:lang-change', onCustom);
+      window.removeEventListener('storage', onStorage);
+    };
+  }, []);
+
+  const label = code => t?.(`languageNames.${code}`) || code;
+  const LANGS = ['he', 'en', 'es', 'ru', 'ar'];
+
+  const selectBase =
+    "appearance-none min-w-[120px] px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 " +
+    "bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 text-sm md:text-base " +
+    "focus:outline-none focus:ring-2 focus:ring-purple-400";
+
+  return (
+    <div
+      className={`w-full md:w-auto flex items-center gap-2 md:gap-3
+      ${compact ? '' : 'rounded-xl px-3 py-2 md:px-4 md:py-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-sm'}`}
+      dir={dir}
+    >
+      <div className="hidden md:flex items-center text-gray-600 dark:text-gray-300">
+        <Languages className="w-5 h-5" aria-hidden />
+      </div>
+
+      {/* FROM */}
+      <div className="relative flex-1 md:flex-none">
+        <select
+          value={fromLang}
+          onChange={onChangeFrom}
+          className={`${selectBase} ${isRTL ? 'pl-10' : 'pr-10'}`}
+        >
+          {LANGS.map(code => <option key={code} value={code}>{label(code)}</option>)}
+        </select>
+        <ChevronDown
+          className={`pointer-events-none absolute top-1/2 -translate-y-1/2 opacity-60 ${isRTL ? 'left-3' : 'right-3'}`}
+        />
+      </div>
+
+      {/* SWAP */}
+      <button
+        type="button"
+        onClick={onSwap}
+        className="shrink-0 inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10
+                   rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900
+                   hover:scale-105 transition"
+        aria-label="החלף שפות"
+      >
+        <ArrowLeftRight className="w-5 h-5" />
+      </button>
+
+      {/* TO */}
+      <div className="relative flex-1 md:flex-none">
+        <select
+          value={learningLang}
+          onChange={onChangeTo}
+          className={`${selectBase} ${isRTL ? 'pl-10' : 'pr-10'}`}
+        >
+          {LANGS.map(code => <option key={code} value={code}>{label(code)}</option>)}
+        </select>
+        <ChevronDown
+          className={`pointer-events-none absolute top-1/2 -translate-y-1/2 opacity-60 ${isRTL ? 'left-3' : 'right-3'}`}
+        />
+      </div>
+    </div>
+  );
+}
+/* ------------------------------------------------------------------------------------ */
 
 const gradients = [
   'from-pink-500 to-orange-400',
@@ -15,23 +115,18 @@ const gradients = [
   'from-rose-400 to-pink-300',
 ];
 
-// רק קטגוריות תקינות
 const validCategories = Array.isArray(categories)
   ? categories.filter(cat =>
-      cat?.id &&
-      cat.name && typeof cat.name === 'object' &&
-      Array.isArray(cat.filters)
+      cat?.id && cat.name && typeof cat.name === 'object' && Array.isArray(cat.filters)
     )
   : [];
 
-// תווית רמה
 const getLevelLabel = (t, level) => {
   if (level === 'easy')   return t('categoriesPage.levels.easy');
   if (level === 'medium') return t('categoriesPage.levels.medium');
   if (level === 'hard')   return t('categoriesPage.levels.hard');
   return '';
 };
-// צבעי רקע תווית רמה
 const getLevelColor = level => {
   switch (level) {
     case 'easy':   return 'bg-green-100 text-green-800';
@@ -41,30 +136,16 @@ const getLevelColor = level => {
   }
 };
 
-// Variants לאנימציות כרטיס
+/* Framer: לא משנים כאן background כדי שלא יתקע */
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: i => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, type: 'spring', stiffness: 120 }
-  }),
-  hover: {
-    scale: 1.04,
-    x: -4,
-    y: -4,
-    boxShadow: '0 20px 30px rgba(0,0,0,0.1)',
-    background: 'linear-gradient(135deg, rgba(249,207,232,0.5), rgba(254,205,211,0.5))'
-  }
+  hidden:  { opacity: 0, y: 20 },
+  visible: i => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, type: 'spring', stiffness: 120 } }),
+  hover:   { scale: 1.04, x: -4, y: -4, boxShadow: '0 20px 30px rgba(0,0,0,0.1)' }
 };
-// Variants לאנימציות אימוג’י
+
 const emojiVariants = {
   initial: { y: 0, rotate: 0 },
-  hover: {
-    y: -8,
-    rotate: [0, 5, -5, 0],
-    transition: { duration: 0.6 }
-  }
+  hover:   { y: -8, rotate: [0, 5, -5, 0], transition: { duration: 0.6 } }
 };
 
 export default function CategoriesPage() {
@@ -72,26 +153,20 @@ export default function CategoriesPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const dir = ['he', 'ar'].includes(settings.uiLang) ? 'rtl' : 'ltr';
+  const isRTL = dir === 'rtl';
 
   const [selectedLevel, setSelectedLevel] = useState('all');
   const [searchTerm, setSearchTerm]       = useState('');
   const [loaded, setLoaded]               = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // סימול טעינה
+  useEffect(() => { const id = setTimeout(() => setLoaded(true), 200); return () => clearTimeout(id); }, []);
   useEffect(() => {
-    const timeout = setTimeout(() => setLoaded(true), 200);
-    return () => clearTimeout(timeout);
+    const onScroll = () => setShowScrollTop(window.scrollY > 300);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // מאזין לגלילה להצגת כפתור ScrollToTop
-  useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 300);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // פילטור קטגוריות לפי רמה ומילת חיפוש
   const allCats = useMemo(() => validCategories, []);
   const filtered = useMemo(() => {
     return allCats.filter(cat => {
@@ -113,7 +188,7 @@ export default function CategoriesPage() {
     <div dir={dir} className="relative min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4">
       <div className="max-w-7xl mx-auto">
 
-        {/* באנר עליון */}
+        {/* באנר */}
         <div className="bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900 text-center rounded-2xl p-8 mb-8">
           <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
             {t('categoriesPage.bannerTitle')}
@@ -121,18 +196,24 @@ export default function CategoriesPage() {
           <p className="mt-4 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t('categoriesPage.bannerSubtitle')}
           </p>
+
+          {/* שורת בחירת שפה – מוצג רק בדסקטופ כדי לא להכפיל במובייל */}
+          <div className="mt-6 hidden md:flex justify-center">
+            <LanguageBar dir={dir} />
+          </div>
         </div>
 
-        {/* חיפוש + בורר רמות */}
-        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+        {/* חיפוש + רמות + פס שפה קומפקטי במובייל */}
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
           <input
             type="text"
             placeholder={t('categoriesPage.searchPlaceholder')}
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
-            className="flex-1 max-w-md px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 shadow"
+            className="w-full md:flex-1 max-w-md px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 shadow"
           />
-          <div className="flex gap-3 flex-wrap">
+
+          <div className="flex gap-2 md:gap-3 flex-wrap">
             {levels.map(lvl => (
               <button
                 key={lvl}
@@ -146,6 +227,11 @@ export default function CategoriesPage() {
                 {t(`categoriesPage.levels.${lvl}`)}
               </button>
             ))}
+          </div>
+
+          {/* במובייל – מציגים רק כאן, קומפקטי ו־full-width */}
+          <div className="md:hidden">
+            <LanguageBar compact dir={dir} />
           </div>
         </div>
 
@@ -178,15 +264,15 @@ export default function CategoriesPage() {
                         rounded-2xl p-6 shadow-lg transition-all duration-300
                         bg-white dark:bg-gray-800
                         hover:bg-gradient-to-br hover:from-pink-100 hover:to-purple-100
+                        will-change-transform
                       `}
                     >
-                      {/* רקע דקורטיבי מעודן */}
-                      <div className={`
-                        absolute -top-6 -right-6 w-24 h-24 rounded-full
-                        bg-gradient-to-br ${grad} opacity-20
-                      `} />
+                      {/* רקע דקורטיבי */}
+                      <div
+                        className={`absolute -top-6 ${isRTL ? '-left-6' : '-right-6'} w-24 h-24 rounded-full
+                                   bg-gradient-to-br ${grad} opacity-20`}
+                      />
 
-                      {/* paw prints */}
                       {cat.id === 'animals' && (
                         <div className="absolute top-4 left-4 flex space-x-1 text-gray-500">
                           <PawPrint className="w-5 h-5 opacity-80" />
@@ -194,7 +280,6 @@ export default function CategoriesPage() {
                         </div>
                       )}
 
-                      {/* אימוג׳י עם אפקט hover */}
                       <motion.span
                         className="text-6xl mb-3 block drop-shadow-md"
                         variants={emojiVariants}
@@ -217,10 +302,7 @@ export default function CategoriesPage() {
                         <span className="text-sm text-gray-700 dark:text-gray-300">
                           {count} {t('categoriesPage.wordsLabel')}
                         </span>
-                        <span className={`
-                          ml-auto px-3 py-1 rounded-full text-xs font-medium
-                          ${getLevelColor(levelId)}
-                        `}>
+                        <span className={`ml-auto px-3 py-1 rounded-full text-xs font-medium ${getLevelColor(levelId)}`}>
                           {getLevelLabel(t, levelId)}
                         </span>
                       </div>
@@ -244,7 +326,6 @@ export default function CategoriesPage() {
         </div>
       </div>
 
-      {/* כפתור גלילה למעלה */}
       <ScrollToTop show={showScrollTop} />
     </div>
   );

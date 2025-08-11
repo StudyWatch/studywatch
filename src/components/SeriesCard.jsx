@@ -18,7 +18,6 @@ export default function SeriesCard({ series }) {
   const { settings } = useSettings();
   const lang = settings?.uiLang || 'he';
 
-  // שימוש ב־SavedDataContext
   const { savedSeries, saveSeries, removeSeries } = useSavedData();
   const isSaved = savedSeries.includes(series.id);
 
@@ -27,7 +26,6 @@ export default function SeriesCard({ series }) {
   const [showDescription, setShowDescription] = useState(false);
   const cardRef = useRef(null);
 
-  // בעת לחיצה בלי “תיאור”: נווט לפרקים
   const handleNavigate = () => {
     if (!showDescription) {
       navigate(`/episodes/${series.id}`);
@@ -43,7 +41,7 @@ export default function SeriesCard({ series }) {
       saveSeries(series.id);
       setToastMessage(lang === 'en' ? '⭐ Added!' : '⭐ נוספה למועדפים!');
 
-      // אנימציית “עף למועדפים”
+      // אנימציית "עף למועדפים"
       const icon = document.querySelector('#favorites-icon');
       if (icon && cardRef.current) {
         const from = cardRef.current.getBoundingClientRect();
@@ -51,14 +49,16 @@ export default function SeriesCard({ series }) {
 
         const clone = cardRef.current.cloneNode(true);
         clone.classList.add('fly-clone');
-        clone.style.left = `${from.left}px`;
-        clone.style.top = `${from.top}px`;
-        clone.style.width = `${from.width}px`;
-        clone.style.height = `${from.height}px`;
-        clone.style.position = 'fixed';
-        clone.style.transition = 'transform 1.3s ease-in-out, opacity 1.3s ease-in-out';
-        clone.style.zIndex = '1000';
-        clone.style.opacity = '1';
+        Object.assign(clone.style, {
+          left: `${from.left}px`,
+          top: `${from.top}px`,
+          width: `${from.width}px`,
+          height: `${from.height}px`,
+          position: 'fixed',
+          transition: 'transform 1.3s ease-in-out, opacity 1.3s ease-in-out',
+          zIndex: '1000',
+          opacity: '1',
+        });
 
         document.body.appendChild(clone);
 
@@ -87,8 +87,9 @@ export default function SeriesCard({ series }) {
     <div
       ref={cardRef}
       className="
-        relative w-full max-w-[260px] mx-auto group card bg-white dark:bg-gray-800
-        rounded-xl shadow-md hover:shadow-xl hover:scale-[1.015] transition duration-300
+        relative w-full max-w-[260px] mx-auto group card
+        bg-white dark:bg-gray-800 rounded-xl shadow-md
+        hover:shadow-xl hover:scale-[1.015] transition duration-300
         overflow-hidden
       "
       onClick={handleNavigate}
@@ -107,7 +108,7 @@ export default function SeriesCard({ series }) {
         </button>
       </div>
 
-      {/* תוכן לחיץ */}
+      {/* תוכן כרטיס */}
       <div className="cursor-pointer flex flex-col items-center text-left p-2">
         {series.image ? (
           <img
@@ -122,29 +123,30 @@ export default function SeriesCard({ series }) {
             </span>
           </div>
         )}
-
         <div className="text-base font-semibold text-gray-800 dark:text-white text-center">
           {getTextByLang('name')}
         </div>
       </div>
 
+      {/* פלטפורמות */}
       {series.platforms?.length > 0 && (
         <div className="flex gap-2 justify-center px-3 py-2 bg-gray-50 dark:bg-gray-700/50 border-t border-gray-200 dark:border-gray-600">
-          {series.platforms.map((p) => (
-            platformIcons[p] && (
-              <img
-                key={p}
-                src={platformIcons[p]}
-                alt={p}
-                title={p}
-                className="w-5 h-5 object-contain rounded shadow-sm hover:scale-110 transition"
-              />
-            )
-          ))}
+          {series.platforms.map(
+            (p) =>
+              platformIcons[p] && (
+                <img
+                  key={p}
+                  src={platformIcons[p]}
+                  alt={p}
+                  title={p}
+                  className="w-5 h-5 object-contain rounded shadow-sm hover:scale-110 transition"
+                />
+              )
+          )}
         </div>
       )}
 
-      {/* כפתור חץ קומפקטי */}
+      {/* חץ לתיאור */}
       {getTextByLang('description') && (
         <div className="absolute bottom-2 right-2 z-20">
           <button
@@ -164,6 +166,7 @@ export default function SeriesCard({ series }) {
         </div>
       )}
 
+      {/* תיאור סדרה */}
       {showDescription && (
         <div className="px-3 pb-3 pt-1 animate-fade-slide-in text-sm text-gray-700 dark:text-gray-300">
           {getTextByLang('description')}

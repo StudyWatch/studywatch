@@ -56,42 +56,40 @@ export default function HomePage() {
         dir={isRtl ? 'rtl' : 'ltr'}
       >
         {/* 🎯 Hero Section */}
-        <section
-          className={`
-            w-full min-h-[380px] md:min-h-[445px]
-            bg-cover bg-no-repeat bg-[center_right_30%] md:bg-bottom
-            relative flex items-start md:items-center justify-start
-            pt-12 md:pt-0
-          `}
-          style={{
-            backgroundImage: isDarkMode
-              ? "url('/images/backgrounds/hero-full-dark.png')"
-              : "url('/images/backgrounds/hero-full.png')"
-          }}
-        >
+       <section
+  className={`
+    w-full min-h-[380px] md:min-h-[405px]
+    bg-cover bg-no-repeat bg-[center_right_30%] md:bg-bottom
+    relative flex items-start md:items-center justify-start
+    pt-6 md:pt-0
+  `}
+  style={{
+    backgroundImage: isDarkMode
+      ? "url('/images/backgrounds/hero-full-dark.png')"
+      : "url('/images/backgrounds/hero-full.png')"
+  }}
+>
+
           <div
             className={`
               absolute
               left-4 sm:left-[8%]
               top-12 md:top-auto
-              mt-6 md:mt-0
+              mt-2 md:mt-0
               max-w-md z-10
               ${isRtl ? 'text-right' : 'text-left'}
             `}
           >
-           <h1
-  className={`
-    text-xl md:text-2xl font-extrabold leading-snug
-    text-white
-    drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)]
-    font-sans
-  `}
->
-
-            
+            <h1
+              className={`
+                text-xl md:text-2xl font-extrabold leading-snug
+                text-white
+                drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)]
+                font-sans
+              `}
+            >
               {t('home.hero.title') || 'Learn languages with real TV series'}
             </h1>
-
             <p
               className={`
                 text-md md:text-lg
@@ -102,7 +100,6 @@ export default function HomePage() {
               {t('home.hero.subtitle') ||
                 'Practice vocabulary and comprehension with real scenes.'}
             </p>
-
             <a
               href="#popular"
               className={`
@@ -124,13 +121,13 @@ export default function HomePage() {
         <section
           id="popular"
           className={`
-            pt-[10px] pb-10 px-4
+            pt-2 pb-10 px-4
             bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155]
             dark:bg-gray-800 dark:text-gray-100
           `}
         >
           <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-3">
               <h2
                 className={`
                   ${isRtl ? 'text-right' : 'text-left'}
